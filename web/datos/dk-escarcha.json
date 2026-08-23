@@ -1,0 +1,451 @@
+{
+  "id": "dk-escarcha",
+  "personaje": "LochRaven",
+  "clase": "Caballero de la Muerte",
+  "especializacion": "Escarcha",
+  "rol": "DPS cuerpo a cuerpo — PvE",
+  "raza": "Orco",
+  "faccion": "Horda",
+  "clase_icono": "spell_deathknight_classicon",
+  "nota": "Conjunto de referencia ICC 25 heroico. Misma coraza Señor de la Plaga que Profano, dual-wield de armas a una mano.",
+  "gemas_clave": {
+    "meta": {
+      "id": 41398,
+      "nombre": "Diamante de asedio de tierra incansable",
+      "icono": "inv_jewelcrafting_shadowspirit_02",
+      "efecto": "+21 agilidad y 3% de daño crítico aumentado",
+      "requisito": "Requiere al menos 1 gema roja, 1 amarilla y 1 azul"
+    },
+    "roja": {
+      "id": 40111,
+      "nombre": "Rubí cárdeno llamativo",
+      "icono": "inv_jewelcrafting_gem_37",
+      "efecto": "+20 fuerza",
+      "color": "Roja"
+    }
+  },
+  "orden": [
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "weapon",
+    "offhand"
+  ],
+  "piezas": {
+    "head": {
+      "ranura": "Cabeza",
+      "id": 51312,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_helmet_151",
+      "nombre": "Casco de Señor de la Plaga santificado",
+      "en": "Sanctified Scourgelord Helmet",
+      "heroico": true,
+      "bono_ranura": "+8 fuerza",
+      "encantamiento": {
+        "nombre": "Arcanum de tormento",
+        "icono": "ability_warrior_rampage",
+        "efecto": "+50 poder de ataque y +20 índice de golpe crítico",
+        "origen": "Caballeros de la Espada de Ébano"
+      },
+      "gemas": [
+        {
+          "ranura": "Meta",
+          "gema": "Diamante de asedio de tierra incansable",
+          "icono": "inv_jewelcrafting_shadowspirit_02",
+          "efecto": "+21 agilidad y 3% de daño crítico aumentado"
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "neck": {
+      "ranura": "Cuello",
+      "id": 54581,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_jewelry_necklace_48",
+      "nombre": "Colgante de lobreguez",
+      "en": "Penumbra Pendant",
+      "heroico": true,
+      "bono_ranura": "+4 fuerza",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza",
+          "ignora_color": true
+        }
+      ]
+    },
+    "shoulder": {
+      "ranura": "Hombros",
+      "id": 51311,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shoulder_130",
+      "nombre": "Hombreras de Señor de la Plaga santificadas",
+      "en": "Sanctified Scourgelord Shoulderplates",
+      "heroico": true,
+      "bono_ranura": "+4 fuerza",
+      "encantamiento": {
+        "nombre": "Inscripción del hacha superior",
+        "icono": "trade_engineering",
+        "efecto": "Poder de ataque y crítico",
+        "origen": "Hijos de Hodir, Exaltado"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "back": {
+      "ranura": "Espalda",
+      "id": 47546,
+      "ilvl": 272,
+      "calidad": 4,
+      "icono": "inv_misc_cape_18",
+      "nombre": "Astucia de Sylvanas",
+      "en": "Sylvanas' Cunning",
+      "heroico": true,
+      "bono_ranura": "+8 poder de ataque",
+      "encantamiento": {
+        "nombre": "Encantar capa: velocidad superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+23 celeridad",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "chest": {
+      "ranura": "Pecho",
+      "id": 51314,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_chest_plate_26",
+      "nombre": "Coraza de Señor de la Plaga santificada",
+      "en": "Sanctified Scourgelord Battleplate",
+      "heroico": true,
+      "bono_ranura": "+6 fuerza",
+      "encantamiento": {
+        "nombre": "Encantar pechera: estadísticas potentes",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+10 a todas las estadísticas",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza",
+          "ignora_color": true
+        }
+      ]
+    },
+    "wrist": {
+      "ranura": "Muñecas",
+      "id": 54580,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_bracer_41",
+      "nombre": "Bandas agraviadas",
+      "en": "Umbrage Armbands",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar brazales: asalto superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+50 poder de ataque",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "hands": {
+      "ranura": "Manos",
+      "id": 51310,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_gauntlets_87",
+      "nombre": "Manoplas de Señor de la Plaga santificadas",
+      "en": "Sanctified Scourgelord Gauntlets",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar guantes: triturador",
+        "icono": "trade_engineering",
+        "efecto": "+44 poder de ataque (Ingeniería: aceleradores)",
+        "origen": "Encantamiento / Ingeniería"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "waist": {
+      "ranura": "Cintura",
+      "id": 50707,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_belt_61",
+      "nombre": "Cincho suturado de Astrylian",
+      "en": "Astrylian's Sutured Cinch",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Hebilla de cinturón eterna",
+        "icono": "inv_belt_36",
+        "efecto": "+1 ranura de gema",
+        "origen": "Herrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "legs": {
+      "ranura": "Piernas",
+      "id": 51313,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_pants_plate_31",
+      "nombre": "Musleras de Señor de la Plaga santificadas",
+      "en": "Sanctified Scourgelord Legplates",
+      "heroico": true,
+      "bono_ranura": "+6 fuerza",
+      "encantamiento": {
+        "nombre": "Armadura de pierna de escama de hielo",
+        "icono": "trade_leatherworking",
+        "efecto": "+75 poder de ataque y +22 crítico",
+        "origen": "Peletería"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza",
+          "ignora_color": true
+        }
+      ]
+    },
+    "feet": {
+      "ranura": "Pies",
+      "id": 54578,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_boots_plate_12",
+      "nombre": "Avanzado del Apocalipsis",
+      "en": "Apocalypse's Advance",
+      "heroico": true,
+      "bono_ranura": "+6 fuerza",
+      "encantamiento": {
+        "nombre": "Encantar botas: asalto superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+32 poder de ataque",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "ring1": {
+      "ranura": "Anillo",
+      "id": 50402,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_81",
+      "nombre": "Sortija Cinérea de venganza infinita",
+      "en": "Ashen Band of Endless Vengeance",
+      "heroico": false,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar anillo: asalto",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "Mejora ofensiva personal (solo Encantador)",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 50618,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "item_icecrownringa",
+      "nombre": "Anillo de zafiro Razaescarcha",
+      "en": "Frostbrood Sapphire Ring",
+      "heroico": true,
+      "bono_ranura": "+4 índice de golpe crítico",
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "trinket1": {
+      "ranura": "Abalorio",
+      "id": 50362,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_trinket_04",
+      "nombre": "Testamento del Libramorte",
+      "en": "Deathbringer's Will",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 54590,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum4",
+      "nombre": "Escama Crepuscular afilada",
+      "en": "Sharpened Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "weapon": {
+      "ranura": "Arma",
+      "id": 50737,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_axe_113",
+      "nombre": "Llamada del caos, hoja de los Reyes de Lordaeron",
+      "en": "Havoc's Call, Blade of Lordaeron Kings",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Runa del cruzado caído",
+        "icono": "inv_axe_85",
+        "efecto": "Sanación y poder de ataque ocasional",
+        "origen": "Forja de runas, Acherus"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza"
+        }
+      ]
+    },
+    "offhand": {
+      "ranura": "Arma",
+      "id": 50704,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_sword_130",
+      "nombre": "Rigor mortis",
+      "en": "Rigormortis",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Runa del cruzado caído",
+        "icono": "inv_axe_85",
+        "efecto": "Sanación y poder de ataque ocasional",
+        "origen": "Forja de runas, Acherus"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno llamativo",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+20 fuerza",
+          "ignora_color": true
+        }
+      ]
+    }
+  }
+}

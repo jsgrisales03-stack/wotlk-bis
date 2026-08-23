@@ -1,0 +1,437 @@
+{
+  "id": "guerrero-proteccion",
+  "personaje": "LochRaven",
+  "clase": "Guerrero",
+  "especializacion": "Protección",
+  "rol": "Tanque — PvE",
+  "raza": "Orco",
+  "faccion": "Horda",
+  "clase_icono": "ability_warrior_defensivestance",
+  "nota": "Conjunto de referencia ICC 25 heroico. Misma coraza de placas Ymirjar que Furia, itemización de tanque.",
+  "gemas_clave": {
+    "meta": {
+      "id": 41380,
+      "nombre": "Diamante de asedio de tierra austero",
+      "icono": "inv_jewelcrafting_shadowspirit_02",
+      "efecto": "+32 aguante y +2% de armadura de objetos",
+      "requisito": "Requiere al menos 2 gemas azules y 1 roja"
+    },
+    "azul": {
+      "id": 40119,
+      "nombre": "Circón majestuoso sólido",
+      "icono": "inv_jewelcrafting_gem_42",
+      "efecto": "+30 aguante",
+      "color": "Azul"
+    }
+  },
+  "orden": [
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "weapon",
+    "relic"
+  ],
+  "piezas": {
+    "head": {
+      "ranura": "Cabeza",
+      "id": 51227,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_helmet_158",
+      "nombre": "Casco de señor Ymirjar santificado",
+      "en": "Sanctified Ymirjar Lord's Helmet",
+      "heroico": true,
+      "bono_ranura": "+8 fuerza",
+      "encantamiento": {
+        "nombre": "Arcanum del adepto protector",
+        "icono": "ability_warrior_swordandboard",
+        "efecto": "+37 aguante y +20 defensa",
+        "origen": "Cruzada Argenta, Reputado"
+      },
+      "gemas": [
+        {
+          "ranura": "Meta",
+          "gema": "Diamante de asedio de tierra austero",
+          "icono": "inv_jewelcrafting_shadowspirit_02",
+          "efecto": "+32 aguante y +2% de armadura de objetos"
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "neck": {
+      "ranura": "Cuello",
+      "id": 50682,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "item_icecrownnecklaceb",
+      "nombre": "Medallón con bilis incrustada",
+      "en": "Bile-Encrusted Medallion",
+      "heroico": true,
+      "bono_ranura": "+6 aguante",
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "shoulder": {
+      "ranura": "Hombros",
+      "id": 51229,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shoulder_129",
+      "nombre": "Hombreras de placas de señor Ymirjar santificadas",
+      "en": "Sanctified Ymirjar Lord's Shoulderplates",
+      "heroico": true,
+      "bono_ranura": "+4 fuerza",
+      "encantamiento": {
+        "nombre": "Inscripción del gladiador superior",
+        "icono": "inv_shoulder_61",
+        "efecto": "+30 aguante y +15 temple",
+        "origen": "Vendedores JcJ"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "back": {
+      "ranura": "Espalda",
+      "id": 50718,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_misc_cape_18",
+      "nombre": "Capa carmesí real",
+      "en": "Royal Crimson Cloak",
+      "heroico": true,
+      "bono_ranura": "+6 aguante",
+      "encantamiento": {
+        "nombre": "Encantar capa: Armadura poderosa",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+225 armadura",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "chest": {
+      "ranura": "Pecho",
+      "id": 51225,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_chest_plate_25",
+      "nombre": "Placa de batalla de señor Ymirjar santificada",
+      "en": "Sanctified Ymirjar Lord's Battleplate",
+      "heroico": true,
+      "bono_ranura": "+6 fuerza",
+      "encantamiento": {
+        "nombre": "Encantar pechera: supersalud",
+        "icono": "trade_engraving",
+        "efecto": "+275 salud",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        }
+      ]
+    },
+    "wrist": {
+      "ranura": "Muñecas",
+      "id": 54580,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_bracer_41",
+      "nombre": "Bandas agraviadas",
+      "en": "Umbrage Armbands",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar brazales: aguante sublime",
+        "icono": "inv_enchant_formulasuperior_01",
+        "efecto": "+40 aguante",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "hands": {
+      "ranura": "Manos",
+      "id": 50619,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_gauntlets_84",
+      "nombre": "Guantes de acechador Anub'ar",
+      "en": "Anub'ar Stalker's Gloves",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar guantes: triturador",
+        "icono": "trade_engineering",
+        "efecto": "+44 poder de ataque (Ingeniería: aceleradores)",
+        "origen": "Encantamiento / Ingeniería"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "waist": {
+      "ranura": "Cintura",
+      "id": 50707,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_belt_61",
+      "nombre": "Cincho suturado de Astrylian",
+      "en": "Astrylian's Sutured Cinch",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Hebilla de cinturón eterna",
+        "icono": "inv_belt_36",
+        "efecto": "+1 ranura de gema",
+        "origen": "Herrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "legs": {
+      "ranura": "Piernas",
+      "id": 51228,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_pants_plate_32",
+      "nombre": "Quijotes de señor Ymirjar santificados",
+      "en": "Sanctified Ymirjar Lord's Legplates",
+      "heroico": true,
+      "bono_ranura": "+6 fuerza",
+      "encantamiento": {
+        "nombre": "Armadura para pierna de pellejo de escarcha",
+        "icono": "inv_misc_armorkit_18",
+        "efecto": "+55 aguante y +22 agilidad",
+        "origen": "Peletería"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        }
+      ]
+    },
+    "feet": {
+      "ranura": "Pies",
+      "id": 54578,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_boots_plate_12",
+      "nombre": "Avanzado del Apocalipsis",
+      "en": "Apocalypse's Advance",
+      "heroico": true,
+      "bono_ranura": "+6 fuerza",
+      "encantamiento": {
+        "nombre": "Encantar botas: vitalidad de los colmillarr",
+        "icono": "trade_engraving",
+        "efecto": "+15 aguante y velocidad menor",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring1": {
+      "ranura": "Anillo",
+      "id": 50622,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_86",
+      "nombre": "Anillo eternamente frío de Devium",
+      "en": "Devium's Eternally Cold Ring",
+      "heroico": true,
+      "bono_ranura": "+6 aguante",
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 50404,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_84",
+      "nombre": "Sortija Cinérea de coraje infinito",
+      "en": "Ashen Band of Endless Courage",
+      "heroico": false,
+      "bono_ranura": "+6 aguante",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "trinket1": {
+      "ranura": "Abalorio",
+      "id": 54591,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum3",
+      "nombre": "Escama Crepuscular petrificada",
+      "en": "Petrified Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 50364,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_trinket_06",
+      "nombre": "Colmillo impecable de Sindragosa",
+      "en": "Sindragosa's Flawless Fang",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "weapon": {
+      "ranura": "Arma",
+      "id": 50704,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_sword_130",
+      "nombre": "Rigor mortis",
+      "en": "Rigormortis",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar arma: matanza mayor",
+        "icono": "inv_enchant_formulasuperior_01",
+        "efecto": "+110 poder de ataque (arma a dos manos)",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        }
+      ]
+    },
+    "relic": {
+      "ranura": "Escudo",
+      "id": 50616,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shield_72",
+      "nombre": "Baluarte de acero humeante",
+      "en": "Bulwark of Smouldering Steel",
+      "heroico": true,
+      "bono_ranura": null
+    }
+  }
+}

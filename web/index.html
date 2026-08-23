@@ -1,39 +1,342 @@
-<title>WotLK BiS Builds</title>
+<meta charset="utf-8">
+<title>Arsenal de Corona de Hielo</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#0a090e;--p:#13111a;--ln:#2a2536;--ln2:#362f45;--tx:#ddd8e8;--tn:#918aa5;--go:#d9b45b;--dk:#c41e3a}
+:root{
+  --bg:#0a090e;--p:#13111a;--p2:#1a1722;--ln:#2a2536;--ln2:#362f45;
+  --tx:#ddd8e8;--tn:#918aa5;--db:#5a536b;--go:#d9b45b;--gr:#40d97e;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--tx);font:14px/1.5 Barlow,"Segoe UI",system-ui,sans-serif;
-  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
-h1{font:700 clamp(28px,4vw,42px)/1.1 Cinzel,Georgia,serif;color:#f0eaf8;text-align:center;margin-bottom:8px}
-.sub{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--go);text-align:center;margin-bottom:40px}
-.grid{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:700px}
-a.card{display:flex;flex-direction:column;align-items:center;gap:14px;
-  background:var(--p);border:1px solid var(--ln);border-radius:12px;
-  padding:28px 32px;width:280px;text-decoration:none;color:var(--tx);
-  transition:border-color .2s,transform .15s,box-shadow .2s}
-a.card:hover{border-color:var(--ln2);transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.4)}
-.card-icon{font-size:48px;line-height:1}
-.card-title{font:600 18px/1.2 Cinzel,Georgia,serif;color:#f0eaf8}
-.card-role{font-size:12px;color:var(--tn);text-transform:uppercase;letter-spacing:2px}
-.card-spec{font-size:13px;color:var(--go)}
-footer{margin-top:50px;font-size:10.5px;color:#47425a;text-align:center}
+body{background:var(--bg);color:var(--tx);
+  font:14px/1.5 Barlow,"Segoe UI",system-ui,sans-serif;
+  min-height:100vh;display:flex;flex-direction:column}
+
+/* site header */
+.site-header{position:sticky;top:0;z-index:150;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;background:rgba(10,9,14,.9);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--ln)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.brand-mark{width:26px;height:26px;border-radius:6px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--go),#7a5a1e);
+  display:flex;align-items:center;justify-content:center;
+  font:700 13px Cinzel,serif;color:#1a1408}
+.brand-name{font:600 15px Cinzel,Georgia,serif;color:#f0eaf8;letter-spacing:.3px}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a{text-decoration:none;color:var(--tn);font-size:12.5px;font-weight:600;
+  padding:7px 12px;border-radius:16px;transition:color .15s,background .15s}
+.nav a:hover{color:var(--tx);background:var(--p2)}
+.nav a.current{color:#f0eaf8;background:var(--p2)}
+
+.lang-switch{display:flex;gap:2px;background:var(--p);border:1px solid var(--ln);
+  border-radius:20px;padding:3px;margin-left:6px}
+.lang-switch button{border:0;background:transparent;color:var(--tn);
+  font:600 11px/1 Barlow,sans-serif;padding:5px 11px;border-radius:16px;
+  cursor:pointer;letter-spacing:.5px}
+.lang-switch button.active{background:var(--ln2);color:#f0eaf8}
+
+.page{max-width:1100px;margin:0 auto;padding:44px 24px 32px;flex:1;width:100%}
+
+/* hero / intro */
+.hero{text-align:center;margin-bottom:20px}
+h1{font:700 clamp(26px,4vw,40px)/1.15 Cinzel,Georgia,serif;color:#f0eaf8;text-wrap:balance}
+.sub{font-size:12.5px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--go);margin-top:10px}
+
+.intro{max-width:680px;margin:22px auto 40px;text-align:center;
+  color:var(--tn);font-size:14px;line-height:1.65}
+.intro strong{color:var(--tx);font-weight:600}
+.intro-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px}
+.intro-tags span{font-size:11px;letter-spacing:.5px;text-transform:uppercase;
+  color:var(--tn);background:var(--p);border:1px solid var(--ln);
+  border-radius:14px;padding:5px 12px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+
+.class-card{background:var(--p);border:1px solid var(--ln);border-radius:10px;
+  padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.class-card.active{border-color:var(--ln2)}
+.class-head{display:flex;align-items:center;gap:10px}
+.class-name{font:600 15.5px/1.2 Cinzel,Georgia,serif;color:#f0eaf8}
+
+.specs{display:flex;flex-direction:column;gap:6px}
+a.spec{display:flex;justify-content:space-between;align-items:center;
+  text-decoration:none;color:var(--tx);
+  background:var(--p2);border:1px solid var(--ln);border-radius:6px;
+  padding:8px 12px;font-size:13px;transition:border-color .15s,background .15s}
+a.spec:hover{border-color:var(--gr);background:#1c2620}
+a.spec .role{color:var(--tn);font-size:11px}
+a.spec .dot{width:6px;height:6px;border-radius:50%;background:var(--gr);flex:0 0 auto}
+
+.spec.pending{display:flex;justify-content:space-between;align-items:center;
+  background:transparent;border:1px dashed var(--ln);border-radius:6px;
+  padding:8px 12px;font-size:13px;color:var(--db)}
+.spec.pending .role{color:var(--db);font-size:11px}
+.spec.pending .dot{width:6px;height:6px;border-radius:50%;background:var(--db);flex:0 0 auto}
+
+/* site footer */
+.site-footer{border-top:1px solid var(--ln);margin-top:56px;padding:28px 24px;
+  display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.footer-links a{color:var(--tn);font-size:12px;text-decoration:none;font-weight:600}
+.footer-links a:hover{color:var(--tx)}
+.footer-copy{font-size:10.5px;color:#47425a}
 </style>
-<h1>Caballero de la Muerte</h1>
-<div class="sub">Builds de equipo · WotLK</div>
-<div class="grid">
-  <a class="card" href="dk-profano.html">
-    <div class="card-icon">⚔️</div>
-    <div class="card-title">Profano</div>
-    <div class="card-role">DPS cuerpo a cuerpo</div>
-    <div class="card-spec">16 piezas · ICC 25 heroico</div>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">A</div>
+    <div class="brand-name">Arsenal de Corona de Hielo</div>
   </a>
-  <a class="card" href="dk-sangre.html">
-    <div class="card-icon">🛡️</div>
-    <div class="card-title">Sangre</div>
-    <div class="card-role">Tanque</div>
-    <div class="card-spec">16 piezas · ICC 25 heroico</div>
-  </a>
+  <nav class="nav">
+    <a href="index.html" class="current i18n" data-es="Builds" data-en="Builds">Builds</a>
+    <a href="comentarios.html" class="i18n" data-es="Comentarios" data-en="Comments">Comentarios</a>
+    <div class="lang-switch">
+      <button data-lang="es">ES</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </nav>
+</header>
+
+<div class="page">
+
+<div class="hero">
+  <h1 class="i18n" data-es="Arsenal de Corona de Hielo" data-en="Icecrown Arsenal">Arsenal de Corona de Hielo</h1>
+  <div class="sub i18n" data-es="Guías de equipo WotLK · PvE" data-en="WotLK Gear Guides · PvE">Guías de equipo WotLK · PvE</div>
 </div>
-<footer>World of Warcraft © Blizzard Entertainment. Datos verificados contra Wowhead WotLK Classic.</footer>
+
+<p class="intro i18n"
+   data-es="Referencia de <strong>equipo BiS de PvE</strong> para cada clase y especialización de Wrath of the Lich King, pensada para Ciudadela de la Corona de Hielo 25 jugadores heroico. Cada ficha muestra las piezas, gemas y encantamientos recomendados con nombres en español, y permite ver el detalle de gemas al pasar el cursor sobre cada objeto. Los datos se verifican contra Wowhead WotLK Classic."
+   data-en="A reference of <strong>PvE BiS gear</strong> for every Wrath of the Lich King class and specialization, built around Icecrown Citadel 25-man Heroic. Each page shows the recommended pieces, gems and enchants with hover detail on every item. Data is verified against Wowhead WotLK Classic."
+>Referencia de <strong>equipo BiS de PvE</strong> para cada clase y especialización de Wrath of the Lich King, pensada para Ciudadela de la Corona de Hielo 25 jugadores heroico. Cada ficha muestra las piezas, gemas y encantamientos recomendados con nombres en español, y permite ver el detalle de gemas al pasar el cursor sobre cada objeto. Los datos se verifican contra Wowhead WotLK Classic.</p>
+
+<div class="intro-tags">
+  <span class="i18n" data-es="ICC 25 heroico" data-en="ICC 25 Heroic">ICC 25 heroico</span>
+  <span class="i18n" data-es="Gemas y encantamientos" data-en="Gems &amp; enchants">Gemas y encantamientos</span>
+  <span class="i18n" data-es="Nombres en español" data-en="Spanish item names">Nombres en español</span>
+  <span class="i18n" data-es="10 clases" data-en="10 classes">10 clases</span>
+</div>
+
+<div class="grid">
+
+  <div class="class-card active">
+    <div class="class-head">
+      <div class="class-name i18n" data-es="Caballero de la Muerte" data-en="Death Knight">Caballero de la Muerte</div>
+    </div>
+    <div class="specs">
+      <a class="spec" href="dk-profano.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Profano" data-en="Unholy">Profano</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+      <a class="spec" href="dk-sangre.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Sangre" data-en="Blood">Sangre</span></span>
+        <span class="role i18n" data-es="Tanque" data-en="Tank">Tanque</span>
+      </a>
+      <a class="spec" href="dk-escarcha.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Escarcha" data-en="Frost">Escarcha</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Guerrero" data-en="Warrior">Guerrero</div></div>
+    <div class="specs">
+      <a class="spec" href="guerrero-armas.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Armas" data-en="Arms">Armas</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+      <a class="spec" href="guerrero-furia.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Furia" data-en="Fury">Furia</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+      <a class="spec" href="guerrero-proteccion.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Protección" data-en="Protection">Protección</span></span>
+        <span class="role i18n" data-es="Tanque" data-en="Tank">Tanque</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Paladín" data-en="Paladin">Paladín</div></div>
+    <div class="specs">
+      <a class="spec" href="paladin-reprension.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Reprensión" data-en="Retribution">Reprensión</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+      <a class="spec" href="paladin-proteccion.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Protección" data-en="Protection">Protección</span></span>
+        <span class="role i18n" data-es="Tanque" data-en="Tank">Tanque</span>
+      </a>
+      <a class="spec" href="paladin-sagrado.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Sagrado" data-en="Holy">Sagrado</span></span>
+        <span class="role i18n" data-es="Sanador" data-en="Healer">Sanador</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Cazador" data-en="Hunter">Cazador</div></div>
+    <div class="specs">
+      <a class="spec" href="cazador-punteria.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Puntería" data-en="Marksmanship">Puntería</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+      <a class="spec" href="cazador-bestias.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Bestias" data-en="Beast Mastery">Bestias</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+      <a class="spec" href="cazador-supervivencia.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Supervivencia" data-en="Survival">Supervivencia</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Pícaro" data-en="Rogue">Pícaro</div></div>
+    <div class="specs">
+      <a class="spec" href="picaro-asesinato.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Asesinato" data-en="Assassination">Asesinato</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+      <a class="spec" href="picaro-combate.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Combate" data-en="Combat">Combate</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+      <a class="spec" href="picaro-sutileza.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Sutileza" data-en="Subtlety">Sutileza</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Sacerdote" data-en="Priest">Sacerdote</div></div>
+    <div class="specs">
+      <a class="spec" href="sacerdote-disciplina.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Disciplina" data-en="Discipline">Disciplina</span></span>
+        <span class="role i18n" data-es="Sanador" data-en="Healer">Sanador</span>
+      </a>
+      <a class="spec" href="sacerdote-sagrado.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Sagrado" data-en="Holy">Sagrado</span></span>
+        <span class="role i18n" data-es="Sanador" data-en="Healer">Sanador</span>
+      </a>
+      <a class="spec" href="sacerdote-sombras.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Sombras" data-en="Shadow">Sombras</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Chamán" data-en="Shaman">Chamán</div></div>
+    <div class="specs">
+      <a class="spec" href="chaman-elemental.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Elemental" data-en="Elemental">Elemental</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+      <a class="spec" href="chaman-mejora.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Mejora" data-en="Enhancement">Mejora</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+      <a class="spec" href="chaman-restauracion.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Restauración" data-en="Restoration">Restauración</span></span>
+        <span class="role i18n" data-es="Sanador" data-en="Healer">Sanador</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Mago" data-en="Mage">Mago</div></div>
+    <div class="specs">
+      <a class="spec" href="mago-arcano.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Arcano" data-en="Arcane">Arcano</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+      <a class="spec" href="mago-fuego.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Fuego" data-en="Fire">Fuego</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+      <a class="spec" href="mago-escarcha.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Escarcha" data-en="Frost">Escarcha</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Brujo" data-en="Warlock">Brujo</div></div>
+    <div class="specs">
+      <a class="spec" href="brujo-afliccion.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Aflicción" data-en="Affliction">Aflicción</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+      <a class="spec" href="brujo-demonologia.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Demonología" data-en="Demonology">Demonología</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+      <a class="spec" href="brujo-destruccion.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Destrucción" data-en="Destruction">Destrucción</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="class-card active">
+    <div class="class-head"><div class="class-name i18n" data-es="Druida" data-en="Druid">Druida</div></div>
+    <div class="specs">
+      <a class="spec" href="druida-equilibrio.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Equilibrio" data-en="Balance">Equilibrio</span></span>
+        <span class="role i18n" data-es="DPS distancia" data-en="Ranged DPS">DPS distancia</span>
+      </a>
+      <a class="spec" href="druida-feral-tanque.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Feral · Tanque" data-en="Feral · Tank">Feral · Tanque</span></span>
+        <span class="role i18n" data-es="Tanque" data-en="Tank">Tanque</span>
+      </a>
+      <a class="spec" href="druida-feral-dps.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Feral · DPS" data-en="Feral · DPS">Feral · DPS</span></span>
+        <span class="role i18n" data-es="DPS cc" data-en="Melee DPS">DPS cc</span>
+      </a>
+      <a class="spec" href="druida-restauracion.html">
+        <span><span class="dot"></span> <span class="i18n" data-es="Restauración" data-en="Restoration">Restauración</span></span>
+        <span class="role i18n" data-es="Sanador" data-en="Healer">Sanador</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html" class="i18n" data-es="Builds" data-en="Builds">Builds</a>
+    <a href="comentarios.html" class="i18n" data-es="Comentarios" data-en="Comments">Comentarios</a>
+    <a href="https://www.wowhead.com/wotlk" target="_blank" rel="noopener">Wowhead WotLK</a>
+    <a href="https://github.com/jsgrisales03-stack/wotlk-bis" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="footer-copy i18n" data-es="World of Warcraft © Blizzard Entertainment. Datos verificados contra Wowhead WotLK Classic." data-en="World of Warcraft © Blizzard Entertainment. Data verified against Wowhead WotLK Classic.">World of Warcraft © Blizzard Entertainment. Datos verificados contra Wowhead WotLK Classic.</div>
+</footer>
+
+<script>
+(function(){
+  var KEY='wotlk-lang';
+  function apply(l){
+    document.documentElement.lang = l;
+    document.querySelectorAll('.i18n').forEach(function(el){
+      var v = l==='en' ? (el.getAttribute('data-en')||el.getAttribute('data-es')) : el.getAttribute('data-es');
+      if (v.indexOf('<') !== -1) { el.innerHTML = v; } else { el.textContent = v; }
+    });
+    document.querySelectorAll('.lang-switch button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.lang===l);
+    });
+    localStorage.setItem(KEY, l);
+  }
+  document.querySelectorAll('.lang-switch button').forEach(function(b){
+    b.addEventListener('click', function(){ apply(b.dataset.lang); });
+  });
+  apply(localStorage.getItem(KEY) || 'es');
+})();
+</script>

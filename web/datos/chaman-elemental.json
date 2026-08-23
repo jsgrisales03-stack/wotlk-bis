@@ -1,0 +1,433 @@
+{
+  "id": "chaman-elemental",
+  "personaje": "LochRaven",
+  "clase": "Chamán",
+  "especializacion": "Elemental",
+  "rol": "DPS a distancia — PvE",
+  "raza": "Trol",
+  "faccion": "Horda",
+  "clase_icono": "spell_nature_lightningoverload",
+  "nota": "Conjunto de referencia ICC 25 heroico. Misma coraza de bruja de Escarcha que Mejora, itemización caster.",
+  "gemas_clave": {
+    "meta": {
+      "id": 41333,
+      "nombre": "Diamante de llama celeste de ascuas",
+      "icono": "inv_jewelcrafting_icediamond_02",
+      "efecto": "+25 poder con hechizos, +2% intelecto",
+      "requisito": "Requiere al menos 3 gemas rojas"
+    },
+    "roja": {
+      "id": 40113,
+      "nombre": "Rubí cárdeno rúnico",
+      "icono": "inv_jewelcrafting_gem_37",
+      "efecto": "+23 poder con hechizos",
+      "color": "Roja"
+    }
+  },
+  "orden": [
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "weapon",
+    "relic"
+  ],
+  "piezas": {
+    "head": {
+      "ranura": "Cabeza",
+      "id": 51242,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_helmet_169",
+      "nombre": "Visera de bruja de Escarcha santificada",
+      "en": "Sanctified Frost Witch's Faceguard",
+      "heroico": true,
+      "bono_ranura": "+16 poder de ataque",
+      "encantamiento": {
+        "nombre": "Arcanum de misterios ardientes",
+        "icono": "spell_fire_masterofelements",
+        "efecto": "+30 poder con hechizos y +20 índice de golpe crítico",
+        "origen": "Kirin Tor, Reverenciado"
+      },
+      "gemas": [
+        {
+          "ranura": "Meta",
+          "gema": "Diamante de llama celeste de ascuas",
+          "icono": "inv_jewelcrafting_icediamond_02",
+          "efecto": "+25 poder con hechizos, +2% intelecto"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "neck": {
+      "ranura": "Cuello",
+      "id": 50658,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "item_icecrownnecklaced",
+      "nombre": "Amuleto de la elegía silenciosa",
+      "en": "Amulet of the Silent Eulogy",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "shoulder": {
+      "ranura": "Hombros",
+      "id": 51240,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shoulder_133",
+      "nombre": "Guardahombros de bruja de Escarcha santificados",
+      "en": "Sanctified Frost Witch's Shoulderguards",
+      "heroico": true,
+      "bono_ranura": "+8 poder de ataque",
+      "encantamiento": {
+        "nombre": "Inscripción de la tormenta superior",
+        "icono": "trade_engineering",
+        "efecto": "+24 poder con hechizos y +15 índice de golpe crítico",
+        "origen": "Hijos de Hodir, Reverenciado"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "back": {
+      "ranura": "Espalda",
+      "id": 54583,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_cape_16",
+      "nombre": "Capa de ocaso ardiente",
+      "en": "Cloak of Burning Dusk",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar capa: Perforar con hechizos",
+        "icono": "inv_scroll_03",
+        "efecto": "+35 penetración de hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "chest": {
+      "ranura": "Pecho",
+      "id": 51244,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_chest_mail_15",
+      "nombre": "Coselete de bruja de Escarcha santificado",
+      "en": "Sanctified Frost Witch's Chestguard",
+      "heroico": true,
+      "bono_ranura": "+12 poder de ataque",
+      "encantamiento": {
+        "nombre": "Encantar pechera: estadísticas potentes",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+10 a todas las estadísticas",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "wrist": {
+      "ranura": "Muñecas",
+      "id": 54582,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_bracer_45",
+      "nombre": "Brazales de noche ígnea",
+      "en": "Bracers of Fiery Night",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar brazales: poder con hechizos excelente",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+30 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "hands": {
+      "ranura": "Manos",
+      "id": 50619,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_gauntlets_84",
+      "nombre": "Guantes de acechador Anub'ar",
+      "en": "Anub'ar Stalker's Gloves",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar guantes: poder con hechizos excepcional",
+        "icono": "inv_scroll_03",
+        "efecto": "+28 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "waist": {
+      "ranura": "Cintura",
+      "id": 50613,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_belt_64",
+      "nombre": "Cinturón de geliespectro aplastante",
+      "en": "Crushing Coldwraith Belt",
+      "heroico": true,
+      "bono_ranura": "+7 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Hebilla de cinturón eterna",
+        "icono": "inv_belt_36",
+        "efecto": "+1 ranura de gema",
+        "origen": "Herrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "legs": {
+      "ranura": "Piernas",
+      "id": 51241,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_kilt_mail_01",
+      "nombre": "Falda de guerra de bruja de Escarcha santificada",
+      "en": "Sanctified Frost Witch's War-Kilt",
+      "heroico": true,
+      "bono_ranura": "+12 poder de ataque",
+      "encantamiento": {
+        "nombre": "Hilo de hechizo de zafiro",
+        "icono": "spell_nature_astralrecalgroup",
+        "efecto": "+50 poder con hechizos y +30 aguante",
+        "origen": "Sastrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "feet": {
+      "ranura": "Pies",
+      "id": 50699,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_boots_cloth_24",
+      "nombre": "Botas de científico de la Peste",
+      "en": "Plague Scientist's Boots",
+      "heroico": true,
+      "bono_ranura": "+7 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar botas: caminante del hielo",
+        "icono": "inv_scroll_03",
+        "efecto": "+12 índice de golpe y +12 índice de golpe crítico",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "ring1": {
+      "ranura": "Anillo",
+      "id": 50664,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_86",
+      "nombre": "Anillo de rápido ascenso",
+      "en": "Ring of Rapid Ascent",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 50398,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_83",
+      "nombre": "Sortija Cinérea de destrucción infinita",
+      "en": "Ashen Band of Endless Destruction",
+      "heroico": false,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "trinket1": {
+      "ranura": "Abalorio",
+      "id": 54590,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum4",
+      "nombre": "Escama Crepuscular afilada",
+      "en": "Sharpened Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 54588,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum2",
+      "nombre": "Escama Crepuscular carbonizada",
+      "en": "Charred Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "weapon": {
+      "ranura": "Arma",
+      "id": 50734,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_mace_115",
+      "nombre": "Cetro real de Terenas II",
+      "en": "Royal Scepter of Terenas II",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar arma: poder con hechizos poderoso",
+        "icono": "inv_scroll_03",
+        "efecto": "+63 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "relic": {
+      "ranura": "Tótem",
+      "id": 50458,
+      "ilvl": 264,
+      "calidad": 4,
+      "icono": "spell_frost_frostnova",
+      "nombre": "Tótem de hielo destrozado de Bizuri",
+      "en": "Bizuri's Totem of Shattered Ice",
+      "heroico": false,
+      "bono_ranura": null
+    }
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "id": "druida-feral-tanque",
+  "personaje": "LochRaven",
+  "clase": "Druida",
+  "especializacion": "Feral — Tanque",
+  "rol": "Tanque — PvE",
+  "raza": "Trol",
+  "faccion": "Horda",
+  "clase_icono": "ability_racial_bearform",
+  "nota": "Conjunto de referencia ICC 25 heroico (forma de oso).",
+  "gemas_clave": {
+    "meta": {
+      "id": 41398,
+      "nombre": "Diamante de asedio de tierra incansable",
+      "icono": "inv_jewelcrafting_shadowspirit_02",
+      "efecto": "+21 agilidad y 3% de daño crítico aumentado",
+      "requisito": "Requiere al menos 1 gema roja, 1 amarilla y 1 azul"
+    },
+    "roja": {
+      "id": 40112,
+      "nombre": "Rubí cárdeno rúnico delicado",
+      "icono": "inv_jewelcrafting_gem_37",
+      "efecto": "+23 agilidad",
+      "color": "Roja"
+    }
+  },
+  "orden": [
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "weapon",
+    "relic"
+  ],
+  "piezas": {
+    "head": {
+      "ranura": "Cabeza",
+      "id": 51296,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_helmet_148",
+      "nombre": "Protegecabezas tejeazote santificado",
+      "en": "Sanctified Lasherweave Headguard",
+      "heroico": true,
+      "bono_ranura": "+8 agilidad",
+      "encantamiento": {
+        "nombre": "Arcanum de tormento",
+        "icono": "ability_warrior_rampage",
+        "efecto": "+50 poder de ataque y +20 índice de golpe crítico",
+        "origen": "Caballeros de la Espada de Ébano"
+      },
+      "gemas": [
+        {
+          "ranura": "Meta",
+          "gema": "Diamante de asedio de tierra incansable",
+          "icono": "inv_jewelcrafting_shadowspirit_02",
+          "efecto": "+21 agilidad y 3% de daño crítico aumentado"
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "neck": {
+      "ranura": "Cuello",
+      "id": 50682,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "item_icecrownnecklaceb",
+      "nombre": "Medallón con bilis incrustada",
+      "en": "Bile-Encrusted Medallion",
+      "heroico": true,
+      "bono_ranura": "+6 aguante",
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        }
+      ]
+    },
+    "shoulder": {
+      "ranura": "Hombros",
+      "id": 51299,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shoulder_111",
+      "nombre": "Hombreras tejeazote santificadas",
+      "en": "Sanctified Lasherweave Shoulderpads",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Inscripción del hacha superior",
+        "icono": "trade_engineering",
+        "efecto": "Poder de ataque y crítico",
+        "origen": "Hijos de Hodir, Exaltado"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "back": {
+      "ranura": "Espalda",
+      "id": 50718,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_misc_cape_18",
+      "nombre": "Capa carmesí real",
+      "en": "Royal Crimson Cloak",
+      "heroico": true,
+      "bono_ranura": "+6 aguante",
+      "encantamiento": {
+        "nombre": "Encantar capa: velocidad superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+23 celeridad",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "chest": {
+      "ranura": "Pecho",
+      "id": 50656,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_chest_leather_22",
+      "nombre": "Saco de maravillas de Ikfirus",
+      "en": "Ikfirus's Sack of Wonder",
+      "heroico": true,
+      "bono_ranura": "+8 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar pechera: estadísticas potentes",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+10 a todas las estadísticas",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "wrist": {
+      "ranura": "Muñecas",
+      "id": 54580,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_bracer_41",
+      "nombre": "Bandas agraviadas",
+      "en": "Umbrage Armbands",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar brazales: asalto superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+50 poder de ataque",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        }
+      ]
+    },
+    "hands": {
+      "ranura": "Manos",
+      "id": 51295,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_gauntlets_83",
+      "nombre": "Lúas tejeazote santificadas",
+      "en": "Sanctified Lasherweave Handgrips",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar guantes: triturador",
+        "icono": "trade_engineering",
+        "efecto": "+44 poder de ataque (Ingeniería: aceleradores)",
+        "origen": "Encantamiento / Ingeniería"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        }
+      ]
+    },
+    "waist": {
+      "ranura": "Cintura",
+      "id": 50707,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_belt_61",
+      "nombre": "Cincho suturado de Astrylian",
+      "en": "Astrylian's Sutured Cinch",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Hebilla de cinturón eterna",
+        "icono": "inv_belt_36",
+        "efecto": "+1 ranura de gema",
+        "origen": "Herrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        }
+      ]
+    },
+    "legs": {
+      "ranura": "Piernas",
+      "id": 51297,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_pants_leather_35",
+      "nombre": "Musleras tejeazote santificadas",
+      "en": "Sanctified Lasherweave Legguards",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Armadura de pierna nerubiana",
+        "icono": "trade_leatherworking",
+        "efecto": "+55 poder de ataque y +15 crítico",
+        "origen": "Peletería"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "feet": {
+      "ranura": "Pies",
+      "id": 50607,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_boots_leather_07",
+      "nombre": "Botas de pelaje congeladas",
+      "en": "Frostbitten Fur Boots",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar botas: asalto superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+32 poder de ataque",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring1": {
+      "ranura": "Anillo",
+      "id": 50622,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_86",
+      "nombre": "Anillo eternamente frío de Devium",
+      "en": "Devium's Eternally Cold Ring",
+      "heroico": true,
+      "bono_ranura": "+6 aguante",
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        }
+      ]
+    },
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 50404,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_84",
+      "nombre": "Sortija Cinérea de coraje infinito",
+      "en": "Ashen Band of Endless Courage",
+      "heroico": false,
+      "bono_ranura": "+6 aguante",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "trinket1": {
+      "ranura": "Abalorio",
+      "id": 54591,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum3",
+      "nombre": "Escama Crepuscular petrificada",
+      "en": "Petrified Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 50364,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_trinket_06",
+      "nombre": "Colmillo impecable de Sindragosa",
+      "en": "Sindragosa's Flawless Fang",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "weapon": {
+      "ranura": "Arma",
+      "id": 50735,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_weapon_staff_109",
+      "nombre": "Vinculador de juramentos, carga del general forestal",
+      "en": "Oathbinder, Charge of the Ranger-General",
+      "heroico": true,
+      "bono_ranura": "+8 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar arma: matanza mayor",
+        "icono": "inv_enchant_formulasuperior_01",
+        "efecto": "+110 poder de ataque (arma a dos manos)",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Circón majestuoso sólido",
+          "icono": "inv_jewelcrafting_gem_42",
+          "efecto": "+30 aguante",
+          "ignora_color": true
+        }
+      ]
+    },
+    "relic": {
+      "ranura": "Ídolo",
+      "id": 50456,
+      "ilvl": 264,
+      "calidad": 4,
+      "icono": "spell_nature_natureguardian",
+      "nombre": "Ídolo de la luna sollozante",
+      "en": "Idol of the Crying Moon",
+      "heroico": false,
+      "bono_ranura": null
+    }
+  }
+}

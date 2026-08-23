@@ -1,0 +1,138 @@
+<meta charset="utf-8">
+<title>Comentarios · Arsenal de Corona de Hielo</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#0a090e;--p:#13111a;--p2:#1a1722;--ln:#2a2536;--ln2:#362f45;
+  --tx:#ddd8e8;--tn:#918aa5;--db:#5a536b;--go:#d9b45b;--gr:#40d97e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);
+  font:14px/1.5 Barlow,"Segoe UI",system-ui,sans-serif;
+  min-height:100vh;display:flex;flex-direction:column}
+
+.site-header{position:sticky;top:0;z-index:150;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;background:rgba(10,9,14,.9);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--ln)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.brand-mark{width:26px;height:26px;border-radius:6px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--go),#7a5a1e);
+  display:flex;align-items:center;justify-content:center;
+  font:700 13px Cinzel,serif;color:#1a1408}
+.brand-name{font:600 15px Cinzel,Georgia,serif;color:#f0eaf8;letter-spacing:.3px}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a{text-decoration:none;color:var(--tn);font-size:12.5px;font-weight:600;
+  padding:7px 12px;border-radius:16px;transition:color .15s,background .15s}
+.nav a:hover{color:var(--tx);background:var(--p2)}
+.nav a.current{color:#f0eaf8;background:var(--p2)}
+.lang-switch{display:flex;gap:2px;background:var(--p);border:1px solid var(--ln);
+  border-radius:20px;padding:3px;margin-left:6px}
+.lang-switch button{border:0;background:transparent;color:var(--tn);
+  font:600 11px/1 Barlow,sans-serif;padding:5px 11px;border-radius:16px;
+  cursor:pointer;letter-spacing:.5px}
+.lang-switch button.active{background:var(--ln2);color:#f0eaf8}
+
+.page{max-width:680px;margin:0 auto;padding:70px 24px;flex:1;width:100%;
+  display:flex;flex-direction:column;align-items:center;text-align:center}
+
+.icon-badge{width:56px;height:56px;border-radius:50%;
+  background:var(--p);border:1px solid var(--ln2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin-bottom:22px}
+
+h1{font:700 clamp(22px,3.5vw,30px)/1.2 Cinzel,Georgia,serif;color:#f0eaf8;margin-bottom:12px}
+.lead{color:var(--tn);font-size:14.5px;line-height:1.7;max-width:480px}
+.lead strong{color:var(--tx)}
+
+.status-pill{display:inline-flex;align-items:center;gap:6px;margin-top:24px;
+  font-size:11px;letter-spacing:.5px;text-transform:uppercase;
+  color:var(--go);background:var(--p);border:1px solid var(--ln);
+  border-radius:14px;padding:6px 14px}
+.status-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--go)}
+
+.channels{display:flex;flex-direction:column;gap:10px;margin-top:34px;width:100%;max-width:420px}
+.channel{display:flex;align-items:center;justify-content:space-between;
+  background:var(--p);border:1px solid var(--ln);border-radius:8px;
+  padding:12px 16px;text-decoration:none;color:var(--tx);
+  transition:border-color .15s,background .15s}
+.channel:hover{border-color:var(--gr);background:#1c2620}
+.channel-label{font-size:13px;font-weight:600}
+.channel-hint{font-size:11px;color:var(--tn)}
+
+.site-footer{border-top:1px solid var(--ln);margin-top:56px;padding:28px 24px;
+  display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.footer-links a{color:var(--tn);font-size:12px;text-decoration:none;font-weight:600}
+.footer-links a:hover{color:var(--tx)}
+.footer-copy{font-size:10.5px;color:#47425a}
+</style>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">A</div>
+    <div class="brand-name">Arsenal de Corona de Hielo</div>
+  </a>
+  <nav class="nav">
+    <a href="index.html" class="i18n" data-es="Builds" data-en="Builds">Builds</a>
+    <a href="comentarios.html" class="current i18n" data-es="Comentarios" data-en="Comments">Comentarios</a>
+    <div class="lang-switch">
+      <button data-lang="es">ES</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </nav>
+</header>
+
+<div class="page">
+  <div class="icon-badge">💬</div>
+  <h1 class="i18n" data-es="Comentarios" data-en="Comments">Comentarios</h1>
+  <p class="lead i18n"
+     data-es="Todavía no hay un sistema de comentarios conectado en esta página. Cuando lo activemos, aquí podrás <strong>dejar feedback, reportar un dato incorrecto o pedir una build nueva</strong> directamente sobre cada especialización."
+     data-en="There's no comment system wired up here yet. Once it's connected, you'll be able to <strong>leave feedback, report incorrect data, or request a new build</strong> directly on each specialization.">
+    Todavía no hay un sistema de comentarios conectado en esta página. Cuando lo activemos, aquí podrás <strong>dejar feedback, reportar un dato incorrecto o pedir una build nueva</strong> directamente sobre cada especialización.
+  </p>
+
+  <div class="status-pill">
+    <span class="dot"></span>
+    <span class="i18n" data-es="Próximamente" data-en="Coming soon">Próximamente</span>
+  </div>
+
+  <div class="channels">
+    <a class="channel" href="https://github.com/jsgrisales03-stack/wotlk-bis/issues" target="_blank" rel="noopener">
+      <span class="channel-label i18n" data-es="Reportar en GitHub" data-en="Report on GitHub">Reportar en GitHub</span>
+      <span class="channel-hint i18n" data-es="Issues del repo" data-en="Repo issues">Issues del repo</span>
+    </a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html" class="i18n" data-es="Builds" data-en="Builds">Builds</a>
+    <a href="comentarios.html" class="i18n" data-es="Comentarios" data-en="Comments">Comentarios</a>
+    <a href="https://www.wowhead.com/wotlk" target="_blank" rel="noopener">Wowhead WotLK</a>
+    <a href="https://github.com/jsgrisales03-stack/wotlk-bis" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="footer-copy i18n" data-es="World of Warcraft © Blizzard Entertainment. Datos verificados contra Wowhead WotLK Classic." data-en="World of Warcraft © Blizzard Entertainment. Data verified against Wowhead WotLK Classic.">World of Warcraft © Blizzard Entertainment. Datos verificados contra Wowhead WotLK Classic.</div>
+</footer>
+
+<script>
+(function(){
+  var KEY='wotlk-lang';
+  function apply(l){
+    document.documentElement.lang = l;
+    document.querySelectorAll('.i18n').forEach(function(el){
+      var v = l==='en' ? (el.getAttribute('data-en')||el.getAttribute('data-es')) : el.getAttribute('data-es');
+      if (v.indexOf('<') !== -1) { el.innerHTML = v; } else { el.textContent = v; }
+    });
+    document.querySelectorAll('.lang-switch button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.lang===l);
+    });
+    localStorage.setItem(KEY, l);
+  }
+  document.querySelectorAll('.lang-switch button').forEach(function(b){
+    b.addEventListener('click', function(){ apply(b.dataset.lang); });
+  });
+  apply(localStorage.getItem(KEY) || 'es');
+})();
+</script>

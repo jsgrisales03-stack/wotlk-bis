@@ -1,0 +1,431 @@
+{
+  "id": "paladin-sagrado",
+  "personaje": "LochRaven",
+  "clase": "Paladín",
+  "especializacion": "Sagrado",
+  "rol": "Sanador — PvE",
+  "raza": "Elfo de sangre",
+  "faccion": "Horda",
+  "clase_icono": "spell_holy_holybolt",
+  "nota": "Conjunto de referencia ICC 25 heroico. Misma coraza juraluz, itemización de sanador.",
+  "gemas_clave": {
+    "meta": {
+      "id": 41376,
+      "nombre": "Diamante de llama celeste revitalizante",
+      "icono": "inv_jewelcrafting_icediamond_02",
+      "efecto": "+11 maná/5s, +3% curación crítica",
+      "requisito": "Requiere al menos 2 gemas rojas"
+    },
+    "roja": {
+      "id": 40113,
+      "nombre": "Rubí cárdeno rúnico",
+      "icono": "inv_jewelcrafting_gem_37",
+      "efecto": "+23 poder con hechizos",
+      "color": "Roja"
+    }
+  },
+  "orden": [
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "weapon",
+    "relic"
+  ],
+  "piezas": {
+    "head": {
+      "ranura": "Cabeza",
+      "id": 51277,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_helmet_154",
+      "nombre": "Casco juraluz santificado",
+      "en": "Sanctified Lightsworn Helmet",
+      "heroico": true,
+      "bono_ranura": "+8 fuerza",
+      "encantamiento": {
+        "nombre": "Arcanum de alivio de gozo",
+        "icono": "ability_warrior_shieldmastery",
+        "efecto": "+30 poder con hechizos y +10 maná cada 5 segundos",
+        "origen": "Acuerdo del Reposo del Dragón, Reverenciado"
+      },
+      "gemas": [
+        {
+          "ranura": "Meta",
+          "gema": "Diamante de llama celeste revitalizante",
+          "icono": "inv_jewelcrafting_icediamond_02",
+          "efecto": "+11 maná/5s, +3% curación crítica"
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "neck": {
+      "ranura": "Cuello",
+      "id": 50724,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelcrafting_crimsonspinel_02",
+      "nombre": "Gargantilla carmesí de la Reina de Sangre",
+      "en": "Blood Queen's Crimson Choker",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "shoulder": {
+      "ranura": "Hombros",
+      "id": 51279,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shoulder_117",
+      "nombre": "Hombreras de placas juraluz santificadas",
+      "en": "Sanctified Lightsworn Shoulderplates",
+      "heroico": true,
+      "bono_ranura": "+4 fuerza",
+      "encantamiento": {
+        "nombre": "Inscripción del risco superior",
+        "icono": "spell_arcane_teleportorgrimmar",
+        "efecto": "+24 poder con hechizos y +8 maná cada 5 segundos",
+        "origen": "Hijos de Hodir, Reverenciado"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "back": {
+      "ranura": "Espalda",
+      "id": 54583,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_cape_16",
+      "nombre": "Capa de ocaso ardiente",
+      "en": "Cloak of Burning Dusk",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar capa: sabiduría",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+10 espíritu",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "chest": {
+      "ranura": "Pecho",
+      "id": 51275,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_chest_plate22",
+      "nombre": "Placa de batalla juraluz santificada",
+      "en": "Sanctified Lightsworn Battleplate",
+      "heroico": true,
+      "bono_ranura": "+6 fuerza",
+      "encantamiento": {
+        "nombre": "Encantar pechera: estadísticas potentes",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+10 a todas las estadísticas",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "wrist": {
+      "ranura": "Muñecas",
+      "id": 54582,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_bracer_45",
+      "nombre": "Brazales de noche ígnea",
+      "en": "Bracers of Fiery Night",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar brazales: poder con hechizos excelente",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+30 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "hands": {
+      "ranura": "Manos",
+      "id": 50619,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_gauntlets_84",
+      "nombre": "Guantes de acechador Anub'ar",
+      "en": "Anub'ar Stalker's Gloves",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar guantes: poder con hechizos excepcional",
+        "icono": "inv_scroll_03",
+        "efecto": "+28 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "waist": {
+      "ranura": "Cintura",
+      "id": 50702,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_belt_68",
+      "nombre": "Enfermedad persistente",
+      "en": "Lingering Illness",
+      "heroico": true,
+      "bono_ranura": "+7 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Hebilla de cinturón eterna",
+        "icono": "inv_belt_36",
+        "efecto": "+1 ranura de gema",
+        "origen": "Herrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "legs": {
+      "ranura": "Piernas",
+      "id": 51278,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_pants_plate_33",
+      "nombre": "Quijotes juraluz santificados",
+      "en": "Sanctified Lightsworn Legplates",
+      "heroico": true,
+      "bono_ranura": "+6 fuerza",
+      "encantamiento": {
+        "nombre": "Hilo de hechizo de zafiro",
+        "icono": "spell_nature_astralrecalgroup",
+        "efecto": "+50 poder con hechizos y +30 aguante",
+        "origen": "Sastrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "feet": {
+      "ranura": "Pies",
+      "id": 50699,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_boots_cloth_24",
+      "nombre": "Botas de científico de la Peste",
+      "en": "Plague Scientist's Boots",
+      "heroico": true,
+      "bono_ranura": "+7 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar botas: vitalidad superior",
+        "icono": "inv_scroll_03",
+        "efecto": "+7 maná y +7 salud cada 5 segundos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "ring1": {
+      "ranura": "Anillo",
+      "id": 50644,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_ahnqiraj_05",
+      "nombre": "Anillo de susurros enloquecedores",
+      "en": "Ring of Maddening Whispers",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 54585,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "item_icecrownringb",
+      "nombre": "Anillo de regeneración por fase",
+      "en": "Ring of Phased Regeneration",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "trinket1": {
+      "ranura": "Abalorio",
+      "id": 50366,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_trinket_02",
+      "nombre": "Ábaco de Althor",
+      "en": "Althor's Abacus",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 54589,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum1",
+      "nombre": "Escama Crepuscular resplandeciente",
+      "en": "Glowing Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "weapon": {
+      "ranura": "Arma",
+      "id": 51944,
+      "ilvl": 271,
+      "calidad": 4,
+      "icono": "inv_mace_115",
+      "nombre": "Valius, mazo del Iluminado",
+      "en": "Valius, Gavel of the Lightbringer",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar arma: poder con hechizos poderoso",
+        "icono": "inv_scroll_03",
+        "efecto": "+63 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "relic": {
+      "ranura": "Objeto secundario",
+      "id": 50719,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_misc_thread_01",
+      "nombre": "Huso de seda de las Sombras",
+      "en": "Shadow Silk Spindle",
+      "heroico": true,
+      "bono_ranura": null
+    }
+  }
+}

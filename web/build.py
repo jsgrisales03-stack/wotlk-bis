@@ -16,6 +16,15 @@ COLOR_RANURA = {
     "Meta": "#d9b45b", "Prismática": "#c084fc",
 }
 
+CLASE_EN = {"Caballero de la Muerte": "Death Knight", "Sacerdote": "Priest"}
+ESPEC_EN = {
+    "Profano": "Unholy", "Sangre": "Blood", "Escarcha": "Frost",
+    "Sombras": "Shadow", "Disciplina": "Discipline", "Sagrado": "Holy",
+}
+RAZA_EN = {"Orco": "Orc", "Trol": "Troll", "Elfo de sangre": "Blood Elf",
+           "No-muerto": "Undead", "Tauren": "Tauren"}
+FACCION_EN = {"Horda": "Horde", "Alianza": "Alliance"}
+
 def esc(t): return html.escape(str(t), quote=True)
 
 def ic(iconos, nombre, cls, alt=""):
@@ -62,10 +71,11 @@ def slot(p, iconos, lado):
     tt = tooltip_html(p, iconos, lado)
     has_tt = " has-tt" if tt else ""
 
+    en_name = esc(p.get("en", p["nombre"]))
     return f"""<div class="slot {lado}{has_tt}">
   <div class="s-icon {cls}">{ic(iconos, p["icono"], "si", p["nombre"])}<b class="lv">{p["ilvl"]}</b>{h}</div>
   <div class="s-txt">
-    <span class="s-name" style="color:{col}">{esc(p["nombre"])}</span>
+    <span class="s-name i18n" data-es="{esc(p["nombre"])}" data-en="{en_name}" style="color:{col}">{esc(p["nombre"])}</span>
     {enc_line}{dots}
   </div>
   {tt}
@@ -189,6 +199,15 @@ header h1{font:700 clamp(22px,3.5vw,34px)/1.1 Cinzel,Georgia,serif;
 footer{flex:0 0 auto;text-align:center;font-size:10.5px;color:#47425a;
   padding:8px 0 12px}
 
+/* lang switch */
+.lang-switch{position:fixed;top:14px;right:14px;z-index:200;
+  display:flex;gap:2px;background:var(--p);border:1px solid var(--ln);
+  border-radius:20px;padding:3px}
+.lang-switch button{border:0;background:transparent;color:var(--tn);
+  font:600 11px/1 Barlow,sans-serif;padding:5px 11px;border-radius:16px;
+  cursor:pointer;letter-spacing:.5px}
+.lang-switch button.active{background:var(--ln2);color:#f0eaf8}
+
 /* responsive */
 @media(max-width:860px){
   body{overflow:auto;height:auto}
@@ -205,46 +224,79 @@ footer{flex:0 0 auto;text-align:center;font-size:10.5px;color:#47425a;
 
 IZQUIERDA = ["head", "neck", "shoulder", "back", "chest", "wrist"]
 DERECHA = ["hands", "waist", "legs", "feet", "ring1", "ring2"]
-ABAJO = ["trinket1", "trinket2", "weapon", "sigil"]
 
 
 def construir(build_id):
     d = json.load(open(os.path.join(DATOS, build_id + ".json"), encoding="utf-8"))
     iconos = json.load(open(os.path.join(DATOS, "iconos.json"), encoding="utf-8"))
 
+    abajo = d["orden"][12:]
     col_l = "".join(slot(d["piezas"][s], iconos, "izq") for s in IZQUIERDA)
     col_r = "".join(slot(d["piezas"][s], iconos, "der") for s in DERECHA)
-    bot = "".join(slot(d["piezas"][s], iconos, "btm") for s in ABAJO)
-    dk_icon = ic(iconos, "spell_deathknight_classicon", "cl-ic", "DK")
+    bot = "".join(slot(d["piezas"][s], iconos, "btm") for s in abajo)
+    clase_icono = d.get("clase_icono", "spell_deathknight_classicon")
+    cl_icon = ic(iconos, clase_icono, "cl-ic", d["clase"])
+    raza_es = d.get("raza", "Orco")
+    faccion_es = d.get("faccion", "Horda")
 
-    return f"""<title>{esc(d["clase"])} · {esc(d["especializacion"])}</title>
+    clase_es, espec_es = d["clase"], d["especializacion"]
+    clase_en = CLASE_EN.get(clase_es, clase_es)
+    espec_en = ESPEC_EN.get(espec_es, espec_es)
+    footer_es = "Iconos: World of Warcraft © Blizzard Entertainment. Datos verificados contra Wowhead WotLK Classic."
+    footer_en = "Icons: World of Warcraft © Blizzard Entertainment. Data verified against Wowhead WotLK Classic."
+
+    return f"""<meta charset="utf-8">
+<title>{esc(clase_es)} · {esc(espec_es)}</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
 <style>{CSS}</style>
+<div class="lang-switch">
+  <button data-lang="es">ES</button>
+  <button data-lang="en">EN</button>
+</div>
 <div class="page">
 
 <header>
-  <h1>{esc(d["clase"])}</h1>
-  <div class="spec-lab">{esc(d["especializacion"])}</div>
+  <h1 class="i18n" data-es="{esc(clase_es)}" data-en="{esc(clase_en)}">{esc(clase_es)}</h1>
+  <div class="spec-lab i18n" data-es="{esc(espec_es)}" data-en="{esc(espec_en)}">{esc(espec_es)}</div>
 </header>
 
 <div class="pd">
   <div class="col col-l">{col_l}</div>
   <div class="ctr">
     <div class="ctr-bg"></div>
-    {dk_icon}
+    {cl_icon}
     <div class="ctr-t">
-      <div class="race">Orco</div>
-      <div class="fac">Horda</div>
+      <div class="race i18n" data-es="{esc(raza_es)}" data-en="{esc(RAZA_EN.get(raza_es, raza_es))}">{esc(raza_es)}</div>
+      <div class="fac i18n" data-es="{esc(faccion_es)}" data-en="{esc(FACCION_EN.get(faccion_es, faccion_es))}">{esc(faccion_es)}</div>
     </div>
   </div>
   <div class="col col-r">{col_r}</div>
   <div class="bot-row">{bot}</div>
 </div>
 
-<footer>Iconos: World of Warcraft &copy; Blizzard Entertainment. Datos verificados contra Wowhead WotLK Classic.</footer>
+<footer class="i18n" data-es="{esc(footer_es)}" data-en="{esc(footer_en)}">{esc(footer_es)}</footer>
 
-</div>"""
+</div>
+<script>
+(function(){{
+  var KEY='wotlk-lang';
+  function apply(l){{
+    document.documentElement.lang = l;
+    document.querySelectorAll('.i18n').forEach(function(el){{
+      el.textContent = l==='en' ? (el.getAttribute('data-en')||el.getAttribute('data-es')) : el.getAttribute('data-es');
+    }});
+    document.querySelectorAll('.lang-switch button').forEach(function(b){{
+      b.classList.toggle('active', b.dataset.lang===l);
+    }});
+    localStorage.setItem(KEY, l);
+  }}
+  document.querySelectorAll('.lang-switch button').forEach(function(b){{
+    b.addEventListener('click', function(){{ apply(b.dataset.lang); }});
+  }});
+  apply(localStorage.getItem(KEY) || 'es');
+}})();
+</script>"""
 
 
 if __name__ == "__main__":

@@ -1,0 +1,449 @@
+{
+  "id": "picaro-sutileza",
+  "personaje": "LochRaven",
+  "clase": "Pícaro",
+  "especializacion": "Sutileza",
+  "rol": "DPS cuerpo a cuerpo — PvE",
+  "raza": "Trol",
+  "faccion": "Horda",
+  "clase_icono": "ability_stealth",
+  "nota": "Conjunto de referencia ICC 25 heroico.",
+  "gemas_clave": {
+    "meta": {
+      "id": 41398,
+      "nombre": "Diamante de asedio de tierra incansable",
+      "icono": "inv_jewelcrafting_shadowspirit_02",
+      "efecto": "+21 agilidad y 3% de daño crítico aumentado",
+      "requisito": "Requiere al menos 1 gema roja, 1 amarilla y 1 azul"
+    },
+    "roja": {
+      "id": 40112,
+      "nombre": "Rubí cárdeno rúnico delicado",
+      "icono": "inv_jewelcrafting_gem_37",
+      "efecto": "+23 agilidad",
+      "color": "Roja"
+    }
+  },
+  "orden": [
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "weapon",
+    "offhand"
+  ],
+  "piezas": {
+    "head": {
+      "ranura": "Cabeza",
+      "id": 51252,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_helmet_158",
+      "nombre": "Casco de Hoja de las Sombras santificado",
+      "en": "Sanctified Shadowblade Helmet",
+      "heroico": true,
+      "bono_ranura": "+8 agilidad",
+      "encantamiento": {
+        "nombre": "Arcanum de tormento",
+        "icono": "ability_warrior_rampage",
+        "efecto": "+50 poder de ataque y +20 índice de golpe crítico",
+        "origen": "Caballeros de la Espada de Ébano"
+      },
+      "gemas": [
+        {
+          "ranura": "Meta",
+          "gema": "Diamante de asedio de tierra incansable",
+          "icono": "inv_jewelcrafting_shadowspirit_02",
+          "efecto": "+21 agilidad y 3% de daño crítico aumentado"
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "neck": {
+      "ranura": "Cuello",
+      "id": 50633,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_misc_monsterhorn_03",
+      "nombre": "Garra cruel de Sindragosa",
+      "en": "Sindragosa's Cruel Claw",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "shoulder": {
+      "ranura": "Hombros",
+      "id": 51254,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shoulder_113",
+      "nombre": "Espaldares de Hoja de las Sombras santificados",
+      "en": "Sanctified Shadowblade Pauldrons",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Inscripción del hacha superior",
+        "icono": "trade_engineering",
+        "efecto": "Poder de ataque y crítico",
+        "origen": "Hijos de Hodir, Exaltado"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "back": {
+      "ranura": "Espalda",
+      "id": 50653,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "item_icecrowncloak",
+      "nombre": "Capa de destripador de La Cámara de las Sombras",
+      "en": "Shadowvault Slayer's Cloak",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar capa: velocidad superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+23 celeridad",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "chest": {
+      "ranura": "Pecho",
+      "id": 51250,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_chest_leather_21",
+      "nombre": "Coraza de Hoja de las Sombras santificada",
+      "en": "Sanctified Shadowblade Breastplate",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar pechera: estadísticas potentes",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+10 a todas las estadísticas",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "wrist": {
+      "ranura": "Muñecas",
+      "id": 50670,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_bracer_41",
+      "nombre": "Guardamuñecas máximos de Toskk",
+      "en": "Toskk's Maximized Wristguards",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar brazales: asalto superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+50 poder de ataque",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "hands": {
+      "ranura": "Manos",
+      "id": 51251,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_gauntlets_83",
+      "nombre": "Guanteletes de Hoja de las Sombras santificados",
+      "en": "Sanctified Shadowblade Gauntlets",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar guantes: triturador",
+        "icono": "trade_engineering",
+        "efecto": "+44 poder de ataque (Ingeniería: aceleradores)",
+        "origen": "Encantamiento / Ingeniería"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "waist": {
+      "ranura": "Cintura",
+      "id": 50707,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_belt_61",
+      "nombre": "Cincho suturado de Astrylian",
+      "en": "Astrylian's Sutured Cinch",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Hebilla de cinturón eterna",
+        "icono": "inv_belt_36",
+        "efecto": "+1 ranura de gema",
+        "origen": "Herrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "legs": {
+      "ranura": "Piernas",
+      "id": 51253,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_pants_leather_35",
+      "nombre": "Quijotes de Hoja de las Sombras santificados",
+      "en": "Sanctified Shadowblade Legplates",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Armadura de pierna nerubiana",
+        "icono": "trade_leatherworking",
+        "efecto": "+55 poder de ataque y +15 crítico",
+        "origen": "Peletería"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "feet": {
+      "ranura": "Pies",
+      "id": 50607,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_boots_leather_07",
+      "nombre": "Botas de pelaje congeladas",
+      "en": "Frostbitten Fur Boots",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar botas: asalto superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+32 poder de ataque",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring1": {
+      "ranura": "Anillo",
+      "id": 50604,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_83",
+      "nombre": "Sortija del coloso de hueso",
+      "en": "Band of the Bone Colossus",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar anillo: asalto",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "Mejora ofensiva personal (solo Encantador)",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 54576,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "item_icecrownringc",
+      "nombre": "Sello de crepúsculo",
+      "en": "Signet of Twilight",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "trinket1": {
+      "ranura": "Abalorio",
+      "id": 50362,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_trinket_04",
+      "nombre": "Testamento del Libramorte",
+      "en": "Deathbringer's Will",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 54590,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum4",
+      "nombre": "Escama Crepuscular afilada",
+      "en": "Sharpened Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "weapon": {
+      "ranura": "Arma",
+      "id": 50704,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_sword_130",
+      "nombre": "Rigor mortis",
+      "en": "Rigormortis",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar arma: mangosta",
+        "icono": "inv_enchant_formulasuperior_01",
+        "efecto": "+120 agilidad ocasional y celeridad de ataque",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "offhand": {
+      "ranura": "Arma",
+      "id": 50641,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_weapon_shortblade_47",
+      "nombre": "Perforacorazones",
+      "en": "Heartpierce",
+      "heroico": true,
+      "bono_ranura": "+8 poder de ataque",
+      "encantamiento": {
+        "nombre": "Encantar arma: mangosta",
+        "icono": "inv_enchant_formulasuperior_01",
+        "efecto": "+120 agilidad ocasional y celeridad de ataque",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    }
+  }
+}

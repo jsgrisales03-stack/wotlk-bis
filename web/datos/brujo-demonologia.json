@@ -1,0 +1,455 @@
+{
+  "id": "brujo-demonologia",
+  "personaje": "LochRaven",
+  "clase": "Brujo",
+  "especializacion": "Demonología",
+  "rol": "DPS a distancia — PvE",
+  "raza": "Trol",
+  "faccion": "Horda",
+  "clase_icono": "spell_shadow_metamorphosis",
+  "nota": "Conjunto de referencia ICC 25 heroico.",
+  "gemas_clave": {
+    "meta": {
+      "id": 41333,
+      "nombre": "Diamante de llama celeste de ascuas",
+      "icono": "inv_jewelcrafting_icediamond_02",
+      "efecto": "+25 poder con hechizos, +2% intelecto",
+      "requisito": "Requiere al menos 3 gemas rojas"
+    },
+    "roja": {
+      "id": 40113,
+      "nombre": "Rubí cárdeno rúnico",
+      "icono": "inv_jewelcrafting_gem_37",
+      "efecto": "+23 poder con hechizos",
+      "color": "Roja"
+    }
+  },
+  "orden": [
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "weapon",
+    "offhand",
+    "wand"
+  ],
+  "piezas": {
+    "head": {
+      "ranura": "Cabeza",
+      "id": 51231,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_helmet_152",
+      "nombre": "Caperuza del Aquelarre oscuro santificada",
+      "en": "Sanctified Dark Coven Hood",
+      "heroico": true,
+      "bono_ranura": "+9 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Arcanum de misterios ardientes",
+        "icono": "spell_fire_masterofelements",
+        "efecto": "+30 poder con hechizos y +20 índice de golpe crítico",
+        "origen": "Kirin Tor, Reverenciado"
+      },
+      "gemas": [
+        {
+          "ranura": "Meta",
+          "gema": "Diamante de llama celeste de ascuas",
+          "icono": "inv_jewelcrafting_icediamond_02",
+          "efecto": "+25 poder con hechizos, +2% intelecto"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "neck": {
+      "ranura": "Cuello",
+      "id": 50658,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "item_icecrownnecklaced",
+      "nombre": "Amuleto de la elegía silenciosa",
+      "en": "Amulet of the Silent Eulogy",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "shoulder": {
+      "ranura": "Hombros",
+      "id": 51234,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shoulder_114",
+      "nombre": "Hombreras del Aquelarre oscuro santificadas",
+      "en": "Sanctified Dark Coven Shoulderpads",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Inscripción de la tormenta superior",
+        "icono": "trade_engineering",
+        "efecto": "+24 poder con hechizos y +15 índice de golpe crítico",
+        "origen": "Hijos de Hodir, Reverenciado"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "back": {
+      "ranura": "Espalda",
+      "id": 54583,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_cape_16",
+      "nombre": "Capa de ocaso ardiente",
+      "en": "Cloak of Burning Dusk",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar capa: Perforar con hechizos",
+        "icono": "inv_scroll_03",
+        "efecto": "+35 penetración de hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "chest": {
+      "ranura": "Pecho",
+      "id": 51233,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_chest_cloth_77",
+      "nombre": "Toga del Aquelarre oscuro santificada",
+      "en": "Sanctified Dark Coven Robe",
+      "heroico": true,
+      "bono_ranura": "+7 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar pechera: estadísticas potentes",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+10 a todas las estadísticas",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "wrist": {
+      "ranura": "Muñecas",
+      "id": 54582,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_bracer_45",
+      "nombre": "Brazales de noche ígnea",
+      "en": "Bracers of Fiery Night",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar brazales: poder con hechizos excelente",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+30 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "hands": {
+      "ranura": "Manos",
+      "id": 51230,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_gauntlets_88",
+      "nombre": "Guantes del Aquelarre oscuro santificados",
+      "en": "Sanctified Dark Coven Gloves",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar guantes: poder con hechizos excepcional",
+        "icono": "inv_scroll_03",
+        "efecto": "+28 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "waist": {
+      "ranura": "Cintura",
+      "id": 50613,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_belt_64",
+      "nombre": "Cinturón de geliespectro aplastante",
+      "en": "Crushing Coldwraith Belt",
+      "heroico": true,
+      "bono_ranura": "+7 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Hebilla de cinturón eterna",
+        "icono": "inv_belt_36",
+        "efecto": "+1 ranura de gema",
+        "origen": "Herrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "legs": {
+      "ranura": "Piernas",
+      "id": 50694,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_kilt_cloth_02",
+      "nombre": "Pantalones manchados del Pesteador",
+      "en": "Plaguebringer's Stained Pants",
+      "heroico": true,
+      "bono_ranura": "+9 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Hilo de hechizo de zafiro",
+        "icono": "spell_nature_astralrecalgroup",
+        "efecto": "+50 poder con hechizos y +30 aguante",
+        "origen": "Sastrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "feet": {
+      "ranura": "Pies",
+      "id": 50699,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_boots_cloth_24",
+      "nombre": "Botas de científico de la Peste",
+      "en": "Plague Scientist's Boots",
+      "heroico": true,
+      "bono_ranura": "+7 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar botas: caminante del hielo",
+        "icono": "inv_scroll_03",
+        "efecto": "+12 índice de golpe y +12 índice de golpe crítico",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "ring1": {
+      "ranura": "Anillo",
+      "id": 50664,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_86",
+      "nombre": "Anillo de rápido ascenso",
+      "en": "Ring of Rapid Ascent",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 50714,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_ring_81",
+      "nombre": "El otro sello de Valanar",
+      "en": "Valanar's Other Signet Ring",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    },
+    "trinket1": {
+      "ranura": "Abalorio",
+      "id": 50365,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_trinket_03",
+      "nombre": "Filacteria del exánime innombrable",
+      "en": "Phylactery of the Nameless Lich",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 54588,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum2",
+      "nombre": "Escama Crepuscular carbonizada",
+      "en": "Charred Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "weapon": {
+      "ranura": "Arma",
+      "id": 50732,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_sword_150",
+      "nombre": "Oleada de sangre, hoja de agonía de Kel'Thuzad",
+      "en": "Bloodsurge, Kel'Thuzad's Blade of Agony",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "encantamiento": {
+        "nombre": "Encantar arma: poder con hechizos poderoso",
+        "icono": "inv_scroll_03",
+        "efecto": "+63 poder con hechizos",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos"
+        }
+      ]
+    },
+    "offhand": {
+      "ranura": "Objeto secundario",
+      "id": 50719,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_misc_thread_01",
+      "nombre": "Huso de seda de las Sombras",
+      "en": "Shadow Silk Spindle",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "wand": {
+      "ranura": "Vara",
+      "id": 50684,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_wand_35",
+      "nombre": "Pincho empalador de cadáveres",
+      "en": "Corpse-Impaling Spike",
+      "heroico": true,
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
+    }
+  }
+}

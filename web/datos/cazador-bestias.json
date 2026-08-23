@@ -1,0 +1,392 @@
+{
+  "id": "cazador-bestias",
+  "personaje": "LochRaven",
+  "clase": "Cazador",
+  "especializacion": "Bestias",
+  "rol": "DPS a distancia — PvE",
+  "raza": "Trol",
+  "faccion": "Horda",
+  "clase_icono": "ability_hunter_focusedaim",
+  "nota": "Conjunto de referencia ICC 25 heroico. Sin arma cuerpo a cuerpo: el arma a distancia es la principal.",
+  "gemas_clave": {
+    "meta": {
+      "id": 41398,
+      "nombre": "Diamante de asedio de tierra incansable",
+      "icono": "inv_jewelcrafting_shadowspirit_02",
+      "efecto": "+21 agilidad y 3% de daño crítico aumentado",
+      "requisito": "Requiere al menos 1 gema roja, 1 amarilla y 1 azul"
+    },
+    "roja": {
+      "id": 40112,
+      "nombre": "Rubí cárdeno rúnico delicado",
+      "icono": "inv_jewelcrafting_gem_37",
+      "efecto": "+23 agilidad",
+      "color": "Roja"
+    }
+  },
+  "orden": [
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "ranged"
+  ],
+  "piezas": {
+    "head": {
+      "ranura": "Cabeza",
+      "id": 51286,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_helmet_158",
+      "nombre": "Celada de cazador de sangre Ahn'Kahar santificada",
+      "en": "Sanctified Ahn'Kahar Blood Hunter's Headpiece",
+      "heroico": true,
+      "bono_ranura": "+8 agilidad",
+      "encantamiento": {
+        "nombre": "Arcanum de tormento",
+        "icono": "ability_warrior_rampage",
+        "efecto": "+50 poder de ataque y +20 índice de golpe crítico",
+        "origen": "Caballeros de la Espada de Ébano"
+      },
+      "gemas": [
+        {
+          "ranura": "Meta",
+          "gema": "Diamante de asedio de tierra incansable",
+          "icono": "inv_jewelcrafting_shadowspirit_02",
+          "efecto": "+21 agilidad y 3% de daño crítico aumentado"
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "neck": {
+      "ranura": "Cuello",
+      "id": 50633,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_misc_monsterhorn_03",
+      "nombre": "Garra cruel de Sindragosa",
+      "en": "Sindragosa's Cruel Claw",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "shoulder": {
+      "ranura": "Hombros",
+      "id": 51288,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shoulder_113",
+      "nombre": "Bufas de cazador de sangre Ahn'Kahar santificadas",
+      "en": "Sanctified Ahn'Kahar Blood Hunter's Spaulders",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Inscripción del hacha superior",
+        "icono": "trade_engineering",
+        "efecto": "Poder de ataque y crítico",
+        "origen": "Hijos de Hodir, Exaltado"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "back": {
+      "ranura": "Espalda",
+      "id": 47546,
+      "ilvl": 272,
+      "calidad": 4,
+      "icono": "inv_misc_cape_18",
+      "nombre": "Astucia de Sylvanas",
+      "en": "Sylvanas' Cunning",
+      "heroico": true,
+      "bono_ranura": "+8 poder de ataque",
+      "encantamiento": {
+        "nombre": "Encantar capa: velocidad superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+23 celeridad",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "chest": {
+      "ranura": "Pecho",
+      "id": 51289,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_chest_mail_11",
+      "nombre": "Guerrera de cazador de sangre Ahn'Kahar santificada",
+      "en": "Sanctified Ahn'Kahar Blood Hunter's Tunic",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar pechera: estadísticas potentes",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+10 a todas las estadísticas",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "wrist": {
+      "ranura": "Muñecas",
+      "id": 50655,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_bracer_40",
+      "nombre": "Avambrazos de cazador de la Plaga",
+      "en": "Scourge Hunter's Vambraces",
+      "heroico": true,
+      "bono_ranura": null,
+      "encantamiento": {
+        "nombre": "Encantar brazales: asalto superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+50 poder de ataque",
+        "origen": "Encantamiento"
+      }
+    },
+    "hands": {
+      "ranura": "Manos",
+      "id": 51285,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_gauntlets_84",
+      "nombre": "Manoplas de cazador de sangre Ahn'Kahar santificadas",
+      "en": "Sanctified Ahn'Kahar Blood Hunter's Handguards",
+      "heroico": true,
+      "bono_ranura": "+4 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar guantes: triturador",
+        "icono": "trade_engineering",
+        "efecto": "+44 poder de ataque (Ingeniería: aceleradores)",
+        "origen": "Encantamiento / Ingeniería"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "waist": {
+      "ranura": "Cintura",
+      "id": 50688,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_belt_60",
+      "nombre": "Cordón de acechador Nerub'ar",
+      "en": "Nerub'ar Stalker's Cord",
+      "heroico": true,
+      "bono_ranura": "+6 agilidad",
+      "encantamiento": {
+        "nombre": "Hebilla de cinturón eterna",
+        "icono": "inv_belt_36",
+        "efecto": "+1 ranura de gema",
+        "origen": "Herrería"
+      },
+      "gemas": [
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        }
+      ]
+    },
+    "legs": {
+      "ranura": "Piernas",
+      "id": 50645,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_pants_mail_32",
+      "nombre": "Leotardos de luces del norte",
+      "en": "Leggings of Northern Lights",
+      "heroico": true,
+      "bono_ranura": "+8 agilidad",
+      "encantamiento": {
+        "nombre": "Armadura de pierna nerubiana",
+        "icono": "trade_leatherworking",
+        "efecto": "+55 poder de ataque y +15 crítico",
+        "origen": "Peletería"
+      },
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    },
+    "feet": {
+      "ranura": "Pies",
+      "id": 54577,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_boots_mail_06",
+      "nombre": "Pisadas de regreso",
+      "en": "Returning Footfalls",
+      "heroico": true,
+      "bono_ranura": null,
+      "encantamiento": {
+        "nombre": "Encantar botas: asalto superior",
+        "icono": "inv_enchant_formulagood_01",
+        "efecto": "+32 poder de ataque",
+        "origen": "Encantamiento"
+      }
+    },
+    "ring1": {
+      "ranura": "Anillo",
+      "id": 50618,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "item_icecrownringa",
+      "nombre": "Anillo de zafiro Razaescarcha",
+      "en": "Frostbrood Sapphire Ring",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 54576,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "item_icecrownringc",
+      "nombre": "Sello de crepúsculo",
+      "en": "Signet of Twilight",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket1": {
+      "ranura": "Abalorio",
+      "id": 50362,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_jewelry_trinket_04",
+      "nombre": "Testamento del Libramorte",
+      "en": "Deathbringer's Will",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 54590,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_misc_rubysanctum4",
+      "nombre": "Escama Crepuscular afilada",
+      "en": "Sharpened Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "ranged": {
+      "ranura": "A distancia",
+      "id": 50735,
+      "ilvl": 284,
+      "calidad": 4,
+      "icono": "inv_weapon_staff_109",
+      "nombre": "Vinculador de juramentos, carga del general forestal",
+      "en": "Oathbinder, Charge of the Ranger-General",
+      "heroico": true,
+      "bono_ranura": "+8 agilidad",
+      "encantamiento": {
+        "nombre": "Encantar arma a distancia: certeza mortal",
+        "icono": "inv_scroll_03",
+        "efecto": "+40 índice de golpe",
+        "origen": "Encantamiento"
+      },
+      "gemas": [
+        {
+          "ranura": "Roja",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad"
+        },
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        },
+        {
+          "ranura": "Amarilla",
+          "gema": "Rubí cárdeno rúnico delicado",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 agilidad",
+          "ignora_color": true
+        }
+      ]
+    }
+  }
+}
