@@ -133,10 +133,10 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar capa: Perforar con hechizos",
-        "icono": "inv_scroll_03",
-        "efecto": "+35 penetración de hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Bordado de tejido de luz",
+        "icono": "spell_arcane_prismaticcloak",
+        "efecto": "Probabilidad de +295 poder con hechizos durante 15 s",
+        "origen": "Sastrería"
       },
       "gemas": [
         {
@@ -215,28 +215,21 @@
     },
     "hands": {
       "ranura": "Manos",
-      "id": 50722,
+      "id": 51280,
       "ilvl": 277,
       "calidad": 4,
-      "icono": "inv_gauntlets_92",
-      "nombre": "Guantes de ritualista San'layn",
-      "en": "San'layn Ritualist Gloves",
+      "icono": "inv_gauntlets_90black",
+      "nombre": "Guantes de mago sangriento santificados",
+      "en": "Sanctified Bloodmage Gloves",
       "heroico": true,
-      "bono_ranura": "+7 poder con hechizos",
+      "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar guantes: poder con hechizos excepcional",
-        "icono": "inv_scroll_03",
-        "efecto": "+28 poder con hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Aceleradores de hipervelocidad",
+        "icono": "trade_engineering",
+        "efecto": "+340 celeridad durante 12 s, cada minuto",
+        "origen": "Ingeniería"
       },
       "gemas": [
-        {
-          "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico",
-          "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos",
-          "ignora_color": true
-        },
         {
           "ranura": "Azul",
           "gema": "Rubí cárdeno rúnico",
@@ -257,10 +250,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Hebilla de cinturón eterna",
-        "icono": "inv_belt_36",
-        "efecto": "+1 ranura de gema",
-        "origen": "Herrería"
+        "nombre": "Cinturón de fragmentación",
+        "icono": "trade_engineering",
+        "efecto": "Permite lanzar una bomba de fragmentación cada 6 min",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -289,9 +282,9 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Hilo de hechizo de zafiro",
+        "nombre": "Hilo de hechizo luminoso",
         "icono": "spell_nature_astralrecalgroup",
-        "efecto": "+50 poder con hechizos y +30 aguante",
+        "efecto": "+50 poder con hechizos y +20 espíritu",
         "origen": "Sastrería"
       },
       "gemas": [
@@ -322,10 +315,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar botas: caminante del hielo",
-        "icono": "inv_scroll_03",
-        "efecto": "+12 índice de golpe y +12 índice de golpe crítico",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {

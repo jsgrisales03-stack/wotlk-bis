@@ -13,14 +13,14 @@
       "id": 41398,
       "nombre": "Diamante de asedio de tierra incansable",
       "icono": "inv_jewelcrafting_shadowspirit_02",
-      "efecto": "+21 agilidad y 3% de daño crítico aumentado",
+      "efecto": "+21 agilidad, +3% daño crítico",
       "requisito": "Requiere al menos 1 gema roja, 1 amarilla y 1 azul"
     },
     "roja": {
       "id": 40112,
-      "nombre": "Rubí cárdeno rúnico delicado",
+      "nombre": "Rubí cárdeno delicado",
       "icono": "inv_jewelcrafting_gem_37",
-      "efecto": "+23 agilidad",
+      "efecto": "+20 agilidad",
       "color": "Roja"
     }
   },
@@ -54,23 +54,23 @@
       "heroico": true,
       "bono_ranura": "+8 agilidad",
       "encantamiento": {
-        "nombre": "Arcanum de tormento",
-        "icono": "ability_warrior_rampage",
-        "efecto": "+50 poder de ataque y +20 índice de golpe crítico",
-        "origen": "Caballeros de la Espada de Ébano"
+        "nombre": "Disco de amplificación mental",
+        "icono": "trade_engineering",
+        "efecto": "+45 aguante y control mental cada 10 min",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
           "ranura": "Meta",
           "gema": "Diamante de asedio de tierra incansable",
           "icono": "inv_jewelcrafting_shadowspirit_02",
-          "efecto": "+21 agilidad y 3% de daño crítico aumentado"
+          "efecto": "+21 agilidad, +3% daño crítico"
         },
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         }
       ]
     },
@@ -104,17 +104,17 @@
       "heroico": true,
       "bono_ranura": "+4 agilidad",
       "encantamiento": {
-        "nombre": "Inscripción del hacha superior",
-        "icono": "trade_engineering",
-        "efecto": "Poder de ataque y crítico",
-        "origen": "Hijos de Hodir, Exaltado"
+        "nombre": "Inscripción del gladiador superior",
+        "icono": "inv_shoulder_61",
+        "efecto": "+30 aguante y +15 temple",
+        "origen": "Vendedores JcJ"
       },
       "gemas": [
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         }
       ]
     },
@@ -129,9 +129,9 @@
       "heroico": true,
       "bono_ranura": "+6 aguante",
       "encantamiento": {
-        "nombre": "Encantar capa: velocidad superior",
+        "nombre": "Encantar capa: armadura poderosa",
         "icono": "inv_enchant_formulagood_01",
-        "efecto": "+23 celeridad",
+        "efecto": "+225 armadura",
         "origen": "Encantamiento"
       },
       "gemas": [
@@ -155,10 +155,10 @@
       "heroico": true,
       "bono_ranura": "+8 agilidad",
       "encantamiento": {
-        "nombre": "Encantar pechera: estadísticas potentes",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+10 a todas las estadísticas",
-        "origen": "Encantamiento"
+        "nombre": "Refuerzo para armadura boreal pesado",
+        "icono": "inv_misc_armorkit_30",
+        "efecto": "+18 aguante",
+        "origen": "Peletería"
       },
       "gemas": [
         {
@@ -194,9 +194,9 @@
       "heroico": true,
       "bono_ranura": "+4 agilidad",
       "encantamiento": {
-        "nombre": "Encantar brazales: asalto superior",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+50 poder de ataque",
+        "nombre": "Encantar brazales: aguante sublime",
+        "icono": "inv_enchant_formulasuperior_01",
+        "efecto": "+40 aguante",
         "origen": "Encantamiento"
       },
       "gemas": [
@@ -219,10 +219,10 @@
       "heroico": true,
       "bono_ranura": "+4 agilidad",
       "encantamiento": {
-        "nombre": "Encantar guantes: triturador",
+        "nombre": "Cincha de armadura reticulada",
         "icono": "trade_engineering",
-        "efecto": "+44 poder de ataque (Ingeniería: aceleradores)",
-        "origen": "Encantamiento / Ingeniería"
+        "efecto": "+885 armadura",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -276,9 +276,9 @@
       "heroico": true,
       "bono_ranura": "+6 agilidad",
       "encantamiento": {
-        "nombre": "Armadura de pierna nerubiana",
-        "icono": "trade_leatherworking",
-        "efecto": "+55 poder de ataque y +15 crítico",
+        "nombre": "Armadura para pierna de pellejo de escarcha",
+        "icono": "inv_misc_armorkit_18",
+        "efecto": "+55 aguante y +22 agilidad",
         "origen": "Peletería"
       },
       "gemas": [
@@ -308,10 +308,10 @@
       "heroico": true,
       "bono_ranura": "+6 agilidad",
       "encantamiento": {
-        "nombre": "Encantar botas: asalto superior",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+32 poder de ataque",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -402,9 +402,9 @@
       "heroico": true,
       "bono_ranura": "+8 agilidad",
       "encantamiento": {
-        "nombre": "Encantar arma: matanza mayor",
-        "icono": "inv_enchant_formulasuperior_01",
-        "efecto": "+110 poder de ataque (arma a dos manos)",
+        "nombre": "Encantar arma: drenador de sangre",
+        "icono": "inv_misc_note_01",
+        "efecto": "Probabilidad de acumular Reserva de sangre al golpear",
         "origen": "Encantamiento"
       },
       "gemas": [

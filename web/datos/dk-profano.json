@@ -4,13 +4,15 @@
   "clase": "Caballero de la Muerte",
   "especializacion": "Profano",
   "rol": "DPS cuerpo a cuerpo — PvE",
+  "raza": "Orco",
+  "faccion": "Horda",
   "nota": "Conjunto de referencia con Agonía de Sombras. Personaje ingeniero: guantes y botas usan mejoras de Ingeniería.",
   "gemas_clave": {
     "meta": {
       "id": 41398,
       "nombre": "Diamante de asedio de tierra incansable",
       "icono": "inv_jewelcrafting_shadowspirit_02",
-      "efecto": "+21 agilidad y 3% de daño crítico aumentado",
+      "efecto": "+21 agilidad, +3% daño crítico",
       "requisito": "Requiere al menos 1 gema roja, 1 amarilla y 1 azul"
     },
     "roja": {
@@ -350,7 +352,7 @@
       ]
     },
     "ring1": {
-      "ranura": "Anillo 1",
+      "ranura": "Anillo",
       "id": 50693,
       "ilvl": 277,
       "calidad": 4,
@@ -362,7 +364,7 @@
       "encantamiento": {
         "nombre": "Encantar anillo: asalto",
         "icono": "inv_enchant_formulagood_01",
-        "efecto": "+20 poder de ataque",
+        "efecto": "+40 poder de ataque",
         "origen": "Solo si eres Encantador",
         "opcional": true
       },
@@ -377,7 +379,7 @@
       ]
     },
     "ring2": {
-      "ranura": "Anillo 2",
+      "ranura": "Anillo",
       "id": 52572,
       "ilvl": 277,
       "calidad": 4,
@@ -389,7 +391,7 @@
       "encantamiento": {
         "nombre": "Encantar anillo: asalto",
         "icono": "inv_enchant_formulagood_01",
-        "efecto": "+20 poder de ataque",
+        "efecto": "+40 poder de ataque",
         "origen": "Solo si eres Encantador",
         "opcional": true
       },
@@ -404,7 +406,7 @@
       ]
     },
     "trinket1": {
-      "ranura": "Abalorio 1",
+      "ranura": "Abalorio",
       "id": 54590,
       "ilvl": 284,
       "calidad": 4,
@@ -417,7 +419,7 @@
       "gemas": []
     },
     "trinket2": {
-      "ranura": "Abalorio 2",
+      "ranura": "Abalorio",
       "id": 50363,
       "ilvl": 277,
       "calidad": 4,
@@ -430,7 +432,7 @@
       "gemas": []
     },
     "weapon": {
-      "ranura": "Dos manos",
+      "ranura": "Arma",
       "id": 49623,
       "ilvl": 284,
       "calidad": 5,

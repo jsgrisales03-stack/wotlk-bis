@@ -13,7 +13,7 @@
       "id": 41380,
       "nombre": "Diamante de asedio de tierra austero",
       "icono": "inv_jewelcrafting_shadowspirit_02",
-      "efecto": "+32 aguante y +2% de armadura de objetos",
+      "efecto": "+32 aguante, +2% armadura",
       "requisito": "Requiere al menos 2 gemas azules y 1 roja"
     },
     "azul": {
@@ -64,7 +64,7 @@
           "ranura": "Meta",
           "gema": "Diamante de asedio de tierra austero",
           "icono": "inv_jewelcrafting_shadowspirit_02",
-          "efecto": "+32 aguante y +2% de armadura de objetos"
+          "efecto": "+32 aguante, +2% armadura"
         },
         {
           "ranura": "Roja",
@@ -132,7 +132,7 @@
       "heroico": true,
       "bono_ranura": "+6 aguante",
       "encantamiento": {
-        "nombre": "Encantar capa: Armadura poderosa",
+        "nombre": "Encantar capa: armadura poderosa",
         "icono": "inv_enchant_formulagood_01",
         "efecto": "+225 armadura",
         "origen": "Encantamiento"
@@ -313,7 +313,7 @@
       "heroico": true,
       "bono_ranura": "+6 fuerza",
       "encantamiento": {
-        "nombre": "Encantar botas: vitalidad de los colmillarr",
+        "nombre": "Encantar botas: vitalidad colmillarr",
         "icono": "trade_engraving",
         "efecto": "+15 aguante y velocidad menor",
         "origen": "Encantamiento"
@@ -428,7 +428,7 @@
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_shield_72",
-      "nombre": "Baluarte de acero humeante",
+      "nombre": "Baluarte de acero incandescente",
       "en": "Bulwark of Smouldering Steel",
       "heroico": true,
       "bono_ranura": null

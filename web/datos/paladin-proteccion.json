@@ -13,7 +13,7 @@
       "id": 41380,
       "nombre": "Diamante de asedio de tierra austero",
       "icono": "inv_jewelcrafting_shadowspirit_02",
-      "efecto": "+32 aguante y +2% de armadura de objetos",
+      "efecto": "+32 aguante, +2% armadura",
       "requisito": "Requiere al menos 2 gemas azules y 1 roja"
     },
     "azul": {
@@ -45,14 +45,14 @@
   "piezas": {
     "head": {
       "ranura": "Cabeza",
-      "id": 51277,
+      "id": 51266,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_helmet_154",
-      "nombre": "Casco juraluz santificado",
-      "en": "Sanctified Lightsworn Helmet",
+      "nombre": "Visera juraluz santificada",
+      "en": "Sanctified Lightsworn Faceguard",
       "heroico": true,
-      "bono_ranura": "+8 fuerza",
+      "bono_ranura": "+12 aguante",
       "encantamiento": {
         "nombre": "Arcanum del adepto protector",
         "icono": "ability_warrior_swordandboard",
@@ -64,14 +64,13 @@
           "ranura": "Meta",
           "gema": "Diamante de asedio de tierra austero",
           "icono": "inv_jewelcrafting_shadowspirit_02",
-          "efecto": "+32 aguante y +2% de armadura de objetos"
+          "efecto": "+32 aguante, +2% armadura"
         },
         {
           "ranura": "Roja",
           "gema": "Circón majestuoso sólido",
           "icono": "inv_jewelcrafting_gem_42",
-          "efecto": "+30 aguante",
-          "ignora_color": true
+          "efecto": "+30 aguante"
         }
       ]
     },
@@ -97,14 +96,14 @@
     },
     "shoulder": {
       "ranura": "Hombros",
-      "id": 51279,
+      "id": 51269,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_shoulder_117",
-      "nombre": "Hombreras de placas juraluz santificadas",
-      "en": "Sanctified Lightsworn Shoulderplates",
+      "nombre": "Guardahombros juraluz santificados",
+      "en": "Sanctified Lightsworn Shoulderguards",
       "heroico": true,
-      "bono_ranura": "+4 fuerza",
+      "bono_ranura": "+6 aguante",
       "encantamiento": {
         "nombre": "Inscripción del gladiador superior",
         "icono": "inv_shoulder_61",
@@ -116,8 +115,7 @@
           "ranura": "Roja",
           "gema": "Circón majestuoso sólido",
           "icono": "inv_jewelcrafting_gem_42",
-          "efecto": "+30 aguante",
-          "ignora_color": true
+          "efecto": "+30 aguante"
         }
       ]
     },
@@ -132,7 +130,7 @@
       "heroico": true,
       "bono_ranura": "+6 aguante",
       "encantamiento": {
-        "nombre": "Encantar capa: Armadura poderosa",
+        "nombre": "Encantar capa: armadura poderosa",
         "icono": "inv_enchant_formulagood_01",
         "efecto": "+225 armadura",
         "origen": "Encantamiento"
@@ -149,14 +147,14 @@
     },
     "chest": {
       "ranura": "Pecho",
-      "id": 51275,
+      "id": 51265,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_chest_plate22",
-      "nombre": "Placa de batalla juraluz santificada",
-      "en": "Sanctified Lightsworn Battleplate",
+      "nombre": "Coselete juraluz santificado",
+      "en": "Sanctified Lightsworn Chestguard",
       "heroico": true,
-      "bono_ranura": "+6 fuerza",
+      "bono_ranura": "+9 aguante",
       "encantamiento": {
         "nombre": "Encantar pechera: supersalud",
         "icono": "trade_engraving",
@@ -168,14 +166,14 @@
           "ranura": "Roja",
           "gema": "Circón majestuoso sólido",
           "icono": "inv_jewelcrafting_gem_42",
-          "efecto": "+30 aguante",
-          "ignora_color": true
+          "efecto": "+30 aguante"
         },
         {
           "ranura": "Azul",
           "gema": "Circón majestuoso sólido",
           "icono": "inv_jewelcrafting_gem_42",
-          "efecto": "+30 aguante"
+          "efecto": "+30 aguante",
+          "ignora_color": true
         }
       ]
     },
@@ -207,14 +205,14 @@
     },
     "hands": {
       "ranura": "Manos",
-      "id": 50619,
+      "id": 51267,
       "ilvl": 277,
       "calidad": 4,
-      "icono": "inv_gauntlets_84",
-      "nombre": "Guantes de acechador Anub'ar",
-      "en": "Anub'ar Stalker's Gloves",
+      "icono": "inv_gauntlets_85",
+      "nombre": "Manoplas juraluz santificadas",
+      "en": "Sanctified Lightsworn Handguards",
       "heroico": true,
-      "bono_ranura": "+6 agilidad",
+      "bono_ranura": "+6 aguante",
       "encantamiento": {
         "nombre": "Encantar guantes: triturador",
         "icono": "trade_engineering",
@@ -224,13 +222,6 @@
       "gemas": [
         {
           "ranura": "Amarilla",
-          "gema": "Circón majestuoso sólido",
-          "icono": "inv_jewelcrafting_gem_42",
-          "efecto": "+30 aguante",
-          "ignora_color": true
-        },
-        {
-          "ranura": "Roja",
           "gema": "Circón majestuoso sólido",
           "icono": "inv_jewelcrafting_gem_42",
           "efecto": "+30 aguante",
@@ -272,14 +263,14 @@
     },
     "legs": {
       "ranura": "Piernas",
-      "id": 51278,
+      "id": 51268,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_pants_plate_33",
-      "nombre": "Quijotes juraluz santificados",
-      "en": "Sanctified Lightsworn Legplates",
+      "nombre": "Musleras juraluz santificadas",
+      "en": "Sanctified Lightsworn Legguards",
       "heroico": true,
-      "bono_ranura": "+6 fuerza",
+      "bono_ranura": "+9 aguante",
       "encantamiento": {
         "nombre": "Armadura para pierna de pellejo de escarcha",
         "icono": "inv_misc_armorkit_18",
@@ -298,7 +289,8 @@
           "ranura": "Azul",
           "gema": "Circón majestuoso sólido",
           "icono": "inv_jewelcrafting_gem_42",
-          "efecto": "+30 aguante"
+          "efecto": "+30 aguante",
+          "ignora_color": true
         }
       ]
     },
@@ -313,7 +305,7 @@
       "heroico": true,
       "bono_ranura": "+6 fuerza",
       "encantamiento": {
-        "nombre": "Encantar botas: vitalidad de los colmillarr",
+        "nombre": "Encantar botas: vitalidad colmillarr",
         "icono": "trade_engraving",
         "efecto": "+15 aguante y velocidad menor",
         "origen": "Encantamiento"
@@ -428,7 +420,7 @@
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_shield_72",
-      "nombre": "Baluarte de acero humeante",
+      "nombre": "Baluarte de acero incandescente",
       "en": "Bulwark of Smouldering Steel",
       "heroico": true,
       "bono_ranura": null

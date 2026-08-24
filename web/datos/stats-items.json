@@ -1,0 +1,1609 @@
+{
+ "42580": {
+  "ilvl": 251,
+  "nombre_es": "Ídolo de tenacidad de Gladiador incansable",
+  "notas": "Reliquia (Ídolo). Equipar: aumenta el poder con hechizos del valor de sanación final de tu Flor de vida en 376 p. No otorga estadísticas pasivas generales."
+ },
+ "47059": {
+  "ilvl": 258,
+  "nombre_es": "Consuelo de los derrotados",
+  "notas": "Abalorio. Equipar (proc por lanzamiento): cada vez que lanzas un hechizo obtienes 18 p. de maná cada 5 s durante 10 s, acumulable hasta 8 veces (máx. 144 mp5).",
+  "poder_hechizos": 168
+ },
+ "47546": {
+  "agilidad": 97,
+  "aguante": 97,
+  "armadura": 182,
+  "critico": 65,
+  "ilvl": 272,
+  "nombre_es": "Astucia de Sylvanas",
+  "notas": "Capa (Espalda) heroica. Tiene 1 ranura roja con bono de ranura +8 poder de ataque (no incluido en las estadísticas).",
+  "penetracion_armadura": 57,
+  "poder_ataque": 114
+ },
+ "47661": {
+  "ilvl": 245,
+  "nombre_es": "Tratado sobre valentía",
+  "notas": "Reliquia (Tratado). Equipar (proc): cuando tu Sello de venganza o Sello de corrupción inflige daño periódico, tienes probabilidad de obtener 200 p. de fuerza durante 16 s (probabilidad 70%, 8 s de reutilización). No otorga estadísticas pasivas."
+ },
+ "47673": {
+  "ilvl": 245,
+  "nombre_es": "Sigilo de Virulencia",
+  "notas": "Reliquia (Sigilo). Equipar (proc): al usar Golpe letal, Asolar o Golpe de la Plaga tienes probabilidad de obtener 200 p. de fuerza durante 20 s (probabilidad 80%, 10 s de reutilización). No otorga estadísticas pasivas."
+ },
+ "49623": {
+  "aguante": 198,
+  "critico": 114,
+  "fuerza": 223,
+  "ilvl": 284,
+  "nombre_es": "Agonía de Sombras",
+  "notas": "Hacha a dos manos, 954-1592 de daño, velocidad 3.70. Equipar (proc): tus ataques cuerpo a cuerpo pueden drenar un trozo de alma otorgando 30 p. de fuerza; al acumular 10 trozos liberas Pesadilla de caos (1900-2100 de daño de las Sombras repartido en 15 m) y ganas 270 p. de fuerza durante 10 s. Tiene 3 ranuras rojas con bono de ranura +8 fuerza (no incluido).",
+  "penetracion_armadura": 114
+ },
+ "50348": {
+  "celeridad": 170,
+  "ilvl": 277,
+  "nombre_es": "Objeto desprendido extraño",
+  "notas": "Abalorio heroico. Equipar (proc): tus hechizos dañinos pueden aumentar tu poder con hechizos en 121 p. más 121 adicionales cada 2 s durante 20 s (probabilidad 10%, 45 s de reutilización)."
+ },
+ "50362": {
+  "ilvl": 264,
+  "nombre_es": "Testamento del Libramorte",
+  "notas": "Abalorio (versión normal). Equipar (proc): tus ataques pueden despertar los poderes de las razas de Rasganorte, transformándote y aumentando tus capacidades de combate durante 30 s (probabilidad 35%, 1.75 min de reutilización). El proc otorga fuerza, agilidad o pericia+índice de golpe crítico según la transformación.",
+  "penetracion_armadura": 155
+ },
+ "50363": {
+  "ilvl": 277,
+  "nombre_es": "Testamento del Libramorte",
+  "notas": "Abalorio (versión heroica). Equipar (proc): tus ataques pueden despertar los poderes de las razas de Rasganorte, transformándote y aumentando tus capacidades de combate durante 30 s (probabilidad 35%, 1.75 min de reutilización). El proc otorga fuerza, agilidad o pericia+índice de golpe crítico según la transformación.",
+  "penetracion_armadura": 167
+ },
+ "50364": {
+  "aguante": 258,
+  "ilvl": 277,
+  "nombre_es": "Colmillo impecable de Sindragosa",
+  "notas": "Abalorio heroico. Uso (activo): aumenta en 268 p. la resistencia a los hechizos Arcanos, de Fuego, de Escarcha, de Naturaleza y de las Sombras durante 10 s (1 min de reutilización)."
+ },
+ "50365": {
+  "critico": 172,
+  "ilvl": 277,
+  "nombre_es": "Filacteria del exánime innombrable",
+  "notas": "Abalorio heroico. Equipar (proc): cuando uno de tus hechizos inflige daño periódico tienes probabilidad de ganar 1207 p. de poder con hechizos durante 20 s (probabilidad 30%, 1.667 min de reutilización)."
+ },
+ "50366": {
+  "ilvl": 277,
+  "nombre_es": "Ábaco de Althor",
+  "notas": "Abalorio heroico. Equipar (proc): cuando tus hechizos sanan a un objetivo tienes probabilidad de sanar instantáneamente a otro objetivo amistoso cercano por 6280-7298 (probabilidad 30%, 45 s de reutilización).",
+  "poder_hechizos": 201
+ },
+ "50398": {
+  "aguante": 73,
+  "celeridad": 64,
+  "golpe": 51,
+  "ilvl": 277,
+  "intelecto": 73,
+  "nombre_es": "Sortija Cinérea de destrucción infinita",
+  "notas": "Anillo. Requiere El Veredicto Cinéreo: Exaltado. Equipar (proc): al golpear, tus hechizos ofensivos pueden aumentar tu poder con hechizos en 285 p. durante 10 s (probabilidad 10%, 1 min de reutilización). Tiene 1 ranura amarilla con bono de ranura +5 poder con hechizos (no incluido).",
+  "poder_hechizos": 101
+ },
+ "50402": {
+  "agilidad": 88,
+  "aguante": 84,
+  "critico": 59,
+  "golpe": 59,
+  "ilvl": 277,
+  "nombre_es": "Sortija Cinérea de venganza infinita",
+  "notas": "Anillo. Requiere El Veredicto Cinéreo: Exaltado. Equipar (proc): al acertar tienes probabilidad de aumentar tu poder de ataque en 480 p. durante 10 s (1 min de reutilización). Tiene 1 ranura amarilla con bono de ranura +4 agilidad (no incluido).",
+  "poder_ataque": 135
+ },
+ "50404": {
+  "aguante": 130,
+  "defensa": 59,
+  "esquiva": 59,
+  "fuerza": 68,
+  "golpe": 55,
+  "ilvl": 277,
+  "nombre_es": "Sortija Cinérea de coraje infinito",
+  "notas": "Anillo. Requiere El Veredicto Cinéreo: Exaltado. Equipar (proc): al recibir un golpe en combate tienes probabilidad de aumentar tu armadura en 2400 p. durante 10 s (probabilidad 3%, 1 min de reutilización). Tiene 1 ranura amarilla con bono de ranura +6 aguante (no incluido)."
+ },
+ "50456": {
+  "ilvl": 264,
+  "nombre_es": "Ídolo de la luna sollozante",
+  "notas": "Sin estadísticas base. Equipar (proc): el daño periódico de Lacerar y Arañazo otorga 44 p. de agilidad durante 15 s, acumulable hasta 5 veces."
+ },
+ "50457": {
+  "ilvl": 264,
+  "nombre_es": "Ídolo del eclipse lunar",
+  "notas": "Sin estadísticas base. Equipar (proc): el daño periódico de Enjambre de insectos y Fuego lunar otorga 44 p. de índice de golpe crítico durante 15 s, acumulable hasta 5 veces."
+ },
+ "50458": {
+  "ilvl": 264,
+  "nombre_es": "Tótem de hielo destrozado de Bizuri",
+  "notas": "Sin estadísticas base. Equipar (proc): el daño periódico de Choque de llamas otorga 44 p. de índice de celeridad durante 30 s, acumulable hasta 5 veces. Cuenta como tótem de Aire, Tierra, Fuego y Agua."
+ },
+ "50464": {
+  "ilvl": 264,
+  "nombre_es": "Tótem del mar resurgente"
+ },
+ "50603": {
+  "aguante": 209,
+  "fuerza": 185,
+  "golpe": 99,
+  "ilvl": 277,
+  "nombre_es": "Creadora de criptas",
+  "notas": "Maza a dos manos (938-1407 daño, veloc. 3.60), versión Heroica. Aumenta el poder de ataque en 3792 p. solo con las formas de gato, oso, oso temible y lechúcico lunar (poder de ataque feral condicional, no contabilizado como poder_ataque).",
+  "penetracion_armadura": 115
+ },
+ "50604": {
+  "agilidad": 102,
+  "aguante": 102,
+  "celeridad": 65,
+  "golpe": 62,
+  "ilvl": 277,
+  "nombre_es": "Sortija del coloso de hueso",
+  "notas": "Versión Heroica. Anillo Único-Equipado.",
+  "poder_ataque": 120
+ },
+ "50607": {
+  "agilidad": 120,
+  "aguante": 136,
+  "armadura": 477,
+  "critico": 90,
+  "ilvl": 277,
+  "nombre_es": "Botas de pelaje congeladas",
+  "notas": "Versión Heroica. Cuero, ranura de pies.",
+  "penetracion_armadura": 74,
+  "poder_ataque": 181
+ },
+ "50609": {
+  "aguante": 78,
+  "celeridad": 60,
+  "espiritu": 68,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Amuleto de centinela osario",
+  "notas": "Versión Heroica. Ranura de cuello.",
+  "poder_hechizos": 110
+ },
+ "50613": {
+  "aguante": 103,
+  "armadura": 208,
+  "celeridad": 90,
+  "critico": 74,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Cinturón de geliespectro aplastante",
+  "notas": "Versión Heroica. Tela, ranura de cintura.",
+  "poder_hechizos": 140
+ },
+ "50616": {
+  "aguante": 78,
+  "armadura": 9262,
+  "celeridad": 60,
+  "critico": 68,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Baluarte de acero incandescente",
+  "notas": "Versión Heroica. Escudo (mano izquierda) con 259 de valor de bloqueo.",
+  "poder_hechizos": 110
+ },
+ "50618": {
+  "agilidad": 102,
+  "aguante": 102,
+  "critico": 60,
+  "ilvl": 277,
+  "nombre_es": "Anillo de zafiro Razaescarcha",
+  "notas": "Versión Heroica. Anillo Único-Equipado.",
+  "penetracion_armadura": 68,
+  "poder_ataque": 120
+ },
+ "50619": {
+  "agilidad": 128,
+  "aguante": 107,
+  "armadura": 964,
+  "celeridad": 63,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 71,
+  "nombre_es": "Guantes de acechador Anub'ar",
+  "notas": "Versión Heroica. Malla, ranura de manos.",
+  "poder_ataque": 149
+ },
+ "50620": {
+  "aguante": 155,
+  "armadura": 1550,
+  "critico": 85,
+  "fuerza": 139,
+  "ilvl": 277,
+  "nombre_es": "Ligas de geliespectro",
+  "notas": "Versión Heroica. Placas, ranura de cintura.",
+  "penetracion_armadura": 78
+ },
+ "50622": {
+  "aguante": 141,
+  "armadura": 756,
+  "defensa": 54,
+  "esquiva": 46,
+  "fuerza": 102,
+  "ilvl": 277,
+  "nombre_es": "Anillo eternamente frío de Devium",
+  "notas": "Versión Heroica. Anillo de tanque, Único-Equipado."
+ },
+ "50624": {
+  "aguante": 209,
+  "armadura": 2412,
+  "celeridad": 98,
+  "critico": 122,
+  "fuerza": 185,
+  "ilvl": 277,
+  "nombre_es": "Quijotes de atracador de la Plaga",
+  "notas": "Versión Heroica. Placas, ranura de piernas."
+ },
+ "50628": {
+  "aguante": 78,
+  "armadura": 185,
+  "celeridad": 60,
+  "critico": 68,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Manteo desgarrado de vinculaescarcha",
+  "notas": "Versión Heroica. Capa (ranura de espalda).",
+  "poder_hechizos": 110
+ },
+ "50629": {
+  "aguante": 139,
+  "armadura": 369,
+  "critico": 122,
+  "golpe": 98,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Toga de la pesadilla despierta",
+  "poder_hechizos": 186
+ },
+ "50631": {
+  "aguante": 44,
+  "critico": 38,
+  "espiritu": 30,
+  "ilvl": 277,
+  "intelecto": 44,
+  "nombre_es": "Exterminadora de pesadillas",
+  "notas": "Varita (a distancia), daño de Fuego 580-1077, velocidad 1.80.",
+  "poder_hechizos": 58
+ },
+ "50633": {
+  "agilidad": 102,
+  "aguante": 102,
+  "celeridad": 60,
+  "ilvl": 277,
+  "nombre_es": "Garra cruel de Sindragosa",
+  "penetracion_armadura": 68,
+  "poder_ataque": 120
+ },
+ "50636": {
+  "aguante": 78,
+  "celeridad": 60,
+  "espiritu": 68,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Memoria de Malygos",
+  "poder_hechizos": 110
+ },
+ "50640": {
+  "aguante": 239,
+  "armadura": 2239,
+  "defensa": 122,
+  "esquiva": 106,
+  "fuerza": 139,
+  "golpe": 85,
+  "ilvl": 277,
+  "nombre_es": "Yelmo de calavera de carnero rota"
+ },
+ "50641": {
+  "aguante": 78,
+  "ilvl": 277,
+  "nombre_es": "Perforacorazones",
+  "notas": "Daga: 360-541 de daño, velocidad 1.80. Proc: tus ataques cuerpo a cuerpo tienen posibilidad de activar Vigorización, otorgando 4 p. de energía, 2 p. de ira o 120 p. de maná cada 2 s durante 12 s. Además otorga 2737 p. de poder de ataque solo en formas de gato, oso, oso temible y lechucico lunar.",
+  "poder_ataque": 95
+ },
+ "50644": {
+  "aguante": 78,
+  "critico": 60,
+  "espiritu": 68,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Anillo de susurros enloquecedores",
+  "poder_hechizos": 110
+ },
+ "50645": {
+  "agilidad": 167,
+  "aguante": 144,
+  "armadura": 1349,
+  "critico": 106,
+  "ilvl": 277,
+  "intelecto": 96,
+  "nombre_es": "Leotardos de luces del norte",
+  "penetracion_armadura": 88,
+  "poder_ataque": 228
+ },
+ "50651": {
+  "aguante": 78,
+  "armadura": 162,
+  "critico": 73,
+  "golpe": 52,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Brazales frágiles de la Dama",
+  "poder_hechizos": 110
+ },
+ "50653": {
+  "agilidad": 102,
+  "aguante": 102,
+  "armadura": 185,
+  "celeridad": 68,
+  "critico": 60,
+  "ilvl": 277,
+  "nombre_es": "Capa de destripador de La Cámara de las Sombras",
+  "poder_ataque": 120
+ },
+ "50655": {
+  "agilidad": 102,
+  "aguante": 80,
+  "armadura": 675,
+  "critico": 68,
+  "ilvl": 277,
+  "intelecto": 54,
+  "nombre_es": "Avambrazos de cazador de la Plaga",
+  "penetracion_armadura": 46,
+  "poder_ataque": 120
+ },
+ "50656": {
+  "agilidad": 167,
+  "aguante": 183,
+  "armadura": 694,
+  "golpe": 114,
+  "ilvl": 277,
+  "nombre_es": "Saco de maravillas de Ikfirus",
+  "pericia": 106,
+  "poder_ataque": 228
+ },
+ "50658": {
+  "aguante": 78,
+  "celeridad": 68,
+  "golpe": 60,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Amuleto de la elegía silenciosa",
+  "poder_hechizos": 110
+ },
+ "50663": {
+  "aguante": 103,
+  "armadura": 231,
+  "celeridad": 90,
+  "golpe": 74,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Mitones de capitán de nave de guerra",
+  "poder_hechizos": 140
+ },
+ "50664": {
+  "aguante": 78,
+  "celeridad": 60,
+  "critico": 68,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Anillo de rápido ascenso",
+  "poder_hechizos": 110
+ },
+ "50670": {
+  "agilidad": 102,
+  "aguante": 102,
+  "armadura": 304,
+  "critico": 60,
+  "ilvl": 277,
+  "nombre_es": "Guardamuñecas máximos de Toskk",
+  "notas": "Muñeca de cuero. Sin procs ni efectos de uso.",
+  "penetracion_armadura": 68,
+  "poder_ataque": 120
+ },
+ "50675": {
+  "agilidad": 128,
+  "aguante": 136,
+  "armadura": 434,
+  "celeridad": 74,
+  "ilvl": 277,
+  "nombre_es": "Guantes de secretos de Aldriana",
+  "notas": "Manos de cuero. Sin procs ni efectos de uso.",
+  "penetracion_armadura": 90,
+  "poder_ataque": 165
+ },
+ "50677": {
+  "aguante": 116,
+  "armadura": 185,
+  "celeridad": 60,
+  "critico": 68,
+  "fuerza": 108,
+  "ilvl": 277,
+  "nombre_es": "Frazada enrollada",
+  "notas": "Capa (espalda). Sin procs ni efectos de uso."
+ },
+ "50682": {
+  "aguante": 141,
+  "armadura": 756,
+  "defensa": 54,
+  "esquiva": 46,
+  "fuerza": 102,
+  "ilvl": 277,
+  "nombre_es": "Medallón con bilis incrustada",
+  "notas": "Cuello de tanque; el tooltip incluye 756 de armadura. Sin procs ni efectos de uso."
+ },
+ "50684": {
+  "aguante": 44,
+  "celeridad": 30,
+  "critico": 38,
+  "ilvl": 277,
+  "intelecto": 44,
+  "nombre_es": "Pincho empalador de cadáveres",
+  "notas": "Varita (ranura a distancia), 580-1077 de daño de Fuego, velocidad 1.80. Sin procs ni efectos de uso.",
+  "poder_hechizos": 58
+ },
+ "50688": {
+  "agilidad": 120,
+  "aguante": 107,
+  "armadura": 867,
+  "critico": 74,
+  "ilvl": 277,
+  "intelecto": 71,
+  "nombre_es": "Cordón de acechador Nerub'ar",
+  "notas": "Cintura de malla. Sin procs ni efectos de uso.",
+  "penetracion_armadura": 71,
+  "poder_ataque": 181
+ },
+ "50691": {
+  "aguante": 180,
+  "armadura": 1550,
+  "defensa": 63,
+  "esquiva": 63,
+  "fuerza": 136,
+  "ilvl": 277,
+  "nombre_es": "Cinturón de huesos rotos",
+  "notas": "Cintura de placas. Sin procs ni efectos de uso.",
+  "parada": 71
+ },
+ "50693": {
+  "aguante": 116,
+  "critico": 68,
+  "fuerza": 108,
+  "ilvl": 277,
+  "nombre_es": "Poderío de añublo",
+  "notas": "Anillo (dedo), Único-Equipado. Sin armadura, procs ni efectos de uso.",
+  "penetracion_armadura": 60
+ },
+ "50694": {
+  "aguante": 139,
+  "armadura": 323,
+  "celeridad": 116,
+  "golpe": 104,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Pantalones manchados del Pesteador",
+  "notas": "Piernas de tela, 3 ranuras. Sin procs ni efectos de uso.",
+  "poder_hechizos": 185
+ },
+ "50699": {
+  "aguante": 103,
+  "armadura": 254,
+  "celeridad": 90,
+  "critico": 74,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Botas de científico de la Peste",
+  "notas": "Pies de tela. Sin procs ni efectos de uso.",
+  "poder_hechizos": 140
+ },
+ "50702": {
+  "aguante": 103,
+  "armadura": 208,
+  "critico": 74,
+  "espiritu": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Enfermedad persistente",
+  "notas": "Cintura de tela. Sin procs ni efectos de uso.",
+  "poder_hechizos": 140
+ },
+ "50703": {
+  "aguante": 103,
+  "armadura": 964,
+  "celeridad": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "mp5": 37,
+  "nombre_es": "Guantes de cirujano sucios",
+  "poder_hechizos": 140
+ },
+ "50704": {
+  "aguante": 76,
+  "celeridad": 66,
+  "golpe": 50,
+  "ilvl": 277,
+  "intelecto": 76,
+  "nombre_es": "Rigor mortis",
+  "notas": "Espada de mano derecha (una mano), Único. 143-414 de daño, velocidad 1.80. Sin procs ni efectos de uso.",
+  "poder_hechizos": 836
+ },
+ "50705": {
+  "aguante": 103,
+  "armadura": 391,
+  "celeridad": 90,
+  "espiritu": 74,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Guardapolvo ensangrentado del profesor",
+  "notas": "Cintura de cuero. Sin procs ni efectos de uso.",
+  "poder_hechizos": 140
+ },
+ "50707": {
+  "agilidad": 120,
+  "aguante": 136,
+  "armadura": 391,
+  "critico": 90,
+  "ilvl": 277,
+  "nombre_es": "Cincho suturado de Astrylian",
+  "notas": "Cintura de cuero. Sin procs ni efectos de uso.",
+  "penetracion_armadura": 74,
+  "poder_ataque": 181
+ },
+ "50711": {
+  "agilidad": 128,
+  "aguante": 107,
+  "armadura": 1060,
+  "critico": 90,
+  "golpe": 55,
+  "ilvl": 277,
+  "intelecto": 71,
+  "nombre_es": "Botines del páramo",
+  "notas": "Pies de malla. Sin procs ni efectos de uso.",
+  "poder_ataque": 165
+ },
+ "50714": {
+  "aguante": 78,
+  "celeridad": 78,
+  "golpe": 44,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "El otro sello de Valanar",
+  "poder_hechizos": 110
+ },
+ "50715": {
+  "aguante": 103,
+  "armadura": 521,
+  "celeridad": 74,
+  "espiritu": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Sobrehombros con espinas de punta de Escarcha",
+  "poder_hechizos": 140
+ },
+ "50718": {
+  "aguante": 141,
+  "armadura": 185,
+  "defensa": 68,
+  "esquiva": 68,
+  "fuerza": 78,
+  "golpe": 44,
+  "ilvl": 277,
+  "nombre_es": "Capa carmesí real"
+ },
+ "50719": {
+  "aguante": 78,
+  "celeridad": 68,
+  "critico": 68,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Huso de seda de las Sombras",
+  "notas": "Objeto de mano izquierda (sostener en mano izquierda); no aporta armadura.",
+  "poder_hechizos": 119
+ },
+ "50722": {
+  "aguante": 103,
+  "armadura": 231,
+  "celeridad": 90,
+  "espiritu": 74,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Guantes de ritualista San'layn",
+  "poder_hechizos": 140
+ },
+ "50724": {
+  "aguante": 78,
+  "celeridad": 60,
+  "critico": 65,
+  "ilvl": 277,
+  "intelecto": 78,
+  "nombre_es": "Gargantilla carmesí de la Reina de Sangre",
+  "poder_hechizos": 110
+ },
+ "50730": {
+  "aguante": 222,
+  "critico": 122,
+  "fuerza": 198,
+  "ilvl": 284,
+  "nombre_es": "Glorenzelg, alta hoja de la Mano de Plata",
+  "notas": "Espada de dos manos, 991-1487 de daño, velocidad 3.60.",
+  "pericia": 114
+ },
+ "50732": {
+  "aguante": 81,
+  "celeridad": 71,
+  "critico": 55,
+  "ilvl": 284,
+  "intelecto": 81,
+  "nombre_es": "Oleada de sangre, hoja de agonía de Kel'Thuzad",
+  "notas": "Espada de mano derecha, 161-447 de daño, velocidad 1.80.",
+  "poder_hechizos": 893
+ },
+ "50733": {
+  "agilidad": 62,
+  "aguante": 62,
+  "critico": 41,
+  "ilvl": 284,
+  "nombre_es": "Fal'inrush, defensora de Quel'thalas",
+  "notas": "Ballesta a distancia, 783-1071 de daño, velocidad 3.00.",
+  "penetracion_armadura": 33,
+  "poder_ataque": 66
+ },
+ "50734": {
+  "aguante": 81,
+  "celeridad": 71,
+  "critico": 55,
+  "ilvl": 284,
+  "intelecto": 81,
+  "nombre_es": "Cetro real de Terenas II",
+  "notas": "Maza de mano derecha, 161-447 de daño, velocidad 1.80. Efecto condicional no sumado: aumenta el poder de ataque en 1593 solo con las formas de gato, oso, oso temible y lechúcico lunar.",
+  "poder_hechizos": 893
+ },
+ "50735": {
+  "agilidad": 179,
+  "aguante": 195,
+  "critico": 114,
+  "ilvl": 284,
+  "nombre_es": "Vinculador de juramentos, carga del general forestal",
+  "notas": "Arma de asta de dos manos, 991-1487 de daño, velocidad 3.60. Efecto condicional no sumado: aumenta el poder de ataque en 4051 solo con las formas de gato, oso, oso temible y lechúcico lunar.",
+  "penetracion_armadura": 122,
+  "poder_ataque": 228
+ },
+ "50737": {
+  "agilidad": 84,
+  "aguante": 84,
+  "celeridad": 48,
+  "critico": 56,
+  "ilvl": 284,
+  "nombre_es": "Llamada del caos, hoja de los Reyes de Lordaeron",
+  "notas": "Hacha de una mano, 481-895 de daño, velocidad 2.60.",
+  "poder_ataque": 95
+ },
+ "51176": {
+  "aguante": 123,
+  "armadura": 354,
+  "critico": 100,
+  "espiritu": 100,
+  "ilvl": 264,
+  "intelecto": 123,
+  "nombre_es": "Toga de acólito carmesí santificada",
+  "poder_hechizos": 171
+ },
+ "51178": {
+  "aguante": 123,
+  "armadura": 287,
+  "critico": 100,
+  "espiritu": 92,
+  "ilvl": 264,
+  "intelecto": 123,
+  "nombre_es": "Caperuza de acólito carmesí santificada",
+  "notas": "Tela, solo Sacerdote. Parte del conjunto Vestiduras de acólito carmesí santificado (0/5); los bonos de conjunto (2p: Sanación relámpago con 33% de probabilidad de sanar un 33% adicional durante 9 s; 4p: +5% Palabra de poder: escudo y +10% Círculo de sanación) no se suman a las estadísticas.",
+  "poder_hechizos": 162
+ },
+ "51179": {
+  "aguante": 92,
+  "armadura": 221,
+  "celeridad": 72,
+  "espiritu": 80,
+  "ilvl": 264,
+  "intelecto": 92,
+  "nombre_es": "Guantes de acólito carmesí santificados",
+  "notas": "Tela, solo Sacerdote. Parte del conjunto Vestiduras de acólito carmesí santificado (0/5); bonos de conjunto no sumados.",
+  "poder_hechizos": 132
+ },
+ "51180": {
+  "aguante": 123,
+  "armadura": 354,
+  "celeridad": 100,
+  "critico": 100,
+  "ilvl": 264,
+  "intelecto": 123,
+  "nombre_es": "Vestiduras de acólito carmesí santificadas",
+  "notas": "Tela, solo Sacerdote. Parte del conjunto Atavío de acólito carmesí santificado (0/5); los bonos de conjunto (2p: +5% de crítico en Palabra de las Sombras: dolor, Peste devoradora y Toque vampírico; 4p: reduce el tiempo de canalización de Tortura mental) no se suman.",
+  "poder_hechizos": 171
+ },
+ "51182": {
+  "aguante": 92,
+  "armadura": 265,
+  "celeridad": 72,
+  "critico": 80,
+  "ilvl": 264,
+  "intelecto": 92,
+  "nombre_es": "Manto de acólito carmesí santificado",
+  "notas": "Pieza del conjunto Atavío de acólito carmesí santificado (0/5). Ranura amarilla. Sin procs ni usos activos.",
+  "poder_hechizos": 132
+ },
+ "51225": {
+  "aguante": 209,
+  "armadura": 2756,
+  "critico": 122,
+  "fuerza": 193,
+  "ilvl": 277,
+  "nombre_es": "Placa de batalla de señor Ymirjar santificada",
+  "notas": "Heroico. Pieza del Equipo de batalla de señor Ymirjar santificado (0/5). Ranuras roja y azul. Sin procs ni usos activos.",
+  "penetracion_armadura": 106
+ },
+ "51227": {
+  "aguante": 209,
+  "armadura": 2239,
+  "critico": 114,
+  "fuerza": 185,
+  "ilvl": 277,
+  "nombre_es": "Casco de señor Ymirjar santificado",
+  "notas": "Heroico. Pieza del Equipo de batalla de señor Ymirjar santificado (0/5). Sin procs ni usos activos.",
+  "penetracion_armadura": 106
+ },
+ "51228": {
+  "aguante": 208,
+  "armadura": 2412,
+  "critico": 122,
+  "fuerza": 193,
+  "ilvl": 277,
+  "nombre_es": "Quijotes de señor Ymirjar santificados",
+  "notas": "Heroico. Pieza del Equipo de batalla de señor Ymirjar santificado (0/5). Sin procs ni usos activos.",
+  "pericia": 106
+ },
+ "51229": {
+  "aguante": 155,
+  "armadura": 2067,
+  "critico": 90,
+  "fuerza": 147,
+  "ilvl": 277,
+  "nombre_es": "Hombreras de placas de señor Ymirjar santificadas",
+  "notas": "Heroico. Pieza del Equipo de batalla de señor Ymirjar santificado (0/5). Sin procs ni usos activos.",
+  "penetracion_armadura": 82
+ },
+ "51230": {
+  "aguante": 103,
+  "armadura": 231,
+  "critico": 90,
+  "golpe": 82,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Guantes del Aquelarre oscuro santificados",
+  "notas": "Heroico. Pieza del Atavío del Aquelarre oscuro santificado (0/5). Sin procs ni usos activos.",
+  "poder_hechizos": 150
+ },
+ "51231": {
+  "aguante": 139,
+  "armadura": 300,
+  "celeridad": 106,
+  "critico": 114,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Caperuza del Aquelarre oscuro santificada",
+  "notas": "Heroico. Pieza del Atavío del Aquelarre oscuro santificado (0/5). Sin procs ni usos activos.",
+  "poder_hechizos": 186
+ },
+ "51233": {
+  "aguante": 139,
+  "armadura": 369,
+  "celeridad": 106,
+  "critico": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Toga del Aquelarre oscuro santificada",
+  "notas": "Heroico. Pieza del Atavío del Aquelarre oscuro santificado (0/5). Sin procs ni usos activos.",
+  "poder_hechizos": 195
+ },
+ "51234": {
+  "aguante": 103,
+  "armadura": 277,
+  "celeridad": 82,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Hombreras del Aquelarre oscuro santificadas",
+  "notas": "Heroico. Pieza del Atavío del Aquelarre oscuro santificado (0/5). Ranura amarilla. Sin procs ni usos activos.",
+  "poder_hechizos": 150
+ },
+ "51240": {
+  "agilidad": 136,
+  "aguante": 107,
+  "armadura": 1157,
+  "celeridad": 63,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 71,
+  "nombre_es": "Guardahombros de bruja de Escarcha santificados",
+  "notas": "Heroico. Malla. Pieza del Equipo de batalla de bruja de Escarcha santificado (0/5). Sin procs ni usos activos.",
+  "poder_ataque": 165
+ },
+ "51241": {
+  "agilidad": 183,
+  "aguante": 144,
+  "armadura": 1349,
+  "critico": 114,
+  "golpe": 88,
+  "ilvl": 277,
+  "intelecto": 96,
+  "nombre_es": "Falda de guerra de bruja de Escarcha santificada",
+  "notas": "Heroico. Malla. Pieza del Equipo de batalla de bruja de Escarcha santificado (0/5). Sin procs ni usos activos.",
+  "poder_ataque": 212
+ },
+ "51242": {
+  "agilidad": 175,
+  "aguante": 144,
+  "armadura": 1253,
+  "celeridad": 80,
+  "critico": 114,
+  "ilvl": 277,
+  "intelecto": 96,
+  "nombre_es": "Visera de bruja de Escarcha santificada",
+  "notas": "Heroico. Malla. Ranura meta y ranura roja. Pieza del Equipo de batalla de bruja de Escarcha santificado (0/5). Sin procs ni usos activos.",
+  "poder_ataque": 212
+ },
+ "51244": {
+  "agilidad": 183,
+  "aguante": 144,
+  "armadura": 1542,
+  "celeridad": 88,
+  "critico": 114,
+  "ilvl": 277,
+  "intelecto": 96,
+  "nombre_es": "Coselete de bruja de Escarcha santificado",
+  "notas": "Heroico. Malla. Ranuras roja y azul. Pieza del Equipo de batalla de bruja de Escarcha santificado (0/5). Sin procs ni usos activos.",
+  "poder_ataque": 212
+ },
+ "51245": {
+  "aguante": 103,
+  "armadura": 1157,
+  "celeridad": 82,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Bufas de bruja de Escarcha santificadas",
+  "poder_hechizos": 150
+ },
+ "51246": {
+  "aguante": 139,
+  "armadura": 1349,
+  "critico": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "mp5": 53,
+  "nombre_es": "Musleras de bruja de Escarcha santificadas",
+  "poder_hechizos": 195
+ },
+ "51247": {
+  "aguante": 139,
+  "armadura": 1253,
+  "celeridad": 106,
+  "critico": 114,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Celada de bruja de Escarcha santificada",
+  "poder_hechizos": 185
+ },
+ "51249": {
+  "aguante": 139,
+  "armadura": 1542,
+  "celeridad": 106,
+  "critico": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Guerrera de bruja de Escarcha santificada",
+  "poder_hechizos": 195
+ },
+ "51250": {
+  "agilidad": 183,
+  "aguante": 183,
+  "armadura": 694,
+  "critico": 122,
+  "ilvl": 277,
+  "nombre_es": "Coraza de Hoja de las Sombras santificada",
+  "notas": "Heroico. Cuero. Ranuras roja y amarilla. Pieza del Equipo de batalla de Hoja de las Sombras santificado (0/5). Sin procs ni usos activos.",
+  "penetracion_armadura": 106,
+  "poder_ataque": 212
+ },
+ "51251": {
+  "agilidad": 136,
+  "aguante": 136,
+  "armadura": 434,
+  "celeridad": 82,
+  "critico": 90,
+  "ilvl": 277,
+  "nombre_es": "Guanteletes de Hoja de las Sombras santificados",
+  "notas": "Heroico. Cuero. Ranura roja. Pieza del Equipo de batalla de Hoja de las Sombras santificado (0/5). Sin procs ni usos activos.",
+  "poder_ataque": 165
+ },
+ "51252": {
+  "agilidad": 183,
+  "aguante": 183,
+  "armadura": 564,
+  "critico": 114,
+  "ilvl": 277,
+  "nombre_es": "Casco de Hoja de las Sombras santificado",
+  "penetracion_armadura": 106,
+  "poder_ataque": 196
+ },
+ "51253": {
+  "agilidad": 183,
+  "aguante": 183,
+  "armadura": 608,
+  "critico": 122,
+  "ilvl": 277,
+  "nombre_es": "Quijotes de Hoja de las Sombras santificados",
+  "pericia": 106,
+  "poder_ataque": 212
+ },
+ "51254": {
+  "agilidad": 136,
+  "aguante": 136,
+  "armadura": 521,
+  "critico": 90,
+  "golpe": 82,
+  "ilvl": 277,
+  "nombre_es": "Espaldares de Hoja de las Sombras santificados",
+  "poder_ataque": 165
+ },
+ "51255": {
+  "aguante": 139,
+  "armadura": 300,
+  "celeridad": 98,
+  "critico": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Alzacuellos de acólito carmesí santificado",
+  "poder_hechizos": 185
+ },
+ "51256": {
+  "aguante": 103,
+  "armadura": 231,
+  "critico": 90,
+  "golpe": 82,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Manijas de acólito carmesí santificadas",
+  "poder_hechizos": 150
+ },
+ "51257": {
+  "aguante": 103,
+  "armadura": 277,
+  "celeridad": 82,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Manto de acólito carmesí santificado",
+  "poder_hechizos": 150
+ },
+ "51259": {
+  "aguante": 139,
+  "armadura": 369,
+  "celeridad": 114,
+  "critico": 114,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Vestiduras de acólito carmesí santificadas",
+  "poder_hechizos": 195
+ },
+ "51265": {
+  "aguante": 251,
+  "armadura": 4100,
+  "esquiva": 80,
+  "fuerza": 183,
+  "ilvl": 277,
+  "nombre_es": "Coselete juraluz santificado",
+  "parada": 96
+ },
+ "51266": {
+  "aguante": 243,
+  "armadura": 2239,
+  "fuerza": 183,
+  "ilvl": 277,
+  "nombre_es": "Visera juraluz santificada"
+ },
+ "51267": {
+  "aguante": 192,
+  "armadura": 2871,
+  "defensa": 90,
+  "fuerza": 103,
+  "golpe": 69,
+  "ilvl": 277,
+  "nombre_es": "Manoplas juraluz santificadas"
+ },
+ "51268": {
+  "aguante": 251,
+  "armadura": 2412,
+  "defensa": 122,
+  "esquiva": 106,
+  "fuerza": 139,
+  "ilvl": 277,
+  "nombre_es": "Musleras juraluz santificadas",
+  "pericia": 93
+ },
+ "51269": {
+  "aguante": 192,
+  "armadura": 2067,
+  "defensa": 71,
+  "esquiva": 63,
+  "fuerza": 136,
+  "ilvl": 277,
+  "nombre_es": "Guardahombros juraluz santificados",
+  "parada": 71
+ },
+ "51270": {
+  "aguante": 103,
+  "armadura": 1723,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "mp5": 41,
+  "nombre_es": "Guantes juraluz santificados",
+  "poder_hechizos": 150
+ },
+ "51271": {
+  "aguante": 139,
+  "armadura": 2412,
+  "critico": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "mp5": 53,
+  "nombre_es": "Grebas juraluz santificadas",
+  "poder_hechizos": 195
+ },
+ "51272": {
+  "aguante": 139,
+  "armadura": 2239,
+  "celeridad": 106,
+  "critico": 114,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Celada juraluz santificada",
+  "poder_hechizos": 186
+ },
+ "51273": {
+  "aguante": 103,
+  "armadura": 2067,
+  "celeridad": 82,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Bufas juraluz santificadas",
+  "poder_hechizos": 150
+ },
+ "51274": {
+  "aguante": 139,
+  "armadura": 2756,
+  "celeridad": 106,
+  "critico": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Guerrera juraluz santificada",
+  "poder_hechizos": 195
+ },
+ "51275": {
+  "aguante": 209,
+  "armadura": 2756,
+  "celeridad": 106,
+  "critico": 122,
+  "fuerza": 193,
+  "ilvl": 277,
+  "nombre_es": "Placa de batalla juraluz santificada"
+ },
+ "51277": {
+  "aguante": 209,
+  "armadura": 2239,
+  "celeridad": 106,
+  "critico": 114,
+  "fuerza": 185,
+  "ilvl": 277,
+  "nombre_es": "Casco juraluz santificado"
+ },
+ "51278": {
+  "aguante": 209,
+  "armadura": 2412,
+  "critico": 122,
+  "fuerza": 193,
+  "ilvl": 277,
+  "nombre_es": "Quijotes juraluz santificados",
+  "pericia": 106
+ },
+ "51279": {
+  "aguante": 155,
+  "armadura": 2067,
+  "celeridad": 82,
+  "critico": 90,
+  "fuerza": 147,
+  "ilvl": 277,
+  "nombre_es": "Hombreras de placas juraluz santificadas"
+ },
+ "51280": {
+  "aguante": 103,
+  "armadura": 231,
+  "critico": 90,
+  "golpe": 82,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Guantes de mago sangriento santificados",
+  "poder_hechizos": 150
+ },
+ "51281": {
+  "aguante": 139,
+  "armadura": 300,
+  "celeridad": 98,
+  "critico": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Caperuza de mago sangriento santificada",
+  "poder_hechizos": 186
+ },
+ "51282": {
+  "aguante": 139,
+  "armadura": 323,
+  "critico": 122,
+  "golpe": 106,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Leotardos de mago sangriento santificados",
+  "poder_hechizos": 195
+ },
+ "51283": {
+  "aguante": 139,
+  "armadura": 369,
+  "celeridad": 122,
+  "critico": 106,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Toga de mago sangriento santificada",
+  "poder_hechizos": 195
+ },
+ "51284": {
+  "aguante": 103,
+  "armadura": 277,
+  "celeridad": 82,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Hombreras de mago sangriento santificadas",
+  "poder_hechizos": 150
+ },
+ "51285": {
+  "agilidad": 136,
+  "aguante": 107,
+  "armadura": 964,
+  "critico": 82,
+  "golpe": 71,
+  "ilvl": 277,
+  "intelecto": 71,
+  "nombre_es": "Manoplas de cazador de sangre Ahn'Kahar santificadas",
+  "poder_ataque": 165
+ },
+ "51286": {
+  "agilidad": 175,
+  "aguante": 144,
+  "armadura": 1253,
+  "critico": 106,
+  "ilvl": 277,
+  "intelecto": 96,
+  "nombre_es": "Celada de cazador de sangre Ahn'Kahar santificada",
+  "penetracion_armadura": 88,
+  "poder_ataque": 212
+ },
+ "51288": {
+  "agilidad": 136,
+  "aguante": 107,
+  "armadura": 1157,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 71,
+  "nombre_es": "Bufas de cazador de sangre Ahn'Kahar santificadas",
+  "penetracion_armadura": 63,
+  "poder_ataque": 165
+ },
+ "51289": {
+  "agilidad": 183,
+  "aguante": 144,
+  "armadura": 1542,
+  "critico": 114,
+  "ilvl": 277,
+  "intelecto": 96,
+  "nombre_es": "Guerrera de cazador de sangre Ahn'Kahar santificada",
+  "penetracion_armadura": 88,
+  "poder_ataque": 212
+ },
+ "51290": {
+  "aguante": 139,
+  "armadura": 564,
+  "celeridad": 106,
+  "critico": 114,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Casquete tejeazote santificado",
+  "poder_hechizos": 186
+ },
+ "51292": {
+  "aguante": 103,
+  "armadura": 521,
+  "celeridad": 82,
+  "critico": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Manto tejeazote santificado",
+  "poder_hechizos": 150
+ },
+ "51293": {
+  "aguante": 139,
+  "armadura": 608,
+  "critico": 122,
+  "golpe": 106,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Calzas tejeazote santificadas",
+  "poder_hechizos": 195
+ },
+ "51294": {
+  "aguante": 139,
+  "armadura": 694,
+  "celeridad": 106,
+  "critico": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Vestimentas tejeazote santificadas",
+  "poder_hechizos": 195
+ },
+ "51295": {
+  "agilidad": 136,
+  "aguante": 136,
+  "armadura": 434,
+  "celeridad": 82,
+  "ilvl": 277,
+  "nombre_es": "Lúas tejeazote santificadas",
+  "penetracion_armadura": 90,
+  "poder_ataque": 165
+ },
+ "51296": {
+  "agilidad": 183,
+  "aguante": 183,
+  "armadura": 564,
+  "critico": 114,
+  "ilvl": 277,
+  "nombre_es": "Protegecabezas tejeazote santificado",
+  "penetracion_armadura": 106,
+  "poder_ataque": 196
+ },
+ "51297": {
+  "agilidad": 183,
+  "aguante": 183,
+  "armadura": 608,
+  "ilvl": 277,
+  "nombre_es": "Musleras tejeazote santificadas",
+  "penetracion_armadura": 122,
+  "pericia": 106,
+  "poder_ataque": 212
+ },
+ "51298": {
+  "agilidad": 183,
+  "aguante": 183,
+  "armadura": 694,
+  "critico": 122,
+  "ilvl": 277,
+  "nombre_es": "Vestiduras tejeazote santificadas",
+  "penetracion_armadura": 106,
+  "poder_ataque": 212
+ },
+ "51299": {
+  "agilidad": 136,
+  "aguante": 136,
+  "armadura": 521,
+  "critico": 90,
+  "ilvl": 277,
+  "nombre_es": "Hombreras tejeazote santificadas",
+  "penetracion_armadura": 82,
+  "poder_ataque": 165
+ },
+ "51301": {
+  "aguante": 103,
+  "armadura": 434,
+  "celeridad": 82,
+  "espiritu": 90,
+  "ilvl": 277,
+  "intelecto": 103,
+  "nombre_es": "Guanteletes tejeazote santificados",
+  "poder_hechizos": 150
+ },
+ "51302": {
+  "aguante": 139,
+  "armadura": 564,
+  "critico": 106,
+  "espiritu": 114,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Casco tejeazote santificado",
+  "poder_hechizos": 186
+ },
+ "51303": {
+  "aguante": 139,
+  "armadura": 608,
+  "celeridad": 104,
+  "espiritu": 122,
+  "ilvl": 277,
+  "intelecto": 139,
+  "nombre_es": "Quijotes tejeazote santificados",
+  "poder_hechizos": 195
+ },
+ "51305": {
+  "aguante": 251,
+  "armadura": 4100,
+  "esquiva": 80,
+  "fuerza": 183,
+  "ilvl": 277,
+  "nombre_es": "Coselete de Señor de la Plaga santificado",
+  "parada": 96
+ },
+ "51307": {
+  "aguante": 192,
+  "armadura": 2871,
+  "defensa": 90,
+  "fuerza": 103,
+  "golpe": 69,
+  "ilvl": 277,
+  "nombre_es": "Manoplas de Señor de la Plaga santificadas"
+ },
+ "51308": {
+  "aguante": 251,
+  "armadura": 2412,
+  "defensa": 122,
+  "esquiva": 106,
+  "fuerza": 139,
+  "ilvl": 277,
+  "nombre_es": "Musleras de Señor de la Plaga santificadas",
+  "pericia": 93
+ },
+ "51309": {
+  "aguante": 192,
+  "armadura": 2067,
+  "defensa": 71,
+  "esquiva": 63,
+  "fuerza": 136,
+  "ilvl": 277,
+  "nombre_es": "Espaldares de Señor de la Plaga santificados",
+  "parada": 71
+ },
+ "51310": {
+  "aguante": 209,
+  "armadura": 2756,
+  "critico": 122,
+  "fuerza": 193,
+  "ilvl": 277,
+  "nombre_es": "Placa de batalla de Señor de la Plaga santificada",
+  "penetracion_armadura": 106
+ },
+ "51311": {
+  "aguante": 155,
+  "armadura": 1723,
+  "critico": 90,
+  "fuerza": 147,
+  "golpe": 82,
+  "ilvl": 277,
+  "nombre_es": "Guanteletes de Señor de la Plaga santificados"
+ },
+ "51312": {
+  "aguante": 209,
+  "armadura": 2239,
+  "critico": 114,
+  "fuerza": 185,
+  "ilvl": 277,
+  "nombre_es": "Casco de Señor de la Plaga santificado",
+  "penetracion_armadura": 106
+ },
+ "51313": {
+  "aguante": 209,
+  "armadura": 2412,
+  "critico": 122,
+  "fuerza": 193,
+  "ilvl": 277,
+  "nombre_es": "Quijotes de Señor de la Plaga santificados",
+  "pericia": 106
+ },
+ "51314": {
+  "aguante": 155,
+  "armadura": 2067,
+  "critico": 90,
+  "fuerza": 147,
+  "ilvl": 277,
+  "nombre_es": "Hombreras de placas de Señor de la Plaga santificadas",
+  "penetracion_armadura": 82
+ },
+ "51823": {
+  "aguante": 111,
+  "armadura": 309,
+  "critico": 108,
+  "espiritu": 92,
+  "ilvl": 264,
+  "intelecto": 115,
+  "nombre_es": "Leotardos de la mente refractada",
+  "poder_hechizos": 171
+ },
+ "51851": {
+  "aguante": 123,
+  "armadura": 354,
+  "celeridad": 102,
+  "espiritu": 90,
+  "ilvl": 264,
+  "intelecto": 123,
+  "nombre_es": "Vestiduras de alma de sangre",
+  "poder_hechizos": 162
+ },
+ "51901": {
+  "aguante": 124,
+  "armadura": 1869,
+  "defensa": 48,
+  "esquiva": 42,
+  "fuerza": 82,
+  "ilvl": 264,
+  "nombre_es": "Brazales de saliva de gárgola"
+ },
+ "51944": {
+  "aguante": 74,
+  "critico": 55,
+  "ilvl": 271,
+  "intelecto": 63,
+  "mp5": 31,
+  "nombre_es": "Valius, mazo del Iluminado",
+  "notas": "Maza de una mano (mano derecha), 146-462 de daño, velocidad 2.20. Otorga además 1164 de poder de ataque, pero solo con las formas de gato, oso, oso temible y lechúcico lunar (poder de ataque feral condicional, no aplicable fuera de esas formas).",
+  "poder_hechizos": 791
+ },
+ "52572": {
+  "aguante": 107,
+  "critico": 59,
+  "fuerza": 99,
+  "golpe": 59,
+  "ilvl": 277,
+  "nombre_es": "Sortija Cinérea de poderío infinito",
+  "notas": "Equipar (proc): probabilidad al acertar de aumentar tu poder de ataque en 480 p. durante 10 s (1 min de reutilización). Único-Equipado con las demás Sortijas del Veredicto Cinéreo; requiere El Veredicto Cinéreo - Exaltado."
+ },
+ "54576": {
+  "agilidad": 109,
+  "aguante": 109,
+  "critico": 73,
+  "golpe": 57,
+  "ilvl": 284,
+  "nombre_es": "Sello de crepúsculo",
+  "poder_ataque": 145
+ },
+ "54577": {
+  "agilidad": 145,
+  "aguante": 115,
+  "armadura": 1085,
+  "critico": 97,
+  "ilvl": 284,
+  "intelecto": 76,
+  "nombre_es": "Pisadas de regreso",
+  "penetracion_armadura": 60,
+  "poder_ataque": 162
+ },
+ "54578": {
+  "aguante": 165,
+  "armadura": 1939,
+  "critico": 97,
+  "fuerza": 165,
+  "golpe": 81,
+  "ilvl": 284,
+  "nombre_es": "Avanzado del Apocalipsis"
+ },
+ "54579": {
+  "aguante": 206,
+  "armadura": 1939,
+  "defensa": 68,
+  "esquiva": 68,
+  "fuerza": 145,
+  "ilvl": 284,
+  "nombre_es": "Botines de resurrección inminente",
+  "parada": 68
+ },
+ "54580": {
+  "agilidad": 109,
+  "aguante": 109,
+  "armadura": 311,
+  "celeridad": 73,
+  "critico": 73,
+  "ilvl": 284,
+  "nombre_es": "Bandas agraviadas",
+  "poder_ataque": 113
+ },
+ "54581": {
+  "aguante": 124,
+  "critico": 73,
+  "fuerza": 116,
+  "ilvl": 284,
+  "nombre_es": "Colgante de lobreguez",
+  "penetracion_armadura": 65
+ },
+ "54582": {
+  "aguante": 83,
+  "armadura": 165,
+  "celeridad": 73,
+  "critico": 65,
+  "ilvl": 284,
+  "intelecto": 83,
+  "nombre_es": "Brazales de noche ígnea",
+  "poder_hechizos": 118
+ },
+ "54583": {
+  "aguante": 83,
+  "armadura": 189,
+  "celeridad": 73,
+  "critico": 65,
+  "ilvl": 284,
+  "intelecto": 83,
+  "nombre_es": "Capa de ocaso ardiente",
+  "poder_hechizos": 118
+ },
+ "54584": {
+  "aguante": 83,
+  "armadura": 311,
+  "celeridad": 65,
+  "critico": 73,
+  "ilvl": 284,
+  "intelecto": 83,
+  "nombre_es": "Brazales de cambio de fase",
+  "poder_hechizos": 118
+ },
+ "54585": {
+  "aguante": 83,
+  "celeridad": 65,
+  "ilvl": 284,
+  "intelecto": 83,
+  "mp5": 36,
+  "nombre_es": "Anillo de regeneración por fase",
+  "poder_hechizos": 118
+ },
+ "54587": {
+  "aguante": 110,
+  "armadura": 888,
+  "celeridad": 97,
+  "critico": 81,
+  "ilvl": 284,
+  "intelecto": 110,
+  "nombre_es": "Cinturón de forma partida",
+  "poder_hechizos": 151
+ },
+ "54588": {
+  "celeridad": 184,
+  "ilvl": 284,
+  "nombre_es": "Escama Crepuscular carbonizada",
+  "notas": "Abalorio. Proc: tus hechizos de daño tienen la opción de otorgar 861 p. de poder con hechizos durante 15 s (probabilidad de accionar 10%, 50 s de reutilización)."
+ },
+ "54589": {
+  "ilvl": 284,
+  "nombre_es": "Escama Crepuscular resplandeciente",
+  "notas": "Abalorio. Uso: durante 15 s, cada sanación directa hace que el objetivo se sane a sí mismo y a sus aliados en 10 m por 402 p. cada segundo durante 6 s (2 min de reutilización).",
+  "poder_hechizos": 215
+ },
+ "54590": {
+  "ilvl": 284,
+  "nombre_es": "Escama Crepuscular afilada",
+  "notas": "Abalorio. Proc: al infligir daño tienes probabilidad de obtener 1472 p. de poder de ataque durante 15 s (probabilidad de accionar 35%, 45 s de reutilización).",
+  "penetracion_armadura": 184
+ },
+ "54591": {
+  "armadura": 2576,
+  "ilvl": 284,
+  "nombre_es": "Escama Crepuscular petrificada",
+  "notas": "Abalorio. Proc: los ataques cuerpo a cuerpo que reducen tu salud por debajo del 35% te otorgan 828 p. de índice de esquivar durante 10 s (no más de una vez cada 45 s)."
+ }
+}

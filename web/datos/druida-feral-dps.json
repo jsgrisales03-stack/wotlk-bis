@@ -13,14 +13,14 @@
       "id": 41398,
       "nombre": "Diamante de asedio de tierra incansable",
       "icono": "inv_jewelcrafting_shadowspirit_02",
-      "efecto": "+21 agilidad y 3% de daño crítico aumentado",
+      "efecto": "+21 agilidad, +3% daño crítico",
       "requisito": "Requiere al menos 1 gema roja, 1 amarilla y 1 azul"
     },
     "roja": {
       "id": 40112,
-      "nombre": "Rubí cárdeno rúnico delicado",
+      "nombre": "Rubí cárdeno delicado",
       "icono": "inv_jewelcrafting_gem_37",
-      "efecto": "+23 agilidad",
+      "efecto": "+20 agilidad",
       "color": "Roja"
     }
   },
@@ -64,13 +64,13 @@
           "ranura": "Meta",
           "gema": "Diamante de asedio de tierra incansable",
           "icono": "inv_jewelcrafting_shadowspirit_02",
-          "efecto": "+21 agilidad y 3% de daño crítico aumentado"
+          "efecto": "+21 agilidad, +3% daño crítico"
         },
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         }
       ]
     },
@@ -87,9 +87,9 @@
       "gemas": [
         {
           "ranura": "Azul",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]
@@ -107,15 +107,15 @@
       "encantamiento": {
         "nombre": "Inscripción del hacha superior",
         "icono": "trade_engineering",
-        "efecto": "Poder de ataque y crítico",
+        "efecto": "+40 poder de ataque y +15 índice de golpe crítico",
         "origen": "Hijos de Hodir, Exaltado"
       },
       "gemas": [
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         }
       ]
     },
@@ -130,17 +130,17 @@
       "heroico": true,
       "bono_ranura": "+4 agilidad",
       "encantamiento": {
-        "nombre": "Encantar capa: velocidad superior",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+23 celeridad",
-        "origen": "Encantamiento"
+        "nombre": "Base de tejido flexible",
+        "icono": "inv_misc_cape_22",
+        "efecto": "+23 agilidad y caída lenta",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]
@@ -164,15 +164,15 @@
       "gemas": [
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         },
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]
@@ -196,9 +196,9 @@
       "gemas": [
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]
@@ -214,24 +214,24 @@
       "heroico": true,
       "bono_ranura": "+6 agilidad",
       "encantamiento": {
-        "nombre": "Encantar guantes: triturador",
+        "nombre": "Aceleradores de hipervelocidad",
         "icono": "trade_engineering",
-        "efecto": "+44 poder de ataque (Ingeniería: aceleradores)",
-        "origen": "Encantamiento / Ingeniería"
+        "efecto": "+340 celeridad durante 12 s, cada minuto",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         },
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         }
       ]
     },
@@ -254,16 +254,16 @@
       "gemas": [
         {
           "ranura": "Azul",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         },
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         }
       ]
     },
@@ -278,23 +278,23 @@
       "heroico": true,
       "bono_ranura": "+6 agilidad",
       "encantamiento": {
-        "nombre": "Armadura de pierna nerubiana",
+        "nombre": "Armadura de pierna de escama de hielo",
         "icono": "trade_leatherworking",
-        "efecto": "+55 poder de ataque y +15 crítico",
+        "efecto": "+75 poder de ataque y +22 índice de golpe crítico",
         "origen": "Peletería"
       },
       "gemas": [
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         },
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]
@@ -310,24 +310,24 @@
       "heroico": true,
       "bono_ranura": "+6 agilidad",
       "encantamiento": {
-        "nombre": "Encantar botas: asalto superior",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+32 poder de ataque",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         },
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]
@@ -342,18 +342,12 @@
       "en": "Band of the Bone Colossus",
       "heroico": true,
       "bono_ranura": "+4 agilidad",
-      "encantamiento": {
-        "nombre": "Encantar anillo: asalto",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "Mejora ofensiva personal (solo Encantador)",
-        "origen": "Encantamiento"
-      },
       "gemas": [
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]
@@ -371,16 +365,16 @@
       "gemas": [
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]
     },
     "trinket1": {
       "ranura": "Abalorio",
-      "id": 50362,
+      "id": 50363,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_jewelry_trinket_04",
@@ -411,30 +405,30 @@
       "heroico": true,
       "bono_ranura": "+8 agilidad",
       "encantamiento": {
-        "nombre": "Encantar arma: matanza mayor",
+        "nombre": "Encantar arma: Rabiar",
         "icono": "inv_enchant_formulasuperior_01",
-        "efecto": "+110 poder de ataque (arma a dos manos)",
+        "efecto": "Probabilidad de +400 poder de ataque a costa de armadura",
         "origen": "Encantamiento"
       },
       "gemas": [
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad"
+          "efecto": "+20 agilidad"
         },
         {
           "ranura": "Azul",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         },
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico delicado",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 agilidad",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         }
       ]

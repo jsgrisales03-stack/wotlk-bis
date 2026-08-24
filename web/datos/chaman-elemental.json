@@ -132,7 +132,7 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar capa: Perforar con hechizos",
+        "nombre": "Encantar capa: perforar con hechizos",
         "icono": "inv_scroll_03",
         "efecto": "+35 penetración de hechizos",
         "origen": "Encantamiento"

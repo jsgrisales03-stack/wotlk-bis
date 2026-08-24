@@ -133,10 +133,10 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar capa: Perforar con hechizos",
-        "icono": "inv_scroll_03",
-        "efecto": "+35 penetración de hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Bordado de tejido de luz",
+        "icono": "spell_arcane_prismaticcloak",
+        "efecto": "Probabilidad de +295 poder con hechizos durante 15 s",
+        "origen": "Sastrería"
       },
       "gemas": [
         {
@@ -158,9 +158,9 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar pechera: estadísticas potentes",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+10 a todas las estadísticas",
+        "nombre": "Encantar pechera: espíritu sublime",
+        "icono": "spell_holy_greaterheal",
+        "efecto": "+15 espíritu",
         "origen": "Encantamiento"
       },
       "gemas": [
@@ -215,10 +215,10 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar guantes: poder con hechizos excepcional",
-        "icono": "inv_scroll_03",
-        "efecto": "+28 poder con hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Aceleradores de hipervelocidad",
+        "icono": "trade_engineering",
+        "efecto": "+340 celeridad durante 12 s, cada minuto",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -273,9 +273,9 @@
       "heroico": true,
       "bono_ranura": "+9 poder con hechizos",
       "encantamiento": {
-        "nombre": "Hilo de hechizo de zafiro",
+        "nombre": "Hilo de hechizo luminoso",
         "icono": "spell_nature_astralrecalgroup",
-        "efecto": "+50 poder con hechizos y +30 aguante",
+        "efecto": "+50 poder con hechizos y +20 espíritu",
         "origen": "Sastrería"
       },
       "gemas": [
@@ -312,10 +312,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar botas: caminante del hielo",
-        "icono": "inv_scroll_03",
-        "efecto": "+12 índice de golpe y +12 índice de golpe crítico",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {

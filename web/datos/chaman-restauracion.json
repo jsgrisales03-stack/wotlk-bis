@@ -40,24 +40,25 @@
     "trinket1",
     "trinket2",
     "weapon",
+    "offhand",
     "relic"
   ],
   "piezas": {
     "head": {
       "ranura": "Cabeza",
-      "id": 51242,
+      "id": 51247,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_helmet_169",
-      "nombre": "Visera de bruja de Escarcha santificada",
-      "en": "Sanctified Frost Witch's Faceguard",
+      "nombre": "Celada de bruja de Escarcha santificada",
+      "en": "Sanctified Frost Witch's Headpiece",
       "heroico": true,
-      "bono_ranura": "+16 poder de ataque",
+      "bono_ranura": "+9 poder con hechizos",
       "encantamiento": {
-        "nombre": "Arcanum de alivio de gozo",
-        "icono": "ability_warrior_shieldmastery",
-        "efecto": "+30 poder con hechizos y +10 maná cada 5 segundos",
-        "origen": "Acuerdo del Reposo del Dragón, Reverenciado"
+        "nombre": "Arcanum de misterios ardientes",
+        "icono": "spell_fire_masterofelements",
+        "efecto": "+30 poder con hechizos y +20 índice de golpe crítico",
+        "origen": "Kirin Tor, Reverenciado"
       },
       "gemas": [
         {
@@ -67,11 +68,10 @@
           "efecto": "+11 maná/5s, +3% curación crítica"
         },
         {
-          "ranura": "Azul",
+          "ranura": "Roja",
           "gema": "Rubí cárdeno rúnico",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos",
-          "ignora_color": true
+          "efecto": "+23 poder con hechizos"
         }
       ]
     },
@@ -97,18 +97,18 @@
     },
     "shoulder": {
       "ranura": "Hombros",
-      "id": 51240,
+      "id": 51245,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_shoulder_133",
-      "nombre": "Guardahombros de bruja de Escarcha santificados",
-      "en": "Sanctified Frost Witch's Shoulderguards",
+      "nombre": "Bufas de bruja de Escarcha santificadas",
+      "en": "Sanctified Frost Witch's Spaulders",
       "heroico": true,
-      "bono_ranura": "+8 poder de ataque",
+      "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Inscripción del risco superior",
-        "icono": "spell_arcane_teleportorgrimmar",
-        "efecto": "+24 poder con hechizos y +8 maná cada 5 segundos",
+        "nombre": "Inscripción de la tormenta superior",
+        "icono": "trade_engineering",
+        "efecto": "+24 poder con hechizos y +15 índice de golpe crítico",
         "origen": "Hijos de Hodir, Reverenciado"
       },
       "gemas": [
@@ -132,10 +132,10 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar capa: sabiduría",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+10 espíritu",
-        "origen": "Encantamiento"
+        "nombre": "Bordado de tejido de luz",
+        "icono": "spell_arcane_prismaticcloak",
+        "efecto": "Probabilidad de +295 poder con hechizos durante 15 s",
+        "origen": "Sastrería"
       },
       "gemas": [
         {
@@ -148,14 +148,14 @@
     },
     "chest": {
       "ranura": "Pecho",
-      "id": 51244,
+      "id": 51249,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_chest_mail_15",
-      "nombre": "Coselete de bruja de Escarcha santificado",
-      "en": "Sanctified Frost Witch's Chestguard",
+      "nombre": "Guerrera de bruja de Escarcha santificada",
+      "en": "Sanctified Frost Witch's Tunic",
       "heroico": true,
-      "bono_ranura": "+12 poder de ataque",
+      "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
         "nombre": "Encantar pechera: estadísticas potentes",
         "icono": "inv_enchant_formulagood_01",
@@ -180,12 +180,12 @@
     },
     "wrist": {
       "ranura": "Muñecas",
-      "id": 54582,
+      "id": 54584,
       "ilvl": 284,
       "calidad": 4,
-      "icono": "inv_bracer_45",
-      "nombre": "Brazales de noche ígnea",
-      "en": "Bracers of Fiery Night",
+      "icono": "inv_bracer_40",
+      "nombre": "Brazales de cambio de fase",
+      "en": "Phaseshifter's Bracers",
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
@@ -196,32 +196,33 @@
       },
       "gemas": [
         {
-          "ranura": "Roja",
+          "ranura": "Amarilla",
           "gema": "Rubí cárdeno rúnico",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos"
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
         }
       ]
     },
     "hands": {
       "ranura": "Manos",
-      "id": 50619,
+      "id": 50703,
       "ilvl": 277,
       "calidad": 4,
-      "icono": "inv_gauntlets_84",
-      "nombre": "Guantes de acechador Anub'ar",
-      "en": "Anub'ar Stalker's Gloves",
+      "icono": "inv_gauntlets_104",
+      "nombre": "Guantes de cirujano sucios",
+      "en": "Unclean Surgical Gloves",
       "heroico": true,
-      "bono_ranura": "+6 agilidad",
+      "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar guantes: poder con hechizos excepcional",
-        "icono": "inv_scroll_03",
-        "efecto": "+28 poder con hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Aceleradores de hipervelocidad",
+        "icono": "trade_engineering",
+        "efecto": "+340 celeridad durante 12 s, cada minuto",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
-          "ranura": "Amarilla",
+          "ranura": "Azul",
           "gema": "Rubí cárdeno rúnico",
           "icono": "inv_jewelcrafting_gem_37",
           "efecto": "+23 poder con hechizos",
@@ -237,46 +238,40 @@
     },
     "waist": {
       "ranura": "Cintura",
-      "id": 50702,
-      "ilvl": 277,
+      "id": 54587,
+      "ilvl": 284,
       "calidad": 4,
-      "icono": "inv_belt_68",
-      "nombre": "Enfermedad persistente",
-      "en": "Lingering Illness",
+      "icono": "inv_belt_83",
+      "nombre": "Cinturón de forma partida",
+      "en": "Split Shape Belt",
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
-      "encantamiento": {
-        "nombre": "Hebilla de cinturón eterna",
-        "icono": "inv_belt_36",
-        "efecto": "+1 ranura de gema",
-        "origen": "Herrería"
-      },
       "gemas": [
         {
           "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos",
+          "efecto": "+20 agilidad",
           "ignora_color": true
         },
         {
           "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico",
+          "gema": "Rubí cárdeno delicado",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos"
+          "efecto": "+20 agilidad"
         }
       ]
     },
     "legs": {
       "ranura": "Piernas",
-      "id": 51241,
+      "id": 51246,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_kilt_mail_01",
-      "nombre": "Falda de guerra de bruja de Escarcha santificada",
-      "en": "Sanctified Frost Witch's War-Kilt",
+      "nombre": "Musleras de bruja de Escarcha santificadas",
+      "en": "Sanctified Frost Witch's Legguards",
       "heroico": true,
-      "bono_ranura": "+12 poder de ataque",
+      "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
         "nombre": "Hilo de hechizo de zafiro",
         "icono": "spell_nature_astralrecalgroup",
@@ -310,9 +305,9 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar botas: vitalidad superior",
+        "nombre": "Encantar botas: caminante del hielo",
         "icono": "inv_scroll_03",
-        "efecto": "+7 maná y +7 salud cada 5 segundos",
+        "efecto": "+12 índice de golpe y +12 índice de golpe crítico",
         "origen": "Encantamiento"
       },
       "gemas": [
@@ -333,26 +328,6 @@
     },
     "ring1": {
       "ranura": "Anillo",
-      "id": 50644,
-      "ilvl": 277,
-      "calidad": 4,
-      "icono": "inv_jewelry_ring_ahnqiraj_05",
-      "nombre": "Anillo de susurros enloquecedores",
-      "en": "Ring of Maddening Whispers",
-      "heroico": true,
-      "bono_ranura": "+5 poder con hechizos",
-      "gemas": [
-        {
-          "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico",
-          "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos",
-          "ignora_color": true
-        }
-      ]
-    },
-    "ring2": {
-      "ranura": "Anillo",
       "id": 54585,
       "ilvl": 284,
       "calidad": 4,
@@ -370,18 +345,27 @@
         }
       ]
     },
-    "trinket1": {
-      "ranura": "Abalorio",
-      "id": 50366,
+    "ring2": {
+      "ranura": "Anillo",
+      "id": 50664,
       "ilvl": 277,
       "calidad": 4,
-      "icono": "inv_jewelry_trinket_02",
-      "nombre": "Ábaco de Althor",
-      "en": "Althor's Abacus",
+      "icono": "inv_jewelry_ring_86",
+      "nombre": "Anillo de rápido ascenso",
+      "en": "Ring of Rapid Ascent",
       "heroico": true,
-      "bono_ranura": null
+      "bono_ranura": "+5 poder con hechizos",
+      "gemas": [
+        {
+          "ranura": "Azul",
+          "gema": "Rubí cárdeno rúnico",
+          "icono": "inv_jewelcrafting_gem_37",
+          "efecto": "+23 poder con hechizos",
+          "ignora_color": true
+        }
+      ]
     },
-    "trinket2": {
+    "trinket1": {
       "ranura": "Abalorio",
       "id": 54589,
       "ilvl": 284,
@@ -389,6 +373,17 @@
       "icono": "inv_misc_rubysanctum1",
       "nombre": "Escama Crepuscular resplandeciente",
       "en": "Glowing Twilight Scale",
+      "heroico": true,
+      "bono_ranura": null
+    },
+    "trinket2": {
+      "ranura": "Abalorio",
+      "id": 47059,
+      "ilvl": 258,
+      "calidad": 4,
+      "icono": "achievement_dungeon_ulduar77_25man",
+      "nombre": "Consuelo de los derrotados",
+      "en": "Solace of the Defeated",
       "heroico": true,
       "bono_ranura": null
     },
@@ -419,14 +414,31 @@
     },
     "relic": {
       "ranura": "Tótem",
-      "id": 50458,
+      "id": 50464,
       "ilvl": 264,
       "calidad": 4,
-      "icono": "spell_frost_frostnova",
-      "nombre": "Tótem de hielo destrozado de Bizuri",
-      "en": "Bizuri's Totem of Shattered Ice",
+      "icono": "spell_frost_summonwaterelemental",
+      "nombre": "Tótem del mar resurgente",
+      "en": "Totem of the Surging Sea",
       "heroico": false,
       "bono_ranura": null
+    },
+    "offhand": {
+      "ranura": "Objeto secundario",
+      "id": 50616,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_shield_72",
+      "nombre": "Baluarte de acero incandescente",
+      "en": "Bulwark of Smouldering Steel",
+      "heroico": true,
+      "bono_ranura": null,
+      "encantamiento": {
+        "nombre": "Encantar escudo: intelecto superior",
+        "icono": "trade_engraving",
+        "efecto": "+25 intelecto",
+        "origen": "Encantamiento"
+      }
     }
   }
 }

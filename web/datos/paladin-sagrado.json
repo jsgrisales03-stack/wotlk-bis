@@ -45,14 +45,14 @@
   "piezas": {
     "head": {
       "ranura": "Cabeza",
-      "id": 51277,
+      "id": 51272,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_helmet_154",
-      "nombre": "Casco juraluz santificado",
-      "en": "Sanctified Lightsworn Helmet",
+      "nombre": "Celada juraluz santificada",
+      "en": "Sanctified Lightsworn Headpiece",
       "heroico": true,
-      "bono_ranura": "+8 fuerza",
+      "bono_ranura": "+9 poder con hechizos",
       "encantamiento": {
         "nombre": "Arcanum de alivio de gozo",
         "icono": "ability_warrior_shieldmastery",
@@ -96,14 +96,14 @@
     },
     "shoulder": {
       "ranura": "Hombros",
-      "id": 51279,
+      "id": 51273,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_shoulder_117",
-      "nombre": "Hombreras de placas juraluz santificadas",
-      "en": "Sanctified Lightsworn Shoulderplates",
+      "nombre": "Bufas juraluz santificadas",
+      "en": "Sanctified Lightsworn Spaulders",
       "heroico": true,
-      "bono_ranura": "+4 fuerza",
+      "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
         "nombre": "Inscripción del risco superior",
         "icono": "spell_arcane_teleportorgrimmar",
@@ -146,14 +146,14 @@
     },
     "chest": {
       "ranura": "Pecho",
-      "id": 51275,
+      "id": 51274,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_chest_plate22",
-      "nombre": "Placa de batalla juraluz santificada",
-      "en": "Sanctified Lightsworn Battleplate",
+      "nombre": "Guerrera juraluz santificada",
+      "en": "Sanctified Lightsworn Tunic",
       "heroico": true,
-      "bono_ranura": "+6 fuerza",
+      "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
         "nombre": "Encantar pechera: estadísticas potentes",
         "icono": "inv_enchant_formulagood_01",
@@ -203,14 +203,14 @@
     },
     "hands": {
       "ranura": "Manos",
-      "id": 50619,
+      "id": 51270,
       "ilvl": 277,
       "calidad": 4,
-      "icono": "inv_gauntlets_84",
-      "nombre": "Guantes de acechador Anub'ar",
-      "en": "Anub'ar Stalker's Gloves",
+      "icono": "inv_gauntlets_85",
+      "nombre": "Guantes juraluz santificados",
+      "en": "Sanctified Lightsworn Gloves",
       "heroico": true,
-      "bono_ranura": "+6 agilidad",
+      "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
         "nombre": "Encantar guantes: poder con hechizos excepcional",
         "icono": "inv_scroll_03",
@@ -224,12 +224,6 @@
           "icono": "inv_jewelcrafting_gem_37",
           "efecto": "+23 poder con hechizos",
           "ignora_color": true
-        },
-        {
-          "ranura": "Roja",
-          "gema": "Rubí cárdeno rúnico",
-          "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos"
         }
       ]
     },
@@ -267,14 +261,14 @@
     },
     "legs": {
       "ranura": "Piernas",
-      "id": 51278,
+      "id": 51271,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_pants_plate_33",
-      "nombre": "Quijotes juraluz santificados",
-      "en": "Sanctified Lightsworn Legplates",
+      "nombre": "Grebas juraluz santificadas",
+      "en": "Sanctified Lightsworn Greaves",
       "heroico": true,
-      "bono_ranura": "+6 fuerza",
+      "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
         "nombre": "Hilo de hechizo de zafiro",
         "icono": "spell_nature_astralrecalgroup",

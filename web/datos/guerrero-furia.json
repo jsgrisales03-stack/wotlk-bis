@@ -13,7 +13,7 @@
       "id": 41398,
       "nombre": "Diamante de asedio de tierra incansable",
       "icono": "inv_jewelcrafting_shadowspirit_02",
-      "efecto": "+21 agilidad y 3% de daño crítico aumentado",
+      "efecto": "+21 agilidad, +3% daño crítico",
       "requisito": "Requiere al menos 1 gema roja, 1 amarilla y 1 azul"
     },
     "roja": {
@@ -65,7 +65,7 @@
           "ranura": "Meta",
           "gema": "Diamante de asedio de tierra incansable",
           "icono": "inv_jewelcrafting_shadowspirit_02",
-          "efecto": "+21 agilidad y 3% de daño crítico aumentado"
+          "efecto": "+21 agilidad, +3% daño crítico"
         },
         {
           "ranura": "Roja",
@@ -108,7 +108,7 @@
       "encantamiento": {
         "nombre": "Inscripción del hacha superior",
         "icono": "trade_engineering",
-        "efecto": "Poder de ataque y crítico",
+        "efecto": "+40 poder de ataque y +15 índice de golpe crítico",
         "origen": "Hijos de Hodir, Exaltado"
       },
       "gemas": [
@@ -213,10 +213,10 @@
       "heroico": true,
       "bono_ranura": "+6 agilidad",
       "encantamiento": {
-        "nombre": "Encantar guantes: triturador",
+        "nombre": "Aceleradores de hipervelocidad",
         "icono": "trade_engineering",
-        "efecto": "+44 poder de ataque (Ingeniería: aceleradores)",
-        "origen": "Encantamiento / Ingeniería"
+        "efecto": "+340 celeridad durante 12 s, cada minuto",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -310,10 +310,10 @@
       "heroico": true,
       "bono_ranura": "+6 fuerza",
       "encantamiento": {
-        "nombre": "Encantar botas: asalto superior",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+32 poder de ataque",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -340,12 +340,6 @@
       "en": "Ashen Band of Endless Vengeance",
       "heroico": false,
       "bono_ranura": "+4 agilidad",
-      "encantamiento": {
-        "nombre": "Encantar anillo: asalto",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "Mejora ofensiva personal (solo Encantador)",
-        "origen": "Encantamiento"
-      },
       "gemas": [
         {
           "ranura": "Amarilla",
@@ -377,7 +371,7 @@
     },
     "trinket1": {
       "ranura": "Abalorio",
-      "id": 50362,
+      "id": 50363,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_jewelry_trinket_04",
@@ -407,12 +401,6 @@
       "en": "Glorenzelg, High-Blade of the Silver Hand",
       "heroico": true,
       "bono_ranura": "+8 fuerza",
-      "encantamiento": {
-        "nombre": "Encantar arma: matanza mayor",
-        "icono": "inv_enchant_formulasuperior_01",
-        "efecto": "+110 poder de ataque (arma a dos manos)",
-        "origen": "Encantamiento"
-      },
       "gemas": [
         {
           "ranura": "Roja",
@@ -444,12 +432,6 @@
       "en": "Cryptmaker",
       "heroico": true,
       "bono_ranura": "+8 fuerza",
-      "encantamiento": {
-        "nombre": "Encantar arma: matanza mayor",
-        "icono": "inv_enchant_formulasuperior_01",
-        "efecto": "+110 poder de ataque (arma a dos manos)",
-        "origen": "Encantamiento"
-      },
       "gemas": [
         {
           "ranura": "Roja",

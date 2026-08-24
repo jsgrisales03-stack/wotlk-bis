@@ -133,7 +133,7 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar capa: Perforar con hechizos",
+        "nombre": "Encantar capa: perforar con hechizos",
         "icono": "inv_scroll_03",
         "efecto": "+35 penetración de hechizos",
         "origen": "Encantamiento"
@@ -335,13 +335,13 @@
     },
     "ring1": {
       "ranura": "Anillo",
-      "id": 50664,
+      "id": 50398,
       "ilvl": 277,
       "calidad": 4,
-      "icono": "inv_jewelry_ring_86",
-      "nombre": "Anillo de rápido ascenso",
-      "en": "Ring of Rapid Ascent",
-      "heroico": true,
+      "icono": "inv_jewelry_ring_83",
+      "nombre": "Sortija Cinérea de destrucción infinita",
+      "en": "Ashen Band of Endless Destruction",
+      "heroico": false,
       "bono_ranura": "+5 poder con hechizos",
       "gemas": [
         {

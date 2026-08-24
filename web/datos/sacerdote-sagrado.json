@@ -13,7 +13,7 @@
       "id": 41376,
       "nombre": "Diamante de llama celeste revitalizante",
       "icono": "inv_jewelcrafting_icediamond_02",
-      "efecto": "+11 maná cada 5 segundos y +3% de curación crítica",
+      "efecto": "+11 maná/5s, +3% curación crítica",
       "requisito": "Requiere al menos 2 gemas rojas"
     },
     "roja": {
@@ -69,10 +69,10 @@
       "heroico": false,
       "bono_ranura": "+9 poder con hechizos",
       "encantamiento": {
-        "nombre": "Arcanum de alivio de gozo",
-        "icono": "ability_warrior_shieldmastery",
-        "efecto": "+30 poder con hechizos y +10 maná cada 5 segundos",
-        "origen": "Acuerdo del Reposo del Dragón, Reverenciado"
+        "nombre": "Arcanum de misterios ardientes",
+        "icono": "spell_fire_masterofelements",
+        "efecto": "+30 poder con hechizos y +20 índice de golpe crítico",
+        "origen": "Kirin Tor, Reverenciado"
       },
       "gemas": [
         {
@@ -121,9 +121,9 @@
       "heroico": false,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Inscripción del risco superior",
-        "icono": "spell_arcane_teleportorgrimmar",
-        "efecto": "+24 poder con hechizos y +8 maná cada 5 segundos",
+        "nombre": "Inscripción de la tormenta superior",
+        "icono": "trade_engineering",
+        "efecto": "+24 poder con hechizos y +15 índice de golpe crítico",
         "origen": "Hijos de Hodir, Reverenciado"
       },
       "gemas": [
@@ -163,12 +163,12 @@
     },
     "chest": {
       "ranura": "Pecho",
-      "id": 51180,
+      "id": 51176,
       "ilvl": 264,
       "calidad": 4,
       "icono": "inv_chest_cloth_80",
-      "nombre": "Vestiduras de acólito carmesí santificadas",
-      "en": "Sanctified Crimson Acolyte Raiments",
+      "nombre": "Toga de acólito carmesí santificada",
+      "en": "Sanctified Crimson Acolyte Robe",
       "heroico": false,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
@@ -204,10 +204,10 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar brazales: poder con hechizos excelente",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+30 poder con hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Forro de pelaje de poder con hechizos",
+        "icono": "trade_leatherworking",
+        "efecto": "+76 poder con hechizos",
+        "origen": "Peletería"
       },
       "gemas": [
         {
@@ -229,10 +229,10 @@
       "heroico": false,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar guantes: poder con hechizos excepcional",
-        "icono": "inv_scroll_03",
-        "efecto": "+28 poder con hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Aceleradores de hipervelocidad",
+        "icono": "trade_engineering",
+        "efecto": "+340 celeridad durante 12 s, cada minuto",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -333,10 +333,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar botas: vitalidad superior",
-        "icono": "inv_scroll_03",
-        "efecto": "+7 maná y +7 salud cada 5 segundos",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {

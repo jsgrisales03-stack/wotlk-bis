@@ -133,10 +133,10 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar capa: Perforar con hechizos",
-        "icono": "inv_scroll_03",
-        "efecto": "+35 penetración de hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Bordado de tejido de luz",
+        "icono": "spell_arcane_prismaticcloak",
+        "efecto": "Probabilidad de +295 poder con hechizos durante 15 s",
+        "origen": "Sastrería"
       },
       "gemas": [
         {
@@ -150,14 +150,14 @@
     },
     "chest": {
       "ranura": "Pecho",
-      "id": 50629,
+      "id": 51283,
       "ilvl": 277,
       "calidad": 4,
-      "icono": "inv_chest_cloth_77",
-      "nombre": "Toga de la pesadilla despierta",
-      "en": "Robe of the Waking Nightmare",
+      "icono": "inv_chest_cloth_78black",
+      "nombre": "Toga de mago sangriento santificada",
+      "en": "Sanctified Bloodmage Robe",
       "heroico": true,
-      "bono_ranura": "+9 poder con hechizos",
+      "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
         "nombre": "Encantar pechera: estadísticas potentes",
         "icono": "inv_enchant_formulagood_01",
@@ -177,24 +177,17 @@
           "icono": "inv_jewelcrafting_gem_37",
           "efecto": "+23 poder con hechizos",
           "ignora_color": true
-        },
-        {
-          "ranura": "Amarilla",
-          "gema": "Rubí cárdeno rúnico",
-          "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos",
-          "ignora_color": true
         }
       ]
     },
     "wrist": {
       "ranura": "Muñecas",
-      "id": 50651,
-      "ilvl": 277,
+      "id": 54582,
+      "ilvl": 284,
       "calidad": 4,
-      "icono": "inv_bracer_44",
-      "nombre": "Brazales frágiles de la Dama",
-      "en": "The Lady's Brittle Bracers",
+      "icono": "inv_bracer_45",
+      "nombre": "Brazales de noche ígnea",
+      "en": "Bracers of Fiery Night",
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
@@ -205,11 +198,10 @@
       },
       "gemas": [
         {
-          "ranura": "Amarilla",
+          "ranura": "Roja",
           "gema": "Rubí cárdeno rúnico",
           "icono": "inv_jewelcrafting_gem_37",
-          "efecto": "+23 poder con hechizos",
-          "ignora_color": true
+          "efecto": "+23 poder con hechizos"
         }
       ]
     },
@@ -224,10 +216,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar guantes: poder con hechizos excepcional",
-        "icono": "inv_scroll_03",
-        "efecto": "+28 poder con hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Aceleradores de hipervelocidad",
+        "icono": "trade_engineering",
+        "efecto": "+340 celeridad durante 12 s, cada minuto",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -257,10 +249,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Hebilla de cinturón eterna",
-        "icono": "inv_belt_36",
-        "efecto": "+1 ranura de gema",
-        "origen": "Herrería"
+        "nombre": "Cinturón de fragmentación",
+        "icono": "trade_engineering",
+        "efecto": "Permite lanzar una bomba de fragmentación cada 6 min",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -289,9 +281,9 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Hilo de hechizo de zafiro",
+        "nombre": "Hilo de hechizo luminoso",
         "icono": "spell_nature_astralrecalgroup",
-        "efecto": "+50 poder con hechizos y +30 aguante",
+        "efecto": "+50 poder con hechizos y +20 espíritu",
         "origen": "Sastrería"
       },
       "gemas": [
@@ -322,10 +314,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar botas: caminante del hielo",
-        "icono": "inv_scroll_03",
-        "efecto": "+12 índice de golpe y +12 índice de golpe crítico",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -385,12 +377,12 @@
     },
     "trinket1": {
       "ranura": "Abalorio",
-      "id": 50365,
-      "ilvl": 277,
+      "id": 54588,
+      "ilvl": 284,
       "calidad": 4,
-      "icono": "inv_jewelry_trinket_03",
-      "nombre": "Filacteria del exánime innombrable",
-      "en": "Phylactery of the Nameless Lich",
+      "icono": "inv_misc_rubysanctum2",
+      "nombre": "Escama Crepuscular carbonizada",
+      "en": "Charred Twilight Scale",
       "heroico": true,
       "bono_ranura": null
     },

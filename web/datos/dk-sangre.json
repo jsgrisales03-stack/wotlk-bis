@@ -4,13 +4,15 @@
   "clase": "Caballero de la Muerte",
   "especializacion": "Sangre",
   "rol": "Tanque — PvE",
+  "raza": "Orco",
+  "faccion": "Horda",
   "nota": "Conjunto de referencia fase final ICC 25 heroico. Prioriza aguante y salud efectiva.",
   "gemas_clave": {
     "meta": {
       "id": 41380,
       "nombre": "Diamante de asedio de tierra austero",
       "icono": "inv_jewelcrafting_shadowspirit_02",
-      "efecto": "+32 aguante y +2% de armadura de objetos",
+      "efecto": "+32 aguante, +2% armadura",
       "requisito": "Requiere al menos 2 gemas azules y 1 roja"
     },
     "azul": {
@@ -24,14 +26,27 @@
       "id": 40154,
       "nombre": "Piedra de terror de guardián",
       "icono": "inv_jewelcrafting_gem_39",
-      "efecto": "+10 pericia y +15 aguante",
+      "efecto": "+10 pericia, +15 aguante",
       "color": "Morada"
     }
   },
   "orden": [
-    "head", "neck", "shoulder", "back", "chest", "wrist",
-    "hands", "waist", "legs", "feet", "ring1", "ring2",
-    "trinket1", "trinket2", "weapon", "sigil"
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "ring1",
+    "ring2",
+    "trinket1",
+    "trinket2",
+    "weapon",
+    "sigil"
   ],
   "piezas": {
     "head": {
@@ -45,10 +60,10 @@
       "heroico": true,
       "bono_ranura": "+12 aguante",
       "encantamiento": {
-        "nombre": "Arcanum del adepto protector",
-        "icono": "ability_warrior_swordandboard",
-        "efecto": "+37 aguante y +20 defensa",
-        "origen": "Cruzada Argenta, Reputado"
+        "nombre": "Disco de amplificación mental",
+        "icono": "trade_engineering",
+        "efecto": "+45 aguante y control mental cada 10 min",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -123,7 +138,7 @@
       "heroico": true,
       "bono_ranura": "+6 aguante",
       "encantamiento": {
-        "nombre": "Encantar capa: Armadura poderosa",
+        "nombre": "Encantar capa: armadura poderosa",
         "icono": "inv_enchant_formulagood_01",
         "efecto": "+225 armadura",
         "origen": "Encantamiento"
@@ -181,10 +196,10 @@
       "heroico": true,
       "bono_ranura": "+6 aguante",
       "encantamiento": {
-        "nombre": "Encantar brazales: aguante sublime",
-        "icono": "inv_enchant_formulasuperior_01",
-        "efecto": "+40 aguante",
-        "origen": "Encantamiento"
+        "nombre": "Forro de pelaje de aguante",
+        "icono": "trade_leatherworking",
+        "efecto": "+102 aguante",
+        "origen": "Peletería"
       },
       "gemas": [
         {
@@ -304,10 +319,10 @@
       "heroico": true,
       "bono_ranura": "+9 aguante",
       "encantamiento": {
-        "nombre": "Encantar botas: vitalidad de los colmillarr",
-        "icono": "trade_engraving",
-        "efecto": "+15 aguante y velocidad menor",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -399,7 +414,7 @@
       "encantamiento": {
         "nombre": "Runa de la gárgola piel de piedra",
         "icono": "inv_sword_130",
-        "efecto": "Defensa y aguante",
+        "efecto": "+25 defensa y +2% de aguante total",
         "origen": "Forja de runas, Acherus"
       },
       "gemas": [

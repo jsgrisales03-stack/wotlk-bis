@@ -40,6 +40,7 @@
     "trinket1",
     "trinket2",
     "weapon",
+    "offhand",
     "relic"
   ],
   "piezas": {
@@ -54,10 +55,10 @@
       "heroico": true,
       "bono_ranura": "+9 poder con hechizos",
       "encantamiento": {
-        "nombre": "Arcanum de alivio de gozo",
-        "icono": "ability_warrior_shieldmastery",
-        "efecto": "+30 poder con hechizos y +10 maná cada 5 segundos",
-        "origen": "Acuerdo del Reposo del Dragón, Reverenciado"
+        "nombre": "Arcanum de misterios ardientes",
+        "icono": "spell_fire_masterofelements",
+        "efecto": "+30 poder con hechizos y +20 índice de golpe crítico",
+        "origen": "Kirin Tor, Reverenciado"
       },
       "gemas": [
         {
@@ -105,9 +106,9 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Inscripción del risco superior",
-        "icono": "spell_arcane_teleportorgrimmar",
-        "efecto": "+24 poder con hechizos y +8 maná cada 5 segundos",
+        "nombre": "Inscripción de la tormenta superior",
+        "icono": "trade_engineering",
+        "efecto": "+24 poder con hechizos y +15 índice de golpe crítico",
         "origen": "Hijos de Hodir, Reverenciado"
       },
       "gemas": [
@@ -137,10 +138,10 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar capa: sabiduría",
-        "icono": "inv_enchant_formulagood_01",
-        "efecto": "+10 espíritu",
-        "origen": "Encantamiento"
+        "nombre": "Bordado de tejido de luz",
+        "icono": "spell_arcane_prismaticcloak",
+        "efecto": "Probabilidad de +295 poder con hechizos durante 15 s",
+        "origen": "Sastrería"
       },
       "gemas": [
         {
@@ -226,10 +227,10 @@
       "heroico": true,
       "bono_ranura": "+5 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar guantes: poder con hechizos excepcional",
-        "icono": "inv_scroll_03",
-        "efecto": "+28 poder con hechizos",
-        "origen": "Encantamiento"
+        "nombre": "Aceleradores de hipervelocidad",
+        "icono": "trade_engineering",
+        "efecto": "+340 celeridad durante 12 s, cada minuto",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -251,10 +252,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Hebilla de cinturón eterna",
-        "icono": "inv_belt_36",
-        "efecto": "+1 ranura de gema",
-        "origen": "Herrería"
+        "nombre": "Cinturón de fragmentación",
+        "icono": "trade_engineering",
+        "efecto": "Permite lanzar una bomba de fragmentación cada 6 min",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -274,18 +275,18 @@
     },
     "legs": {
       "ranura": "Piernas",
-      "id": 51297,
+      "id": 51303,
       "ilvl": 277,
       "calidad": 4,
       "icono": "inv_pants_leather_35",
-      "nombre": "Musleras tejeazote santificadas",
-      "en": "Sanctified Lasherweave Legguards",
+      "nombre": "Quijotes tejeazote santificados",
+      "en": "Sanctified Lasherweave Legplates",
       "heroico": true,
-      "bono_ranura": "+6 agilidad",
+      "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Hilo de hechizo de zafiro",
+        "nombre": "Hilo de hechizo luminoso",
         "icono": "spell_nature_astralrecalgroup",
-        "efecto": "+50 poder con hechizos y +30 aguante",
+        "efecto": "+50 poder con hechizos y +20 espíritu",
         "origen": "Sastrería"
       },
       "gemas": [
@@ -315,10 +316,10 @@
       "heroico": true,
       "bono_ranura": "+7 poder con hechizos",
       "encantamiento": {
-        "nombre": "Encantar botas: vitalidad superior",
-        "icono": "inv_scroll_03",
-        "efecto": "+7 maná y +7 salud cada 5 segundos",
-        "origen": "Encantamiento"
+        "nombre": "Propulsiones de nitro",
+        "icono": "inv_gizmo_rocketbootextreme",
+        "efecto": "+24 índice de golpe crítico y ráfaga de velocidad",
+        "origen": "Ingeniería"
       },
       "gemas": [
         {
@@ -431,6 +432,17 @@
       "nombre": "Ídolo de tenacidad de Gladiador incansable",
       "en": "Relentless Gladiator's Idol of Tenacity",
       "heroico": false,
+      "bono_ranura": null
+    },
+    "offhand": {
+      "ranura": "Objeto secundario",
+      "id": 50719,
+      "ilvl": 277,
+      "calidad": 4,
+      "icono": "inv_misc_thread_01",
+      "nombre": "Huso de seda de las Sombras",
+      "en": "Shadow Silk Spindle",
+      "heroico": true,
       "bono_ranura": null
     }
   }
