@@ -359,9 +359,17 @@ def construir_ficha(build_id, iconos, items_stats, vestidor=None):
 
     # Si existe un render del personaje se usa como figura de fondo; si no,
     # se recurre al retrato de raza y, en último caso, al icono de clase.
-    archivo_pj = sitio.archivo_personaje(raza, genero)
-    ruta_pj = os.path.join(AQUI, "assets", "personajes", archivo_pj) if archivo_pj else ""
-    con_personaje = bool(ruta_pj and os.path.exists(ruta_pj))
+    # Se prefiere el render propio de esta build (con su equipo puesto); si no
+    # existe, se cae al render genérico de la raza.
+    carpeta_pj = os.path.join(AQUI, "assets", "personajes")
+    archivo_pj = ""
+    if os.path.exists(os.path.join(carpeta_pj, build_id + ".png")):
+        archivo_pj = build_id + ".png"
+    else:
+        generico = sitio.archivo_personaje(raza, genero)
+        if generico and os.path.exists(os.path.join(carpeta_pj, generico)):
+            archivo_pj = generico
+    con_personaje = bool(archivo_pj)
     render_pj = (f'<img class="personaje" src="assets/personajes/{archivo_pj}"'
                  f' alt="{esc(raza)}" loading="lazy">') if con_personaje else ""
 
