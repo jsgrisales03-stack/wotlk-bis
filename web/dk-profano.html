@@ -97,6 +97,17 @@ body{background:var(--bg);color:var(--tx);
   box-shadow:0 1px 5px rgba(0,0,0,.65)}
 .cl-ic{width:54px;height:54px;border-radius:50%;position:relative;z-index:1;
   border:2px solid rgba(80,220,140,.22);box-shadow:0 0 22px rgba(80,220,140,.08)}
+/* Enlace al Vestidor de Wowhead con el equipo de la build ya puesto. */
+.ver3d{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;
+  padding:5px 12px;border-radius:999px;text-decoration:none;white-space:nowrap;
+  font:600 10.5px/1 Barlow,"Segoe UI",system-ui,sans-serif;
+  letter-spacing:1.1px;text-transform:uppercase;
+  color:var(--tn);background:rgba(19,17,26,.92);border:1px solid var(--ln2);
+  transition:color .15s ease,border-color .15s ease,background .15s ease}
+.ver3d:hover,.ver3d:focus-visible{color:var(--gr);
+  border-color:rgba(64,217,126,.45);background:rgba(64,217,126,.09)}
+.ver3d svg{width:12px;height:12px;flex:0 0 auto}
+
 .ctr-t{position:relative;z-index:1;text-align:center}
 .ctr-t .race{font-size:12.5px;color:var(--tn);display:block}
 .ctr-t .fac{font-size:9.5px;text-transform:uppercase;letter-spacing:2px;
@@ -269,6 +280,7 @@ body{background:var(--bg);color:var(--tx);
       <span class="i18n race" data-es="Orco" data-en="Orc">Orco</span>
       <span class="i18n fac" data-es="Horda" data-en="Horde">Horda</span>
     </p>
+    <a class="ver3d" href="https://www.wowhead.com/wotlk/dressing-room#fM80o0zJ89c8u8VkZ8G8VRs8I8VRh8N8VRp8A8VRe877gfrF808frJ808fcK808frC87VwdM808frD808fMO808fMU808wd7MrKe87s" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m3 7 9 5 9-5"/><path d="M12 12v10"/></svg><span class="i18n" data-es="Ver en 3D" data-en="View in 3D">Ver en 3D</span></a>
     <div class="stats"><h2 class="i18n stats-h" data-es="Totales del equipo" data-en="Gear totals">Totales del equipo</h2><dl class="stat-list"><div class="stat"><dt class="i18n" data-es="Fuerza" data-en="Strength">Fuerza</dt><dd>2 267</dd></div><div class="stat destacada"><dt class="i18n" data-es="Poder de ataque" data-en="Attack power">Poder de ataque</dt><dd>408</dd></div><div class="stat"><dt class="i18n" data-es="Crítico" data-en="Crit rating">Crítico</dt><dd>1 256</dd></div><div class="stat"><dt class="i18n" data-es="Golpe" data-en="Hit rating">Golpe</dt><dd>222</dd></div><div class="stat"><dt class="i18n" data-es="Celeridad" data-en="Haste rating">Celeridad</dt><dd>254</dd></div><div class="stat"><dt class="i18n" data-es="Pen. de armadura" data-en="Armor penetration">Pen. de armadura</dt><dd>962</dd></div><div class="stat"><dt class="i18n" data-es="Aguante" data-en="Stamina">Aguante</dt><dd>2 047</dd></div><div class="stat destacada"><dt class="i18n" data-es="Salud" data-en="Health">Salud</dt><dd>20 470</dd></div></dl><p class="i18n stats-note" data-es="Sólo objetos, gemas y encantamientos. Sin talentos ni beneficios de banda." data-en="Gear, gems and enchants only. No talents or raid buffs.">Sólo objetos, gemas y encantamientos. Sin talentos ni beneficios de banda.</p></div>
   </div>
   <div class="col col-r"><div class="slot der has-tt" tabindex="0">

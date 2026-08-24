@@ -15,6 +15,8 @@ import stats as motor
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 DATOS = os.path.join(AQUI, "datos")
+# Ficheros de datos/soporte que no describen una build.
+NO_BUILD = ("iconos", "stats-", "displayids", "vestidor", "_")
 
 CALIDAD = {4: ("epic", "#a335ee"), 5: ("legendary", "#ff8000")}
 COLOR_RANURA = {
@@ -212,6 +214,17 @@ body{background:var(--bg);color:var(--tx);
   box-shadow:0 1px 5px rgba(0,0,0,.65)}
 .cl-ic{width:54px;height:54px;border-radius:50%;position:relative;z-index:1;
   border:2px solid rgba(80,220,140,.22);box-shadow:0 0 22px rgba(80,220,140,.08)}
+/* Enlace al Vestidor de Wowhead con el equipo de la build ya puesto. */
+.ver3d{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;
+  padding:5px 12px;border-radius:999px;text-decoration:none;white-space:nowrap;
+  font:600 10.5px/1 Barlow,"Segoe UI",system-ui,sans-serif;
+  letter-spacing:1.1px;text-transform:uppercase;
+  color:var(--tn);background:rgba(19,17,26,.92);border:1px solid var(--ln2);
+  transition:color .15s ease,border-color .15s ease,background .15s ease}
+.ver3d:hover,.ver3d:focus-visible{color:var(--gr);
+  border-color:rgba(64,217,126,.45);background:rgba(64,217,126,.09)}
+.ver3d svg{width:12px;height:12px;flex:0 0 auto}
+
 .ctr-t{position:relative;z-index:1;text-align:center}
 .ctr-t .race{font-size:12.5px;color:var(--tn);display:block}
 .ctr-t .fac{font-size:9.5px;text-transform:uppercase;letter-spacing:2px;
@@ -325,7 +338,7 @@ def documento(titulo, css, cuerpo, pagina):
 
 
 # --------------------------------------------------------------- ficha
-def construir_ficha(build_id, iconos, items_stats):
+def construir_ficha(build_id, iconos, items_stats, vestidor=None):
     with open(os.path.join(DATOS, build_id + ".json"), encoding="utf-8") as f:
         d = json.load(f)
 
@@ -367,6 +380,19 @@ def construir_ficha(build_id, iconos, items_stats):
     else:
         figura = ic(iconos, clase_icono, "cl-ic", clase)
 
+    # Enlace al visor 3D de Wowhead, con la raza y el equipo de esta build.
+    url_3d = (vestidor or {}).get(build_id, "")
+    if url_3d:
+        cubo = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+                ' stroke-width="2" stroke-linejoin="round" aria-hidden="true">'
+                '<path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m3 7 9 5 9-5"/>'
+                '<path d="M12 12v10"/></svg>')
+        enlace_3d = (f'<a class="ver3d" href="{esc(url_3d)}" target="_blank"'
+                     f' rel="noopener noreferrer">{cubo}'
+                     + bi("Ver en 3D", "View in 3D", "span") + '</a>')
+    else:
+        enlace_3d = ""
+
     cuerpo = f"""<div class="page">
 <div class="ficha-head">
   {bi(clase, sitio.en(sitio.CLASES, clase), "h1")}
@@ -383,6 +409,7 @@ def construir_ficha(build_id, iconos, items_stats):
       {bi(raza, sitio.en(sitio.RAZAS, raza), "span", cls="race")}
       {bi(faccion, sitio.en(sitio.FACCIONES, faccion), "span", cls="fac")}
     </p>
+    {enlace_3d}
     {panel_stats(d, items_stats)}
   </div>
   <div class="col col-r">{col_r}</div>
@@ -434,7 +461,7 @@ def construir_index():
     builds = []
     for ruta in sorted(glob.glob(os.path.join(DATOS, "*.json"))):
         nombre = os.path.basename(ruta)
-        if nombre.startswith(("iconos", "stats-", "displayids", "_")):
+        if nombre.startswith(NO_BUILD):
             continue
         with open(ruta, encoding="utf-8") as f:
             d = json.load(f)
@@ -562,7 +589,7 @@ def build_ids():
     ids = []
     for ruta in sorted(glob.glob(os.path.join(DATOS, "*.json"))):
         nombre = os.path.basename(ruta)
-        if not nombre.startswith(("iconos", "stats-", "displayids", "_")):
+        if not nombre.startswith(NO_BUILD):
             ids.append(nombre[:-5])
     return ids
 
@@ -578,12 +605,19 @@ def main(argv):
     with open(os.path.join(DATOS, "iconos.json"), encoding="utf-8") as f:
         iconos = json.load(f)
     items_stats = motor.cargar_items()
+    ruta_vestidor = os.path.join(DATOS, "vestidor.json")
+    vestidor = {}
+    if os.path.exists(ruta_vestidor):
+        with open(ruta_vestidor, encoding="utf-8") as f:
+            vestidor = json.load(f)
+    else:
+        print("Aviso: falta datos/vestidor.json; las fichas saldrán sin enlace 3D.")
     if not items_stats:
         print("Aviso: falta datos/stats-items.json; las fichas saldrán sin totales.")
 
     objetivos = argv[1:] or build_ids()
     for bid in objetivos:
-        kb = escribir(bid + ".html", construir_ficha(bid, iconos, items_stats))
+        kb = escribir(bid + ".html", construir_ficha(bid, iconos, items_stats, vestidor))
         print(f"  {bid}.html  {kb} KB")
 
     if not argv[1:]:
