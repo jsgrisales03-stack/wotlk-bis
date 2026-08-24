@@ -170,7 +170,7 @@ body{background:var(--bg);color:var(--tx);
   font:13px/1.45 Barlow,"Segoe UI",system-ui,sans-serif;
   font-variant-numeric:tabular-nums;min-height:100vh;
   display:flex;flex-direction:column}
-.page{max-width:1320px;width:100%;margin:0 auto;padding:0 14px;
+.page{max-width:1400px;width:100%;margin:0 auto;padding:0 14px;
   flex:1;display:flex;flex-direction:column;min-height:0}
 
 .ficha-head{text-align:center;padding:16px 0 4px;flex:0 0 auto}
@@ -190,8 +190,11 @@ body{background:var(--bg);color:var(--tx);
 .ctr{grid-row:1/2;grid-column:2/3;display:flex;flex-direction:column;
   align-items:center;justify-content:flex-start;position:relative;
   padding:10px 6px;gap:8px}
+/* Termina en transparente, no en el color de fondo: si no, recorta la
+   textura del sitio y el panel se lee como una caja vacía. */
 .ctr-bg{position:absolute;inset:0;border-radius:12px;
-  background:radial-gradient(ellipse 82% 60% at 50% 22%,#1a1428,var(--bg))}
+  background:radial-gradient(ellipse 78% 52% at 50% 20%,
+    rgba(32,24,52,.85),rgba(20,15,34,.35) 58%,transparent 78%)}
 .ctr-bg::after{content:"";position:absolute;width:104px;height:104px;
   left:50%;top:52px;transform:translate(-50%,-50%);border-radius:50%;
   border:1px solid rgba(80,220,140,.1);box-shadow:0 0 46px rgba(80,220,140,.05)}
@@ -300,22 +303,72 @@ body{background:var(--bg);color:var(--tx);
 .tt-ench b{color:var(--gr)}
 .tt-skip{color:#d99b3c;font-size:11px;margin-left:3px}
 
-@media(max-width:900px){
-  .pd{grid-template-columns:1fr;grid-template-rows:auto;gap:8px;padding-top:10px}
-  .col{align-items:stretch;gap:5px}
+@media(max-width:980px){
+  /* En vertical el contenido tiene que poder crecer. La cadena de flex:1 con
+     min-height:0 dejaba la ficha a la altura de la ventana y las tarjetas se
+     solapaban unas con otras. */
+  .page{display:block;min-height:auto;padding-bottom:14px}
+  .pd{display:flex;flex-direction:column;flex:none;min-height:auto;
+    gap:8px;padding-top:10px}
+  .col{align-items:stretch;justify-content:flex-start;min-height:auto;gap:5px}
   .col-l{order:2}
-  .ctr{order:1;grid-column:auto;grid-row:auto;padding:4px 0 10px}
+  .ctr{order:1;padding:4px 0 10px}
   .col-r{order:3}
-  .bot-row{order:4;grid-column:auto}
+  .bot-row{order:4;padding-top:4px}
   .stats{max-width:340px;margin:0 auto}
   .slot,.slot.izq{flex-direction:row;text-align:left;max-width:100%}
   .slot.izq .s-dots{justify-content:flex-start}
   .slot.btm{max-width:100%}
-  .tt{position:static;display:block;width:auto;margin-top:7px;
+  /* El detalle se despliega al tocar la pieza. Mostrarlo siempre alargaba la
+     ficha muchísimo; las tarjetas ya son enfocables, así que basta el foco. */
+  .slot.has-tt{flex-wrap:wrap;cursor:pointer;padding-right:24px}
+  .slot.has-tt::after{content:"";position:absolute;right:10px;top:50%;
+    width:6px;height:6px;margin-top:-4px;
+    border-right:1.5px solid var(--db);border-bottom:1.5px solid var(--db);
+    transform:rotate(45deg);transition:transform .15s ease,border-color .15s ease}
+  .slot.has-tt:focus-within::after{transform:rotate(-135deg);margin-top:-1px;
+    border-color:var(--gr)}
+  .tt{position:static;width:auto;margin-top:8px;flex:1 0 100%;
     box-shadow:none;background:#17141f}
   .tt-left,.tt-right,.tt-center{transform:none;inset:auto}
-  .slot.has-tt{flex-wrap:wrap;cursor:default}
-  .tt{flex:1 0 100%}
+}
+/* En pantallas grandes crece el propio paperdoll: como las tarjetas se pegan
+   al centro, ensanchar la página sólo empujaría hueco hacia los lados. */
+@media(min-width:1440px){
+  .pd{grid-template-columns:1fr minmax(240px,318px) 1fr}
+  .slot{max-width:366px}
+  .slot.btm{max-width:264px}
+  .personaje{height:290px}
+  .ctr.con-personaje .ctr-t{margin-top:196px}
+  .s-name{font-size:13px}
+  .stat dt{font-size:12px}
+  .stat dd{font-size:13px}
+}
+@media(min-width:1800px){
+  .pd{grid-template-columns:1fr minmax(260px,344px) 1fr}
+  .slot{max-width:396px}
+  .slot.btm{max-width:284px}
+  .personaje{height:312px}
+  .ctr.con-personaje .ctr-t{margin-top:216px}
+}
+@media(max-width:430px){
+  .ficha-head{padding:10px 0 2px}
+  .spec-lab{letter-spacing:2.5px;font-size:12px}
+  .slot{padding:5px 9px;gap:7px}
+  .si{width:32px;height:32px}
+  .s-name{font-size:12px}
+  .s-enc{font-size:10px}
+  .stats{padding:10px 11px 8px}
+  .bot-row{gap:5px}
+}
+/* Portátiles de pantalla baja: se recorta el aire para que la ficha siga
+   entrando de una sola vez, que es el objetivo del diseño. */
+@media(min-width:981px) and (max-height:860px){
+  .ficha-head{padding:10px 0 2px}
+  .personaje{height:228px}
+  .ctr.con-personaje .ctr-t{margin-top:142px}
+  .pd{padding-top:2px}
+  .bot-row{padding-top:6px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 """
@@ -329,7 +382,8 @@ def documento(titulo, css, cuerpo, pagina):
         '<meta name="viewport" content="width=device-width,initial-scale=1">',
         f"<title>{esc(titulo)}</title>",
         sitio.FUENTES,
-        f"<style>{sitio.TOKENS}{sitio.CABECERA_CSS}{sitio.PIE_CSS}{css}</style>",
+        f"<style>{sitio.TOKENS}{sitio.CABECERA_CSS}{sitio.PIE_CSS}{css}{sitio.FONDO_CSS}</style>",
+        '<div class="fondo" aria-hidden="true"></div>',
         sitio.cabecera(pagina),
         cuerpo,
         sitio.pie(),
@@ -434,13 +488,13 @@ CSS_INDEX = """
 body{background:var(--bg);color:var(--tx);
   font:14px/1.5 Barlow,"Segoe UI",system-ui,sans-serif;
   min-height:100vh;display:flex;flex-direction:column}
-.page{max-width:1120px;margin:0 auto;padding:44px 24px 8px;flex:1;width:100%}
+.page{max-width:1560px;margin:0 auto;padding:44px 24px 8px;flex:1;width:100%}
 .hero{text-align:center;margin-bottom:18px}
 .hero h1{font:700 clamp(26px,4vw,40px)/1.15 Cinzel,Georgia,serif;
   color:#f0eaf8;text-wrap:balance}
 .hero .sub{font-size:12.5px;letter-spacing:4px;text-transform:uppercase;
   color:var(--go);margin-top:10px}
-.intro{max-width:65ch;margin:20px auto 0;text-align:center;
+.intro{max-width:62ch;margin:20px auto 0;text-align:center;
   color:var(--tn);font-size:14px;line-height:1.7}
 .intro strong{color:var(--tx);font-weight:600}
 .intro-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
@@ -448,7 +502,7 @@ body{background:var(--bg);color:var(--tx);
 .intro-tags span{font-size:11px;letter-spacing:.5px;text-transform:uppercase;
   color:var(--tn);background:var(--p);border:1px solid var(--ln);
   border-radius:14px;padding:5px 12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(236px,1fr));gap:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
 .class-card{background:var(--p);border:1px solid var(--ln2);border-radius:10px;
   padding:17px 19px;display:flex;flex-direction:column;gap:11px}
 .class-name{font:600 15.5px/1.2 Cinzel,Georgia,serif;color:#f0eaf8}
@@ -462,6 +516,20 @@ a.spec .role{color:var(--tn);font-size:11px;flex:0 0 auto}
 a.spec .dot{width:6px;height:6px;border-radius:50%;background:var(--gr);
   flex:0 0 auto;display:inline-block;margin-right:7px}
 .site-footer{margin-top:50px}
+@media(max-width:760px){
+  .page{padding:30px 16px 8px}
+  .intro{font-size:13.5px;line-height:1.65}
+  .intro-tags{margin:16px 0 26px;gap:6px}
+  .class-card{padding:15px 16px;gap:9px}
+  .site-footer{margin-top:34px}
+}
+@media(max-width:430px){
+  .page{padding:22px 12px 8px}
+  .hero .sub{letter-spacing:2.5px;font-size:11.5px}
+  .intro-tags span{font-size:10px;padding:4px 9px}
+  .class-card{padding:13px 14px}
+  a.spec{padding:9px 11px;font-size:12.5px}
+}
 """
 
 
@@ -565,6 +633,11 @@ body{background:var(--bg);color:var(--tx);
 .channel:hover,.channel:focus-visible{border-color:var(--gr);background:#1c2620}
 .channel-label{font-size:13px;font-weight:600}
 .channel-hint{font-size:11px;color:var(--tn)}
+@media(max-width:600px){
+  .page{padding:44px 18px}
+  .channels{max-width:100%}
+  .lead{font-size:13.5px}
+}
 """
 
 

@@ -53,7 +53,7 @@ body{background:var(--bg);color:var(--tx);
   font:13px/1.45 Barlow,"Segoe UI",system-ui,sans-serif;
   font-variant-numeric:tabular-nums;min-height:100vh;
   display:flex;flex-direction:column}
-.page{max-width:1320px;width:100%;margin:0 auto;padding:0 14px;
+.page{max-width:1400px;width:100%;margin:0 auto;padding:0 14px;
   flex:1;display:flex;flex-direction:column;min-height:0}
 
 .ficha-head{text-align:center;padding:16px 0 4px;flex:0 0 auto}
@@ -73,8 +73,11 @@ body{background:var(--bg);color:var(--tx);
 .ctr{grid-row:1/2;grid-column:2/3;display:flex;flex-direction:column;
   align-items:center;justify-content:flex-start;position:relative;
   padding:10px 6px;gap:8px}
+/* Termina en transparente, no en el color de fondo: si no, recorta la
+   textura del sitio y el panel se lee como una caja vacía. */
 .ctr-bg{position:absolute;inset:0;border-radius:12px;
-  background:radial-gradient(ellipse 82% 60% at 50% 22%,#1a1428,var(--bg))}
+  background:radial-gradient(ellipse 78% 52% at 50% 20%,
+    rgba(32,24,52,.85),rgba(20,15,34,.35) 58%,transparent 78%)}
 .ctr-bg::after{content:"";position:absolute;width:104px;height:104px;
   left:50%;top:52px;transform:translate(-50%,-50%);border-radius:50%;
   border:1px solid rgba(80,220,140,.1);box-shadow:0 0 46px rgba(80,220,140,.05)}
@@ -183,25 +186,89 @@ body{background:var(--bg);color:var(--tx);
 .tt-ench b{color:var(--gr)}
 .tt-skip{color:#d99b3c;font-size:11px;margin-left:3px}
 
-@media(max-width:900px){
-  .pd{grid-template-columns:1fr;grid-template-rows:auto;gap:8px;padding-top:10px}
-  .col{align-items:stretch;gap:5px}
+@media(max-width:980px){
+  /* En vertical el contenido tiene que poder crecer. La cadena de flex:1 con
+     min-height:0 dejaba la ficha a la altura de la ventana y las tarjetas se
+     solapaban unas con otras. */
+  .page{display:block;min-height:auto;padding-bottom:14px}
+  .pd{display:flex;flex-direction:column;flex:none;min-height:auto;
+    gap:8px;padding-top:10px}
+  .col{align-items:stretch;justify-content:flex-start;min-height:auto;gap:5px}
   .col-l{order:2}
-  .ctr{order:1;grid-column:auto;grid-row:auto;padding:4px 0 10px}
+  .ctr{order:1;padding:4px 0 10px}
   .col-r{order:3}
-  .bot-row{order:4;grid-column:auto}
+  .bot-row{order:4;padding-top:4px}
   .stats{max-width:340px;margin:0 auto}
   .slot,.slot.izq{flex-direction:row;text-align:left;max-width:100%}
   .slot.izq .s-dots{justify-content:flex-start}
   .slot.btm{max-width:100%}
-  .tt{position:static;display:block;width:auto;margin-top:7px;
+  /* El detalle se despliega al tocar la pieza. Mostrarlo siempre alargaba la
+     ficha muchísimo; las tarjetas ya son enfocables, así que basta el foco. */
+  .slot.has-tt{flex-wrap:wrap;cursor:pointer;padding-right:24px}
+  .slot.has-tt::after{content:"";position:absolute;right:10px;top:50%;
+    width:6px;height:6px;margin-top:-4px;
+    border-right:1.5px solid var(--db);border-bottom:1.5px solid var(--db);
+    transform:rotate(45deg);transition:transform .15s ease,border-color .15s ease}
+  .slot.has-tt:focus-within::after{transform:rotate(-135deg);margin-top:-1px;
+    border-color:var(--gr)}
+  .tt{position:static;width:auto;margin-top:8px;flex:1 0 100%;
     box-shadow:none;background:#17141f}
   .tt-left,.tt-right,.tt-center{transform:none;inset:auto}
-  .slot.has-tt{flex-wrap:wrap;cursor:default}
-  .tt{flex:1 0 100%}
+}
+/* En pantallas grandes crece el propio paperdoll: como las tarjetas se pegan
+   al centro, ensanchar la página sólo empujaría hueco hacia los lados. */
+@media(min-width:1440px){
+  .pd{grid-template-columns:1fr minmax(240px,318px) 1fr}
+  .slot{max-width:366px}
+  .slot.btm{max-width:264px}
+  .personaje{height:290px}
+  .ctr.con-personaje .ctr-t{margin-top:196px}
+  .s-name{font-size:13px}
+  .stat dt{font-size:12px}
+  .stat dd{font-size:13px}
+}
+@media(min-width:1800px){
+  .pd{grid-template-columns:1fr minmax(260px,344px) 1fr}
+  .slot{max-width:396px}
+  .slot.btm{max-width:284px}
+  .personaje{height:312px}
+  .ctr.con-personaje .ctr-t{margin-top:216px}
+}
+@media(max-width:430px){
+  .ficha-head{padding:10px 0 2px}
+  .spec-lab{letter-spacing:2.5px;font-size:12px}
+  .slot{padding:5px 9px;gap:7px}
+  .si{width:32px;height:32px}
+  .s-name{font-size:12px}
+  .s-enc{font-size:10px}
+  .stats{padding:10px 11px 8px}
+  .bot-row{gap:5px}
+}
+/* Portátiles de pantalla baja: se recorta el aire para que la ficha siga
+   entrando de una sola vez, que es el objetivo del diseño. */
+@media(min-width:981px) and (max-height:860px){
+  .ficha-head{padding:10px 0 2px}
+  .personaje{height:228px}
+  .ctr.con-personaje .ctr-t{margin-top:142px}
+  .pd{padding-top:2px}
+  .bot-row{padding-top:6px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.fondo{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 1100px 560px at 50% -6%,rgba(70,120,205,.11),transparent 64%),
+    radial-gradient(ellipse 840px 520px at 94% 106%,rgba(126,64,178,.09),transparent 62%),
+    radial-gradient(ellipse 720px 500px at 3% 58%,rgba(64,217,126,.05),transparent 60%),
+    radial-gradient(ellipse 130% 90% at 50% 45%,transparent 52%,rgba(0,0,0,.5))}
+/* Grano fino: rompe el plano liso sin llamar la atención. */
+.fondo::after{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size:220px 220px;opacity:.05}
+/* El contenido debe quedar por encima de la capa de fondo. */
+.page,.site-footer{position:relative;z-index:1}
 </style>
+<div class="fondo" aria-hidden="true"></div>
 <header class="site-header">
   <a class="brand" href="index.html">
     <span class="brand-mark" aria-hidden="true">A</span>

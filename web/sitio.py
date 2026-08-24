@@ -286,6 +286,24 @@ TOKENS = """
 img{max-width:100%}
 """
 
+# Textura de fondo del sitio. Va en una capa fija propia para que no se mueva
+# con el scroll ni afecte al flujo; todo son gradientes y un SVG en línea, así
+# que no añade ninguna petición externa.
+FONDO_CSS = """
+.fondo{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 1100px 560px at 50% -6%,rgba(70,120,205,.11),transparent 64%),
+    radial-gradient(ellipse 840px 520px at 94% 106%,rgba(126,64,178,.09),transparent 62%),
+    radial-gradient(ellipse 720px 500px at 3% 58%,rgba(64,217,126,.05),transparent 60%),
+    radial-gradient(ellipse 130% 90% at 50% 45%,transparent 52%,rgba(0,0,0,.5))}
+/* Grano fino: rompe el plano liso sin llamar la atención. */
+.fondo::after{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size:220px 220px;opacity:.05}
+/* El contenido debe quedar por encima de la capa de fondo. */
+.page,.site-footer{position:relative;z-index:1}
+"""
+
 CABECERA_CSS = """
 .site-header{position:sticky;top:0;z-index:150;
   display:flex;align-items:center;justify-content:space-between;gap:12px;
