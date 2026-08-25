@@ -323,7 +323,7 @@ FONDO_CSS = """
   background-size:220px 220px}
 
 /* El contenido debe quedar por encima de la capa de fondo. */
-.page,.site-footer{position:relative;z-index:1}
+.page{position:relative;z-index:1}
 """
 
 CABECERA_CSS = """
@@ -355,15 +355,6 @@ CABECERA_CSS = """
 }
 """
 
-PIE_CSS = """
-.site-footer{border-top:1px solid var(--ln);padding:24px 20px;
-  display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center}
-.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
-.footer-links a{color:var(--tn);font-size:12px;text-decoration:none;font-weight:600}
-.footer-links a:hover{color:var(--tx)}
-.footer-copy{font-size:10.5px;color:#47425a;max-width:60ch;line-height:1.5}
-"""
-
 FUENTES = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
@@ -391,21 +382,8 @@ def cabecera(pagina="builds"):
 </header>"""
 
 
-COPY_ES = ("World of Warcraft y sus iconos son marcas de Blizzard Entertainment. "
-           "Sitio de fans sin ánimo de lucro; datos verificados contra Wowhead WotLK Classic.")
-COPY_EN = ("World of Warcraft and its icons are trademarks of Blizzard Entertainment. "
-           "Non-profit fan site; data verified against Wowhead WotLK Classic.")
 
 
-def pie():
-    return f"""<footer class="site-footer">
-  <div class="footer-links">
-    <a href="index.html" class="i18n" data-es="Builds" data-en="Builds">Builds</a>
-    <a href="comentarios.html" class="i18n" data-es="Comentarios" data-en="Comments">Comentarios</a>
-    <a href="https://www.wowhead.com/wotlk" target="_blank" rel="noopener">Wowhead WotLK</a>
-  </div>
-  <p class="footer-copy i18n" data-es="{COPY_ES}" data-en="{COPY_EN}">{COPY_ES}</p>
-</footer>"""
 
 
 SCRIPT_I18N = """<script>

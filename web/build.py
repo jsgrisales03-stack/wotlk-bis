@@ -385,11 +385,10 @@ def documento(titulo, css, cuerpo, pagina):
         '<meta name="viewport" content="width=device-width,initial-scale=1">',
         f"<title>{esc(titulo)}</title>",
         sitio.FUENTES,
-        f"<style>{sitio.TOKENS}{sitio.CABECERA_CSS}{sitio.PIE_CSS}{css}{sitio.FONDO_CSS}</style>",
+        f"<style>{sitio.TOKENS}{sitio.CABECERA_CSS}{css}{sitio.FONDO_CSS}</style>",
         '<div class="fondo" aria-hidden="true"></div>',
         sitio.cabecera(pagina),
         cuerpo,
-        sitio.pie(),
         sitio.SCRIPT_I18N,
     ])
 
@@ -525,13 +524,11 @@ a.spec:hover,a.spec:focus-visible{border-color:var(--gr);background:#1c2620}
 a.spec .role{color:var(--tn);font-size:11px;flex:0 0 auto}
 a.spec .dot{width:6px;height:6px;border-radius:50%;background:var(--gr);
   flex:0 0 auto;display:inline-block;margin-right:7px}
-.site-footer{margin-top:50px}
 @media(max-width:760px){
   .page{padding:30px 16px 8px}
   .intro{font-size:13.5px;line-height:1.65}
   .intro-tags{margin:16px 0 26px;gap:6px}
   .class-card{padding:15px 16px;gap:9px}
-  .site-footer{margin-top:34px}
 }
 @media(max-width:430px){
   .page{padding:22px 12px 8px}
