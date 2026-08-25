@@ -290,16 +290,38 @@ img{max-width:100%}
 # con el scroll ni afecte al flujo; todo son gradientes y un SVG en línea, así
 # que no añade ninguna petición externa.
 FONDO_CSS = """
+/* Fondo del sitio: capa fija propia para que no se mueva con el scroll ni
+   afecte al flujo. Todo son gradientes y un SVG en línea, sin peticiones
+   externas. La paleta busca el frío de Corona de Hielo.
+
+   Cada elemento lleva su propia opacidad: agrupar la trama y el grano bajo
+   una sola dejaba el grano diez veces más marcado de la cuenta. */
 .fondo{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-color:var(--bg);
+  background-image:
+    repeating-linear-gradient(115deg,
+      transparent 0 74px,
+      rgba(150,200,255,.022) 74px 75px,
+      transparent 75px 150px),
+    repeating-linear-gradient(-115deg,
+      transparent 0 108px,
+      rgba(150,200,255,.014) 108px 109px,
+      transparent 109px 216px)}
+
+/* Halos de color. */
+.fondo::before{content:"";position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 1100px 560px at 50% -6%,rgba(70,120,205,.11),transparent 64%),
-    radial-gradient(ellipse 840px 520px at 94% 106%,rgba(126,64,178,.09),transparent 62%),
-    radial-gradient(ellipse 720px 500px at 3% 58%,rgba(64,217,126,.05),transparent 60%),
-    radial-gradient(ellipse 130% 90% at 50% 45%,transparent 52%,rgba(0,0,0,.5))}
+    radial-gradient(ellipse 1200px 620px at 50% -12%,rgba(86,150,224,.16),transparent 66%),
+    radial-gradient(ellipse 700px 420px at 50% -4%,rgba(150,214,255,.08),transparent 58%),
+    radial-gradient(ellipse 900px 560px at 96% 104%,rgba(126,64,178,.10),transparent 62%),
+    radial-gradient(ellipse 760px 520px at 2% 64%,rgba(64,217,126,.05),transparent 60%),
+    radial-gradient(ellipse 135% 95% at 50% 42%,transparent 46%,rgba(0,0,0,.6))}
+
 /* Grano fino: rompe el plano liso sin llamar la atención. */
-.fondo::after{content:"";position:absolute;inset:0;
+.fondo::after{content:"";position:absolute;inset:0;opacity:.05;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
-  background-size:220px 220px;opacity:.05}
+  background-size:220px 220px}
+
 /* El contenido debe quedar por encima de la capa de fondo. */
 .page,.site-footer{position:relative;z-index:1}
 """
@@ -381,7 +403,6 @@ def pie():
     <a href="index.html" class="i18n" data-es="Builds" data-en="Builds">Builds</a>
     <a href="comentarios.html" class="i18n" data-es="Comentarios" data-en="Comments">Comentarios</a>
     <a href="https://www.wowhead.com/wotlk" target="_blank" rel="noopener">Wowhead WotLK</a>
-    <a href="https://github.com/jsgrisales03-stack/wotlk-bis" target="_blank" rel="noopener">GitHub</a>
   </div>
   <p class="footer-copy i18n" data-es="{COPY_ES}" data-en="{COPY_EN}">{COPY_ES}</p>
 </footer>"""

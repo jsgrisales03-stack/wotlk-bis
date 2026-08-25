@@ -74,22 +74,50 @@ body{background:var(--bg);color:var(--tx);
 .channel:hover,.channel:focus-visible{border-color:var(--gr);background:#1c2620}
 .channel-label{font-size:13px;font-weight:600}
 .channel-hint{font-size:11px;color:var(--tn)}
+.previsto{list-style:none;margin:30px auto 0;max-width:430px;width:100%;
+  display:flex;flex-direction:column;gap:9px;text-align:left}
+.previsto li{display:flex;align-items:flex-start;gap:10px;
+  background:var(--p);border:1px solid var(--ln);border-radius:8px;
+  padding:12px 15px;font-size:13px;color:var(--tx);line-height:1.45}
+.pv-ic{color:var(--go);font-size:9px;line-height:1.9;flex:0 0 auto}
 @media(max-width:600px){
   .page{padding:44px 18px}
   .channels{max-width:100%}
   .lead{font-size:13.5px}
 }
 
+/* Fondo del sitio: capa fija propia para que no se mueva con el scroll ni
+   afecte al flujo. Todo son gradientes y un SVG en línea, sin peticiones
+   externas. La paleta busca el frío de Corona de Hielo.
+
+   Cada elemento lleva su propia opacidad: agrupar la trama y el grano bajo
+   una sola dejaba el grano diez veces más marcado de la cuenta. */
 .fondo{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-color:var(--bg);
+  background-image:
+    repeating-linear-gradient(115deg,
+      transparent 0 74px,
+      rgba(150,200,255,.022) 74px 75px,
+      transparent 75px 150px),
+    repeating-linear-gradient(-115deg,
+      transparent 0 108px,
+      rgba(150,200,255,.014) 108px 109px,
+      transparent 109px 216px)}
+
+/* Halos de color. */
+.fondo::before{content:"";position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 1100px 560px at 50% -6%,rgba(70,120,205,.11),transparent 64%),
-    radial-gradient(ellipse 840px 520px at 94% 106%,rgba(126,64,178,.09),transparent 62%),
-    radial-gradient(ellipse 720px 500px at 3% 58%,rgba(64,217,126,.05),transparent 60%),
-    radial-gradient(ellipse 130% 90% at 50% 45%,transparent 52%,rgba(0,0,0,.5))}
+    radial-gradient(ellipse 1200px 620px at 50% -12%,rgba(86,150,224,.16),transparent 66%),
+    radial-gradient(ellipse 700px 420px at 50% -4%,rgba(150,214,255,.08),transparent 58%),
+    radial-gradient(ellipse 900px 560px at 96% 104%,rgba(126,64,178,.10),transparent 62%),
+    radial-gradient(ellipse 760px 520px at 2% 64%,rgba(64,217,126,.05),transparent 60%),
+    radial-gradient(ellipse 135% 95% at 50% 42%,transparent 46%,rgba(0,0,0,.6))}
+
 /* Grano fino: rompe el plano liso sin llamar la atención. */
-.fondo::after{content:"";position:absolute;inset:0;
+.fondo::after{content:"";position:absolute;inset:0;opacity:.05;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
-  background-size:220px 220px;opacity:.05}
+  background-size:220px 220px}
+
 /* El contenido debe quedar por encima de la capa de fondo. */
 .page,.site-footer{position:relative;z-index:1}
 </style>
@@ -114,20 +142,20 @@ body{background:var(--bg);color:var(--tx);
   <p class="lead i18n" data-es="Todavía no hay un sistema de comentarios conectado. Cuando lo activemos podrás &lt;strong&gt;dejar tu opinión, avisar de un dato incorrecto o pedir una build nueva&lt;/strong&gt; desde cada especialización." data-en="No comment system is connected yet. Once it is live you&#x27;ll be able to &lt;strong&gt;leave feedback, flag incorrect data or request a new build&lt;/strong&gt; from any specialization page.">Todavía no hay un sistema de comentarios conectado. Cuando lo activemos podrás <strong>dejar tu opinión, avisar de un dato incorrecto o pedir una build nueva</strong> desde cada especialización.</p>
   <p class="status-pill"><span class="dot" aria-hidden="true"></span>
     <span class="i18n" data-es="Próximamente" data-en="Coming soon">Próximamente</span></p>
-  <div class="channels">
-    <a class="channel" href="https://github.com/jsgrisales03-stack/wotlk-bis/issues"
-       target="_blank" rel="noopener">
-      <span class="i18n channel-label" data-es="Reportar en GitHub" data-en="Report on GitHub">Reportar en GitHub</span>
-      <span class="i18n channel-hint" data-es="Issues del repositorio" data-en="Repository issues">Issues del repositorio</span>
-    </a>
-  </div>
+  <ul class="previsto">
+    <li><span class="pv-ic" aria-hidden="true">◆</span>
+      <span class="i18n" data-es="Señalar un dato incorrecto en cualquier ficha" data-en="Flag incorrect data on any page">Señalar un dato incorrecto en cualquier ficha</span></li>
+    <li><span class="pv-ic" aria-hidden="true">◆</span>
+      <span class="i18n" data-es="Proponer una alternativa de gema o encantamiento" data-en="Suggest an alternative gem or enchant">Proponer una alternativa de gema o encantamiento</span></li>
+    <li><span class="pv-ic" aria-hidden="true">◆</span>
+      <span class="i18n" data-es="Pedir una especialización o una variante de banda" data-en="Request a specialization or raid variant">Pedir una especialización o una variante de banda</span></li>
+  </ul>
 </div>
 <footer class="site-footer">
   <div class="footer-links">
     <a href="index.html" class="i18n" data-es="Builds" data-en="Builds">Builds</a>
     <a href="comentarios.html" class="i18n" data-es="Comentarios" data-en="Comments">Comentarios</a>
     <a href="https://www.wowhead.com/wotlk" target="_blank" rel="noopener">Wowhead WotLK</a>
-    <a href="https://github.com/jsgrisales03-stack/wotlk-bis" target="_blank" rel="noopener">GitHub</a>
   </div>
   <p class="footer-copy i18n" data-es="World of Warcraft y sus iconos son marcas de Blizzard Entertainment. Sitio de fans sin ánimo de lucro; datos verificados contra Wowhead WotLK Classic." data-en="World of Warcraft and its icons are trademarks of Blizzard Entertainment. Non-profit fan site; data verified against Wowhead WotLK Classic.">World of Warcraft y sus iconos son marcas de Blizzard Entertainment. Sitio de fans sin ánimo de lucro; datos verificados contra Wowhead WotLK Classic.</p>
 </footer>

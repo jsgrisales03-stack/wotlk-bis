@@ -170,7 +170,7 @@ body{background:var(--bg);color:var(--tx);
   font:13px/1.45 Barlow,"Segoe UI",system-ui,sans-serif;
   font-variant-numeric:tabular-nums;min-height:100vh;
   display:flex;flex-direction:column}
-.page{max-width:1400px;width:100%;margin:0 auto;padding:0 14px;
+.page{max-width:1560px;width:100%;margin:0 auto;padding:0 16px;
   flex:1;display:flex;flex-direction:column;min-height:0}
 
 .ficha-head{text-align:center;padding:16px 0 4px;flex:0 0 auto}
@@ -335,21 +335,24 @@ body{background:var(--bg);color:var(--tx);
 /* En pantallas grandes crece el propio paperdoll: como las tarjetas se pegan
    al centro, ensanchar la página sólo empujaría hueco hacia los lados. */
 @media(min-width:1440px){
-  .pd{grid-template-columns:1fr minmax(240px,318px) 1fr}
-  .slot{max-width:366px}
-  .slot.btm{max-width:264px}
-  .personaje{height:290px}
-  .ctr.con-personaje .ctr-t{margin-top:196px}
+  .pd{grid-template-columns:1fr minmax(250px,336px) 1fr}
+  .slot{max-width:388px}
+  .slot.btm{max-width:276px}
+  .personaje{height:300px}
+  .ctr.con-personaje .ctr-t{margin-top:206px}
   .s-name{font-size:13px}
   .stat dt{font-size:12px}
   .stat dd{font-size:13px}
 }
 @media(min-width:1800px){
-  .pd{grid-template-columns:1fr minmax(260px,344px) 1fr}
-  .slot{max-width:396px}
-  .slot.btm{max-width:284px}
-  .personaje{height:312px}
-  .ctr.con-personaje .ctr-t{margin-top:216px}
+  .pd{grid-template-columns:1fr minmax(280px,382px) 1fr}
+  .slot{max-width:432px}
+  .slot.btm{max-width:308px}
+  .personaje{height:344px}
+  .ctr.con-personaje .ctr-t{margin-top:238px}
+  .s-name{font-size:13.5px}
+  .s-enc{font-size:11px}
+  .si{width:40px;height:40px}
 }
 @media(max-width:430px){
   .ficha-head{padding:10px 0 2px}
@@ -488,7 +491,7 @@ CSS_INDEX = """
 body{background:var(--bg);color:var(--tx);
   font:14px/1.5 Barlow,"Segoe UI",system-ui,sans-serif;
   min-height:100vh;display:flex;flex-direction:column}
-.page{max-width:1560px;margin:0 auto;padding:44px 24px 8px;flex:1;width:100%}
+.page{max-width:1620px;margin:0 auto;padding:44px 26px 8px;flex:1;width:100%}
 .hero{text-align:center;margin-bottom:18px}
 .hero h1{font:700 clamp(26px,4vw,40px)/1.15 Cinzel,Georgia,serif;
   color:#f0eaf8;text-wrap:balance}
@@ -502,10 +505,17 @@ body{background:var(--bg);color:var(--tx);
 .intro-tags span{font-size:11px;letter-spacing:.5px;text-transform:uppercase;
   color:var(--tn);background:var(--p);border:1px solid var(--ln);
   border-radius:14px;padding:5px 12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.class-card{background:var(--p);border:1px solid var(--ln2);border-radius:10px;
-  padding:17px 19px;display:flex;flex-direction:column;gap:11px}
-.class-name{font:600 15.5px/1.2 Cinzel,Georgia,serif;color:#f0eaf8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(262px,1fr));gap:16px}
+.class-card{background:var(--p);border:1px solid var(--ln2);border-radius:11px;
+  padding:18px 20px;display:flex;flex-direction:column;gap:13px;
+  transition:border-color .15s ease}
+.class-card:hover{border-color:var(--ln2)}
+.class-head{display:flex;align-items:center;gap:10px}
+.class-ic{width:30px;height:30px;border-radius:7px;flex:0 0 auto;
+  border:1px solid var(--ln2);box-shadow:0 1px 6px rgba(0,0,0,.5)}
+.class-name{font:600 15.5px/1.2 Cinzel,Georgia,serif;color:#f0eaf8;flex:1;min-width:0}
+.class-n{font:600 10.5px/1 Barlow,sans-serif;color:var(--db);
+  border:1px solid var(--ln);border-radius:10px;padding:4px 7px;flex:0 0 auto}
 .specs{display:flex;flex-direction:column;gap:6px}
 a.spec{display:flex;justify-content:space-between;align-items:center;gap:8px;
   text-decoration:none;color:var(--tx);
@@ -533,7 +543,7 @@ a.spec .dot{width:6px;height:6px;border-radius:50%;background:var(--gr);
 """
 
 
-def construir_index():
+def construir_index(iconos):
     builds = []
     for ruta in sorted(glob.glob(os.path.join(DATOS, "*.json"))):
         nombre = os.path.basename(ruta)
@@ -544,6 +554,7 @@ def construir_index():
         builds.append({
             "id": d["id"], "clase": d["clase"],
             "espec": d["especializacion"], "rol": d.get("rol", ""),
+            "icono": d.get("clase_icono", ""),
         })
 
     por_clase = {}
@@ -570,9 +581,16 @@ def construir_index():
                 + bi(rol_es, rol_en, cls="role")
                 + "</a>"
             )
-        tarjetas.append(
-            '<div class="class-card">'
+        icono = next((b["icono"] for b in specs if b["icono"]), "")
+        cabecera = (
+            '<div class="class-head">'
+            + (ic(iconos, icono, "class-ic", clase) if icono in iconos else "")
             + bi(clase, sitio.en(sitio.CLASES, clase), "h2", cls="class-name")
+            + f'<span class="class-n">{len(specs)}</span>'
+            + "</div>"
+        )
+        tarjetas.append(
+            '<div class="class-card">' + cabecera
             + f'<div class="specs">{"".join(filas)}</div></div>'
         )
 
@@ -633,6 +651,12 @@ body{background:var(--bg);color:var(--tx);
 .channel:hover,.channel:focus-visible{border-color:var(--gr);background:#1c2620}
 .channel-label{font-size:13px;font-weight:600}
 .channel-hint{font-size:11px;color:var(--tn)}
+.previsto{list-style:none;margin:30px auto 0;max-width:430px;width:100%;
+  display:flex;flex-direction:column;gap:9px;text-align:left}
+.previsto li{display:flex;align-items:flex-start;gap:10px;
+  background:var(--p);border:1px solid var(--ln);border-radius:8px;
+  padding:12px 15px;font-size:13px;color:var(--tx);line-height:1.45}
+.pv-ic{color:var(--go);font-size:9px;line-height:1.9;flex:0 0 auto}
 @media(max-width:600px){
   .page{padding:44px 18px}
   .channels{max-width:100%}
@@ -654,13 +678,17 @@ def construir_comentarios():
   <p class="lead i18n" data-es="{esc(lead_es)}" data-en="{esc(lead_en)}">{lead_es}</p>
   <p class="status-pill"><span class="dot" aria-hidden="true"></span>
     {bi("Próximamente", "Coming soon")}</p>
-  <div class="channels">
-    <a class="channel" href="https://github.com/jsgrisales03-stack/wotlk-bis/issues"
-       target="_blank" rel="noopener">
-      {bi("Reportar en GitHub", "Report on GitHub", cls="channel-label")}
-      {bi("Issues del repositorio", "Repository issues", cls="channel-hint")}
-    </a>
-  </div>
+  <ul class="previsto">
+    <li><span class="pv-ic" aria-hidden="true">◆</span>
+      {bi("Señalar un dato incorrecto en cualquier ficha",
+          "Flag incorrect data on any page")}</li>
+    <li><span class="pv-ic" aria-hidden="true">◆</span>
+      {bi("Proponer una alternativa de gema o encantamiento",
+          "Suggest an alternative gem or enchant")}</li>
+    <li><span class="pv-ic" aria-hidden="true">◆</span>
+      {bi("Pedir una especialización o una variante de banda",
+          "Request a specialization or raid variant")}</li>
+  </ul>
 </div>"""
     return documento(f"Comentarios · {sitio.MARCA_ES}", CSS_COMENTARIOS, cuerpo, "comentarios")
 
@@ -702,7 +730,7 @@ def main(argv):
         print(f"  {bid}.html  {kb} KB")
 
     if not argv[1:]:
-        print(f"  index.html  {escribir('index.html', construir_index())} KB")
+        print(f"  index.html  {escribir('index.html', construir_index(iconos))} KB")
         print(f"  comentarios.html  {escribir('comentarios.html', construir_comentarios())} KB")
     print(f"Listo: {len(objetivos)} fichas.")
 
