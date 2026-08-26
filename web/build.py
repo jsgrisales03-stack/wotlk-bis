@@ -100,6 +100,33 @@ EQUIPAR = {
 }
 
 
+def texto_origen(o):
+    """Frase de procedencia en ambos idiomas. Los nombres propios de jefes y
+    zonas vienen de Wowhead en español; no se traducen."""
+    if not o or o.get("tipo") in (None, "desconocido", "error"):
+        return None
+    quien = esc(o.get("quien", "").strip())
+    donde = esc(o.get("donde", "").strip())
+    t = o.get("tipo")
+    if t == "botin":
+        prob = o.get("prob", "")
+        cola = f" · {prob}%" if prob else ""
+        return (f"Botín de <b>{quien}</b>{' · ' + donde if donde else ''}{cola}",
+                f"Dropped by <b>{quien}</b>{' · ' + donde if donde else ''}{cola}")
+    if t == "vendedor":
+        rol = o.get("rol", "")
+        cola = f" · {esc(rol)}" if rol else ""
+        return (f"Lo vende <b>{quien}</b>{' · ' + donde if donde else ''}{cola}",
+                f"Sold by <b>{quien}</b>{' · ' + donde if donde else ''}{cola}")
+    if t == "mision":
+        return (f"Recompensa de la misión <b>{quien}</b>{' · ' + donde if donde else ''}",
+                f"Quest reward: <b>{quien}</b>{' · ' + donde if donde else ''}")
+    if quien:
+        return (f"<b>{quien}</b>{' · ' + donde if donde else ''}",
+                f"<b>{quien}</b>{' · ' + donde if donde else ''}")
+    return None
+
+
 def bloque_stats(p, items_stats):
     """Filas del tooltip: nivel, armadura, primarias, ranuras y efectos."""
     st = items_stats.get(p["id"], {})
@@ -134,44 +161,23 @@ def bloque_stats(p, items_stats):
     return "".join(filas)
 
 
-def tooltip(p, iconos, lado, items_stats):
+def tooltip(p, iconos, lado, items_stats, origenes):
     cls, color = CALIDAD.get(p["calidad"], ("epic", "#a335ee"))
     pos = {"izq": "tt-right", "der": "tt-left"}.get(lado, "tt-center")
+    org = texto_origen(origenes.get(str(p["id"])))
+    linea = ""
+    if org:
+        linea = ('<p class="tt-org i18n" '
+                 f'data-es="{esc(org[0])}" data-en="{esc(org[1])}">{org[0]}</p>')
     return (f'<div class="tt {pos}">'
             + bi(p["nombre"], p.get("en", p["nombre"]), "p",
                  cls="tt-nombre", extra=f' style="color:{color}"')
             + bloque_stats(p, items_stats)
+            + linea
             + '</div>')
 
 
 # --------------------------------------------------------------- detalle
-def texto_origen(o):
-    """Frase de procedencia en ambos idiomas. Los nombres propios de jefes y
-    zonas vienen de Wowhead en español; no se traducen."""
-    if not o or o.get("tipo") in (None, "desconocido", "error"):
-        return None
-    quien = esc(o.get("quien", "").strip())
-    donde = esc(o.get("donde", "").strip())
-    t = o.get("tipo")
-    if t == "botin":
-        prob = o.get("prob", "")
-        cola = f" · {prob}%" if prob else ""
-        return (f"Botín de <b>{quien}</b>{' · ' + donde if donde else ''}{cola}",
-                f"Dropped by <b>{quien}</b>{' · ' + donde if donde else ''}{cola}")
-    if t == "vendedor":
-        rol = o.get("rol", "")
-        cola = f" · {esc(rol)}" if rol else ""
-        return (f"Lo vende <b>{quien}</b>{' · ' + donde if donde else ''}{cola}",
-                f"Sold by <b>{quien}</b>{' · ' + donde if donde else ''}{cola}")
-    if t == "mision":
-        return (f"Recompensa de la misión <b>{quien}</b>{' · ' + donde if donde else ''}",
-                f"Quest reward: <b>{quien}</b>{' · ' + donde if donde else ''}")
-    if quien:
-        return (f"<b>{quien}</b>{' · ' + donde if donde else ''}",
-                f"<b>{quien}</b>{' · ' + donde if donde else ''}")
-    return None
-
-
 def detalle(p, iconos, items_stats, origenes, ident):
     """Panel que se abre al pulsar una pieza. Va oculto en la página y el
     script lo copia dentro del diálogo."""
@@ -246,7 +252,7 @@ def ranura(p, iconos, lado, items_stats, origenes, ident):
             for g in p["gemas"]
         ) + "</span>"
 
-    tt = tooltip(p, iconos, lado, items_stats)
+    tt = tooltip(p, iconos, lado, items_stats, origenes)
     etiqueta = bi(p["ranura"], sitio.en(sitio.RANURAS, p["ranura"]), cls="s-slot")
 
     return f"""<button type="button" class="slot {lado} has-tt" data-det="{ident}"
@@ -430,6 +436,9 @@ body{background:var(--bg);color:var(--tx);
 .tt-bono{color:var(--tn)}
 .tt-eq{color:var(--gr);margin-top:2px}
 .tt-skip{color:#d99b3c;font-size:11px;margin-left:3px}
+.tt-org{margin-top:7px;padding-top:6px;border-top:1px solid var(--ln);
+  color:var(--tn);font-size:11px;line-height:1.4}
+.tt-org b{color:var(--go);font-weight:600}
 
 /* Diálogo de detalle. */
 .paneles{display:none}
