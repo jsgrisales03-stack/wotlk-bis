@@ -28,35 +28,46 @@ ROL_CORTO = {
     "Sanador — PvE": ("Sanador", "Healer"),
 }
 
-# Marca de rol, como en el buscador de mazmorras: escudo para el tanque, cruz
-# para el sanador, espadas cruzadas para el cuerpo a cuerpo y flecha para la
-# distancia. Se dibujan macizas porque a 14 px un trazo fino se pierde, y la X
-# distingue al daño cuerpo a cuerpo de la cruz del sanador.
-_BASE = ('<svg class="rol-ic" viewBox="0 0 24 24" aria-hidden="true"'
-         ' stroke-linecap="round" stroke-linejoin="round">')
+# Marca de rol con el aspecto del buscador de mazmorras: medallón de aro
+# dorado con el escudo del tanque, la cruz del sanador y la espada del daño.
+# Se dibujan en SVG porque esas texturas del juego no están publicadas en
+# ninguna ruta accesible, y así además quedan nítidas a cualquier tamaño y no
+# añaden ninguna petición. El daño a distancia comparte medallón con el
+# cuerpo a cuerpo, igual que en el juego.
+_ARO = ('<circle cx="16" cy="16" r="15.2" fill="#6b5219"/>'
+        '<circle cx="16" cy="16" r="13.6" fill="#c9a94e"/>'
+        '<circle cx="16" cy="16" r="11.7" fill="#2a2208"/>')
+
+_TANQUE = (_ARO + '<circle cx="16" cy="16" r="10.7" fill="#1b3157"/>'
+           '<path d="M16 8.2 9.9 10.5v4.6c0 3.7 2.4 7 6.1 8.2 3.7-1.2 6.1-4.5'
+           ' 6.1-8.2v-4.6L16 8.2z" fill="#dae3f2"/>'
+           '<path d="M16 8.2 9.9 10.5v4.6c0 3.7 2.4 7 6.1 8.2z" fill="#9fb4d8"/>')
+
+_SANADOR = (_ARO + '<circle cx="16" cy="16" r="10.7" fill="#123322"/>'
+            '<path d="M13.4 8.3h5.2v5.1h5.1v5.2h-5.1v5.1h-5.2v-5.1H8.3v-5.2h5.1z"'
+            ' fill="#dff0b8" stroke="#7a8f4a" stroke-width=".8"/>')
+
+_DANO = (_ARO + '<circle cx="16" cy="16" r="10.7" fill="#4a1216"/>'
+         '<path d="M24.2 7.8 22.2 15.1 15.1 22.2 11.6 18.7 18.7 11.6z" fill="#e8eef8"/>'
+         '<path d="M18.9 11.4 22.4 14.9 20.6 16.7 17.1 13.2z" fill="#b9c4d6"/>'
+         '<path d="M13.6 16.6 17.2 20.2 12.9 24.5 9.3 20.9z" fill="#c9a94e"/>'
+         '<path d="M10.4 21.8 12.8 24.2 10.2 26.8 7.8 24.4z" fill="#8a6a22"/>')
 
 ROL_ICONO = {
-    "Tanque — PvE": _BASE + (
-        '<path d="M12 3 5 5.6v5.1c0 4 2.8 7.6 7 9 4.2-1.4 7-5 7-9V5.6L12 3z"'
-        ' fill="#4a9eff" fill-opacity=".18" stroke="#4a9eff" stroke-width="1.9"/>'
-        '</svg>'),
-    "Sanador — PvE": _BASE + (
-        '<path d="M9.8 4h4.4v5.8H20v4.4h-5.8V20H9.8v-5.8H4V9.8h5.8z"'
-        ' fill="#40d97e"/></svg>'),
-    "DPS cuerpo a cuerpo — PvE": _BASE + (
-        '<path d="M5.5 5.5 18.5 18.5M18.5 5.5 5.5 18.5" fill="none"'
-        ' stroke="#e5484d" stroke-width="2.1"/>'
-        '<circle cx="5.5" cy="18.5" r="1.6" fill="#e5484d"/>'
-        '<circle cx="18.5" cy="18.5" r="1.6" fill="#e5484d"/></svg>'),
-    "DPS a distancia — PvE": _BASE + (
-        '<path d="M4 20 19 5M13 5h6v6M4 20v-4M4 20h4" fill="none"'
-        ' stroke="#e5484d" stroke-width="2.1"/></svg>'),
+    "Tanque — PvE": _TANQUE,
+    "Sanador — PvE": _SANADOR,
+    "DPS cuerpo a cuerpo — PvE": _DANO,
+    "DPS a distancia — PvE": _DANO,
 }
 
 
 def marca_rol(rol):
-    """Icono del rol, o cadena vacía si la build no lo declara."""
-    return ROL_ICONO.get(rol, "")
+    """Medallón del rol, o cadena vacía si la build no lo declara."""
+    trazo = ROL_ICONO.get(rol)
+    if not trazo:
+        return ""
+    return (f'<svg class="rol-ic" viewBox="0 0 32 32" aria-hidden="true">'
+            f'{trazo}</svg>')
 
 CSS = """
 body{background:var(--bg);color:var(--tx);
@@ -98,7 +109,7 @@ a.spec{display:flex;justify-content:space-between;align-items:center;gap:8px;
   transition:border-color .15s,background .15s}
 a.spec:hover,a.spec:focus-visible{border-color:var(--gr);background:#1c2620}
 a.spec .fin{display:flex;align-items:center;gap:7px;flex:0 0 auto}
-.rol-ic{width:14px;height:14px;flex:0 0 auto;opacity:.85}
+.rol-ic{width:16px;height:16px;flex:0 0 auto;opacity:.9}
 a.spec:hover .rol-ic,a.spec:focus-visible .rol-ic{opacity:1}
 /* El galón es la única señal de que la fila navega; en táctil no hay hover. */
 a.spec .ir{color:var(--db);font-size:16px;line-height:1;
