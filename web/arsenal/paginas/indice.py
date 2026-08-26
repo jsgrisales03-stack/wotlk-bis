@@ -42,11 +42,14 @@ body{background:var(--bg);color:var(--tx);
 .intro{max-width:62ch;margin:20px auto 0;text-align:center;
   color:var(--tn);font-size:14px;line-height:1.7}
 .intro strong{color:var(--tx);font-weight:600}
-.intro-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
-  margin:18px 0 40px}
-.intro-tags span{font-size:11px;letter-spacing:.5px;text-transform:uppercase;
-  color:var(--tn);background:var(--p);border:1px solid var(--ln);
-  border-radius:14px;padding:5px 12px}
+/* Antes eran píldoras con borde y fondo, y la gente las pulsaba creyendo que
+   filtraban algo. Ahora son una línea de datos: sin caja, sin relieve. */
+.intro-meta{display:flex;flex-wrap:wrap;justify-content:center;
+  margin:18px 0 40px;font:11px/1.9 Barlow,sans-serif;letter-spacing:1.4px;
+  text-transform:uppercase;color:var(--db)}
+.intro-meta span{padding:0 15px;position:relative}
+.intro-meta span+span::before{content:"";position:absolute;left:0;top:50%;
+  width:1px;height:11px;margin-top:-6px;background:var(--ln2)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(262px,1fr));gap:16px}
 .class-card{background:var(--p);border:1px solid var(--ln2);border-radius:11px;
   padding:18px 20px;display:flex;flex-direction:column;gap:13px;
@@ -62,21 +65,28 @@ body{background:var(--bg);color:var(--tx);
 a.spec{display:flex;justify-content:space-between;align-items:center;gap:8px;
   text-decoration:none;color:var(--tx);
   background:var(--p2);border:1px solid var(--ln);border-radius:6px;
-  padding:8px 12px;font-size:13px;transition:border-color .15s,background .15s}
+  padding:8px 10px 8px 12px;font-size:13px;
+  transition:border-color .15s,background .15s}
 a.spec:hover,a.spec:focus-visible{border-color:var(--gr);background:#1c2620}
+a.spec .fin{display:flex;align-items:center;gap:9px;flex:0 0 auto}
+/* El galón es la única señal de que la fila navega; en táctil no hay hover. */
+a.spec .ir{color:var(--db);font-size:16px;line-height:1;
+  transition:transform .15s ease,color .15s ease}
+a.spec:hover .ir,a.spec:focus-visible .ir{color:var(--gr);transform:translateX(3px)}
 a.spec .role{color:var(--tn);font-size:11px;flex:0 0 auto}
 a.spec .dot{width:6px;height:6px;border-radius:50%;background:var(--gr);
   flex:0 0 auto;display:inline-block;margin-right:7px}
 @media(max-width:760px){
   .page{padding:30px 16px 8px}
   .intro{font-size:13.5px;line-height:1.65}
-  .intro-tags{margin:16px 0 26px;gap:6px}
+  .intro-meta{margin:16px 0 26px}
   .class-card{padding:15px 16px;gap:9px}
 }
 @media(max-width:430px){
   .page{padding:22px 12px 8px}
   .hero .sub{letter-spacing:2.5px;font-size:11.5px}
-  .intro-tags span{font-size:10px;padding:4px 9px}
+  .intro-meta{font-size:10px;letter-spacing:1.1px}
+  .intro-meta span{padding:0 10px}
   .class-card{padding:13px 14px}
   a.spec{padding:9px 11px;font-size:12.5px}
 }
@@ -109,9 +119,10 @@ def construir(iconos):
                 f'<a class="spec" href="{b["id"]}.html">'
                 '<span><span class="dot" aria-hidden="true"></span>'
                 + bi(b["espec"], textos.en(textos.ESPECS, b["espec"]))
-                + "</span>"
+                + '</span><span class="fin">'
                 + bi(rol_es, rol_en, cls="role")
-                + "</a>"
+                + '<span class="ir" aria-hidden="true">&rsaquo;</span>'
+                + "</span></a>"
             )
         icono = next((b["icono"] for b in specs if b["icono"]), "")
         cabecera = (
@@ -149,7 +160,7 @@ def construir(iconos):
   {bi("Guías de equipo WotLK · PvE", "WotLK gear guides · PvE", "p", cls="sub")}
 </div>
 <p class="intro i18n" data-es="{esc(intro_es)}" data-en="{esc(intro_en)}">{intro_es}</p>
-<div class="intro-tags">{"".join(bi(a, b) for a, b in etiquetas)}</div>
+<p class="intro-meta">{"".join(bi(a, b) for a, b in etiquetas)}</p>
 <div class="grid">{"".join(tarjetas)}</div>
 </div>"""
 

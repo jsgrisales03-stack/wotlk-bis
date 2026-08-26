@@ -4,7 +4,7 @@
 TOKENS = """
 :root{
   --bg:#0a090e; --p:#13111a; --p2:#1a1722; --ln:#2a2536; --ln2:#362f45;
-  --tx:#ddd8e8; --tn:#918aa5; --db:#5a536b; --go:#d9b45b; --gr:#40d97e;
+  --tx:#ddd8e8; --tn:#918aa5; --db:#7e7494; --go:#d9b45b; --gr:#40d97e;
   --ep:#a335ee; --lg:#ff8000; --dk:#c41e3a;
   --focus:#7fd8ff;
 }
