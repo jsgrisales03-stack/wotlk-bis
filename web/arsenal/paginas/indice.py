@@ -28,6 +28,35 @@ ROL_CORTO = {
     "Sanador — PvE": ("Sanador", "Healer"),
 }
 
+# Marca de rol, como en el buscador de mazmorras: escudo para el tanque, cruz
+# para el sanador, espadas cruzadas para el cuerpo a cuerpo y flecha para la
+# distancia. Se dibujan macizas porque a 14 px un trazo fino se pierde, y la X
+# distingue al daño cuerpo a cuerpo de la cruz del sanador.
+_BASE = ('<svg class="rol-ic" viewBox="0 0 24 24" aria-hidden="true"'
+         ' stroke-linecap="round" stroke-linejoin="round">')
+
+ROL_ICONO = {
+    "Tanque — PvE": _BASE + (
+        '<path d="M12 3 5 5.6v5.1c0 4 2.8 7.6 7 9 4.2-1.4 7-5 7-9V5.6L12 3z"'
+        ' fill="#4a9eff" fill-opacity=".18" stroke="#4a9eff" stroke-width="1.9"/>'
+        '</svg>'),
+    "Sanador — PvE": _BASE + (
+        '<path d="M9.8 4h4.4v5.8H20v4.4h-5.8V20H9.8v-5.8H4V9.8h5.8z"'
+        ' fill="#40d97e"/></svg>'),
+    "DPS cuerpo a cuerpo — PvE": _BASE + (
+        '<path d="M5.5 5.5 18.5 18.5M18.5 5.5 5.5 18.5" fill="none"'
+        ' stroke="#e5484d" stroke-width="2.1"/>'
+        '<circle cx="5.5" cy="18.5" r="1.6" fill="#e5484d"/>'
+        '<circle cx="18.5" cy="18.5" r="1.6" fill="#e5484d"/></svg>'),
+    "DPS a distancia — PvE": _BASE + (
+        '<path d="M4 20 19 5M13 5h6v6M4 20v-4M4 20h4" fill="none"'
+        ' stroke="#e5484d" stroke-width="2.1"/></svg>'),
+}
+
+
+def marca_rol(rol):
+    """Icono del rol, o cadena vacía si la build no lo declara."""
+    return ROL_ICONO.get(rol, "")
 
 CSS = """
 body{background:var(--bg);color:var(--tx);
@@ -68,7 +97,9 @@ a.spec{display:flex;justify-content:space-between;align-items:center;gap:8px;
   padding:8px 10px 8px 12px;font-size:13px;
   transition:border-color .15s,background .15s}
 a.spec:hover,a.spec:focus-visible{border-color:var(--gr);background:#1c2620}
-a.spec .fin{display:flex;align-items:center;gap:9px;flex:0 0 auto}
+a.spec .fin{display:flex;align-items:center;gap:7px;flex:0 0 auto}
+.rol-ic{width:14px;height:14px;flex:0 0 auto;opacity:.85}
+a.spec:hover .rol-ic,a.spec:focus-visible .rol-ic{opacity:1}
 /* El galón es la única señal de que la fila navega; en táctil no hay hover. */
 a.spec .ir{color:var(--db);font-size:16px;line-height:1;
   transition:transform .15s ease,color .15s ease}
@@ -120,6 +151,7 @@ def construir(iconos):
                 '<span><span class="dot" aria-hidden="true"></span>'
                 + bi(b["espec"], textos.en(textos.ESPECS, b["espec"]))
                 + '</span><span class="fin">'
+                + marca_rol(b["rol"])
                 + bi(rol_es, rol_en, cls="role")
                 + '<span class="ir" aria-hidden="true">&rsaquo;</span>'
                 + "</span></a>"
