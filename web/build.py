@@ -8,7 +8,8 @@ Generador del sitio «Arsenal de Corona de Hielo».
 Cada ficha se arma desde datos/<id>.json; el índice se deriva de los propios
 datos, así que añadir un JSON nuevo basta para que aparezca en la portada.
 """
-import json, os, sys, html, glob
+import json
+import re, os, sys, html, glob
 
 import sitio
 import stats as motor
@@ -16,7 +17,7 @@ import stats as motor
 AQUI = os.path.dirname(os.path.abspath(__file__))
 DATOS = os.path.join(AQUI, "datos")
 # Ficheros de datos/soporte que no describen una build.
-NO_BUILD = ("iconos", "stats-", "displayids", "vestidor", "_")
+NO_BUILD = ("iconos", "stats-", "displayids", "vestidor", "origenes", "_")
 
 CALIDAD = {4: ("epic", "#a335ee"), 5: ("legendary", "#ff8000")}
 COLOR_RANURA = {
@@ -64,47 +65,172 @@ def bi(es, en, tag="span", cls="", extra=""):
 
 
 def ic(iconos, nombre, cls, alt=""):
-    src = iconos.get(nombre, "")
-    return f'<img class="{cls}" src="{src}" alt="{esc(alt)}" loading="lazy">'
+    """Icono como clase CSS, no como <img> con el base64 incrustado.
+
+    El mismo icono aparece en la tarjeta y en el panel de detalle, y las gemas
+    se repiten muchas veces por ficha. Incrustándolo cada vez, una ficha pasaba
+    de 149 a 248 KB; por clase, cada icono viaja una sola vez.
+    """
+    if nombre not in iconos:
+        return ""
+    rol = f' role="img" aria-label="{esc(alt)}"' if alt else ' aria-hidden="true"'
+    return f'<span class="{cls} ic ic-{nombre}"{rol}></span>'
 
 
 # --------------------------------------------------------------- tooltip
-def tooltip(p, iconos, lado):
+# En el tooltip del juego las características primarias van como "+N Aguante"
+# y las secundarias como una línea "Equipar: ...". Se respeta ese orden.
+PRIMARIAS_TT = ("fuerza", "agilidad", "intelecto", "espiritu", "aguante")
+SECUNDARIAS_TT = ("poder_ataque", "poder_hechizos", "critico", "golpe", "celeridad",
+                  "pericia", "penetracion_armadura", "defensa", "esquiva", "parada",
+                  "mp5", "temple")
+EQUIPAR = {
+    "poder_ataque": ("Aumenta el poder de ataque en {n}.", "Increases attack power by {n}."),
+    "poder_hechizos": ("Aumenta el poder con hechizos en {n}.", "Increases spell power by {n}."),
+    "critico": ("Mejora el índice de golpe crítico en {n}.", "Improves critical strike rating by {n}."),
+    "golpe": ("Mejora el índice de golpe en {n}.", "Improves hit rating by {n}."),
+    "celeridad": ("Mejora el índice de celeridad en {n}.", "Improves haste rating by {n}."),
+    "pericia": ("Aumenta la pericia en {n}.", "Increases expertise rating by {n}."),
+    "penetracion_armadura": ("Aumenta la penetración de armadura en {n}.", "Increases armor penetration rating by {n}."),
+    "defensa": ("Aumenta el índice de defensa en {n}.", "Increases defense rating by {n}."),
+    "esquiva": ("Aumenta el índice de esquiva en {n}.", "Increases dodge rating by {n}."),
+    "parada": ("Aumenta el índice de parada en {n}.", "Increases parry rating by {n}."),
+    "mp5": ("Restaura {n} p. de maná cada 5 s.", "Restores {n} mana per 5 sec."),
+    "temple": ("Aumenta el temple en {n}.", "Increases resilience rating by {n}."),
+}
+
+
+def bloque_stats(p, items_stats):
+    """Filas del tooltip: nivel, armadura, primarias, ranuras y efectos."""
+    st = items_stats.get(p["id"], {})
     filas = []
-    enc = p.get("encantamiento")
-    if enc:
-        filas.append(
-            '<li class="tt-row tt-ench">'
-            + ic(iconos, enc["icono"], "tt-ic", "")
-            + '<div>'
-            + bi(enc["nombre"], sitio.en(sitio.ENCANTAMIENTOS, enc["nombre"]), "b")
-            + bi(enc["efecto"], sitio.en(sitio.EFECTOS, enc["efecto"]))
-            + '</div></li>'
-        )
+    if p.get("heroico"):
+        filas.append(bi("Heroico", "Heroic", "p", cls="tt-heroico"))
+    filas.append(bi(f'Nivel de objeto {p.get("ilvl", "")}',
+                    f'Item Level {p.get("ilvl", "")}', "p", cls="tt-ilvl"))
+    filas.append('<p class="tt-ranura">'
+                 + bi(p["ranura"], sitio.en(sitio.RANURAS, p["ranura"]), "span") + "</p>")
+    if st.get("armadura"):
+        filas.append(bi(f'{st["armadura"]} de armadura', f'{st["armadura"]} Armor', "p"))
+    for k in PRIMARIAS_TT:
+        if st.get(k):
+            es, en_ = motor.ETIQUETAS[k]
+            filas.append(bi(f'+{st[k]} {es.lower()}', f'+{st[k]} {en_}', "p", cls="tt-prim"))
     for g in p.get("gemas", []):
         color = COLOR_RANURA.get(g["ranura"], "#888")
-        nota = ""
-        if g.get("clave"):
-            nota = " " + bi(g["clave"], sitio.en(sitio.EFECTOS, g["clave"]), "em")
-        marca = ('<span class="tt-skip" title="No respeta el color de la ranura"'
-                 ' aria-hidden="true">↯</span>') if g.get("ignora_color") else ""
-        filas.append(
-            '<li class="tt-row">'
-            f'<span class="tt-dot" style="background:{color}" aria-hidden="true"></span>'
-            + ic(iconos, g["icono"], "tt-ic", "")
-            + '<div>'
-            + bi(g["gema"], sitio.en(sitio.GEMAS, g["gema"]), "b") + marca
-            + bi(g["efecto"], sitio.en(sitio.EFECTOS, g["efecto"])) + nota
-            + '</div></li>'
-        )
-    if not filas:
-        return ""
+        filas.append('<p class="tt-soc">'
+                     f'<span class="tt-sd" style="background:{color}" aria-hidden="true"></span>'
+                     + bi(f'Ranura {g["ranura"].lower()}',
+                          f'{sitio.en(sitio.RANURAS, g["ranura"])} Socket', "span") + "</p>")
+    if p.get("bono_ranura"):
+        filas.append(bi(f'Bono de ranura: {p["bono_ranura"]}',
+                        f'Socket Bonus: {sitio.en(sitio.EFECTOS, p["bono_ranura"])}',
+                        "p", cls="tt-bono"))
+    for k in SECUNDARIAS_TT:
+        if st.get(k) and k in EQUIPAR:
+            es, en_ = EQUIPAR[k]
+            filas.append(bi("Equipar: " + es.format(n=st[k]),
+                            "Equip: " + en_.format(n=st[k]), "p", cls="tt-eq"))
+    return "".join(filas)
+
+
+def tooltip(p, iconos, lado, items_stats):
+    cls, color = CALIDAD.get(p["calidad"], ("epic", "#a335ee"))
     pos = {"izq": "tt-right", "der": "tt-left"}.get(lado, "tt-center")
-    return f'<ul class="tt {pos}">{"".join(filas)}</ul>'
+    return (f'<div class="tt {pos}">'
+            + bi(p["nombre"], p.get("en", p["nombre"]), "p",
+                 cls="tt-nombre", extra=f' style="color:{color}"')
+            + bloque_stats(p, items_stats)
+            + '</div>')
+
+
+# --------------------------------------------------------------- detalle
+def texto_origen(o):
+    """Frase de procedencia en ambos idiomas. Los nombres propios de jefes y
+    zonas vienen de Wowhead en español; no se traducen."""
+    if not o or o.get("tipo") in (None, "desconocido", "error"):
+        return None
+    quien = esc(o.get("quien", "").strip())
+    donde = esc(o.get("donde", "").strip())
+    t = o.get("tipo")
+    if t == "botin":
+        prob = o.get("prob", "")
+        cola = f" · {prob}%" if prob else ""
+        return (f"Botín de <b>{quien}</b>{' · ' + donde if donde else ''}{cola}",
+                f"Dropped by <b>{quien}</b>{' · ' + donde if donde else ''}{cola}")
+    if t == "vendedor":
+        rol = o.get("rol", "")
+        cola = f" · {esc(rol)}" if rol else ""
+        return (f"Lo vende <b>{quien}</b>{' · ' + donde if donde else ''}{cola}",
+                f"Sold by <b>{quien}</b>{' · ' + donde if donde else ''}{cola}")
+    if t == "mision":
+        return (f"Recompensa de la misión <b>{quien}</b>{' · ' + donde if donde else ''}",
+                f"Quest reward: <b>{quien}</b>{' · ' + donde if donde else ''}")
+    if quien:
+        return (f"<b>{quien}</b>{' · ' + donde if donde else ''}",
+                f"<b>{quien}</b>{' · ' + donde if donde else ''}")
+    return None
+
+
+def detalle(p, iconos, items_stats, origenes, ident):
+    """Panel que se abre al pulsar una pieza. Va oculto en la página y el
+    script lo copia dentro del diálogo."""
+    cls, color = CALIDAD.get(p["calidad"], ("epic", "#a335ee"))
+    partes = [
+        '<div class="det-cab">',
+        f'<span class="s-icon {cls}">' + ic(iconos, p["icono"], "si", p["nombre"])
+        + f'<b class="lv">{p["ilvl"]}</b>'
+        + ('<b class="hb">H</b>' if p.get("heroico") else "") + '</span>',
+        '<div class="det-tit">',
+        bi(p["nombre"], p.get("en", p["nombre"]), "h3", extra=f' style="color:{color}"'),
+        bi(p["ranura"], sitio.en(sitio.RANURAS, p["ranura"]), "p", cls="det-ranura"),
+        '</div></div>',
+        '<div class="det-stats">' + bloque_stats(p, items_stats) + '</div>',
+    ]
+
+    gemas = p.get("gemas", [])
+    if gemas:
+        filas = []
+        for g in gemas:
+            color_g = COLOR_RANURA.get(g["ranura"], "#888")
+            marca = ('<span class="tt-skip" title="No respeta el color de la ranura"'
+                     ' aria-hidden="true">↯</span>') if g.get("ignora_color") else ""
+            filas.append(
+                '<li class="det-fila">'
+                f'<span class="tt-dot" style="background:{color_g}" aria-hidden="true"></span>'
+                + ic(iconos, g["icono"], "det-ic", "")
+                + '<div>' + bi(g["gema"], sitio.en(sitio.GEMAS, g["gema"]), "b") + marca
+                + bi(g["efecto"], sitio.en(sitio.EFECTOS, g["efecto"])) + '</div></li>')
+        partes.append('<section class="det-sec">'
+                      + bi("Gemas", "Gems", "h4")
+                      + f'<ul class="det-lista">{"".join(filas)}</ul></section>')
+
+    enc = p.get("encantamiento")
+    if enc:
+        extra = ""
+        if enc.get("origen"):
+            extra = bi(enc["origen"], sitio.en(sitio.ORIGENES, enc["origen"]),
+                       "span", cls="det-fuente")
+        partes.append(
+            '<section class="det-sec">' + bi("Encantamiento", "Enchant", "h4")
+            + '<ul class="det-lista"><li class="det-fila">'
+            + ic(iconos, enc["icono"], "det-ic", "")
+            + '<div>' + bi(enc["nombre"], sitio.en(sitio.ENCANTAMIENTOS, enc["nombre"]), "b")
+            + bi(enc["efecto"], sitio.en(sitio.EFECTOS, enc["efecto"])) + extra
+            + '</div></li></ul></section>')
+
+    org = texto_origen(origenes.get(str(p["id"])))
+    if org:
+        partes.append('<section class="det-sec det-origen">'
+                      + bi("Cómo conseguirlo", "How to get it", "h4")
+                      + f'<p class="i18n" data-es="{esc(org[0])}" data-en="{esc(org[1])}">{org[0]}</p>'
+                      + '</section>')
+
+    return f'<div class="det-fuente-html" id="{ident}" hidden>{"".join(partes)}</div>'
 
 
 # --------------------------------------------------------------- una ranura
-def ranura(p, iconos, lado):
+def ranura(p, iconos, lado, items_stats, origenes, ident):
     cls, color = CALIDAD.get(p["calidad"], ("epic", "#a335ee"))
     heroico = ('<b class="hb" title="Heroico">H</b>') if p.get("heroico") else ""
     enc = p.get("encantamiento")
@@ -120,11 +246,11 @@ def ranura(p, iconos, lado):
             for g in p["gemas"]
         ) + "</span>"
 
-    tt = tooltip(p, iconos, lado)
-    interactivo = ' tabindex="0"' if tt else ""
+    tt = tooltip(p, iconos, lado, items_stats)
     etiqueta = bi(p["ranura"], sitio.en(sitio.RANURAS, p["ranura"]), cls="s-slot")
 
-    return f"""<div class="slot {lado}{' has-tt' if tt else ''}"{interactivo}>
+    return f"""<button type="button" class="slot {lado} has-tt" data-det="{ident}"
+    aria-haspopup="dialog">
   <span class="s-icon {cls}">{ic(iconos, p["icono"], "si", p["nombre"])}<b class="lv">{p["ilvl"]}</b>{heroico}</span>
   <span class="s-txt">
     {etiqueta}
@@ -132,7 +258,7 @@ def ranura(p, iconos, lado):
     {linea_enc}{puntos}
   </span>
   {tt}
-</div>"""
+</button>"""
 
 
 # --------------------------------------------------------------- estadísticas
@@ -281,27 +407,64 @@ body{background:var(--bg);color:var(--tx);
 .slot.izq .s-dots{justify-content:flex-end}
 .sd{width:7px;height:7px;border-radius:1.5px;transform:rotate(45deg)}
 
-.tt{display:none;position:absolute;z-index:100;list-style:none;
-  background:#1c1928;border:1px solid var(--ln2);border-radius:8px;
-  padding:9px 12px;width:284px;box-shadow:0 8px 32px rgba(0,0,0,.6);
+/* La tarjeta es un botón: al pasar el cursor muestra las estadísticas y al
+   pulsarla abre el panel completo. */
+.slot{font:inherit;color:inherit;text-align:left;cursor:pointer;-webkit-appearance:none;appearance:none}
+
+.tt{display:none;position:absolute;z-index:100;
+  background:#12101a;border:1px solid var(--ln2);border-radius:8px;
+  padding:10px 13px;width:268px;box-shadow:0 10px 34px rgba(0,0,0,.7);
   pointer-events:none;text-align:left}
-.slot.has-tt:hover .tt,.slot.has-tt:focus-visible .tt,
-.slot.has-tt:focus-within .tt{display:block}
+.slot.has-tt:hover .tt,.slot.has-tt:focus-visible .tt{display:block}
 .tt-right{left:calc(100% + 10px);top:50%;transform:translateY(-50%)}
 .tt-left{right:calc(100% + 10px);top:50%;transform:translateY(-50%)}
 .tt-center{bottom:calc(100% + 8px);left:50%;transform:translateX(-50%)}
-.tt-row{display:flex;gap:8px;align-items:flex-start;padding:5px 0;
-  border-bottom:1px solid rgba(255,255,255,.05)}
-.tt-row:last-child{border-bottom:0}
-.tt-ic{width:24px;height:24px;border-radius:4px;flex:0 0 auto;border:1px solid var(--ln2)}
-.tt-dot{width:8px;height:8px;border-radius:2px;transform:rotate(45deg);
-  flex:0 0 auto;margin-top:8px}
-.tt-row>div{min-width:0;flex:1}
-.tt-row b{display:block;font-size:12.5px;font-weight:600;color:#d5cee3;line-height:1.3}
-.tt-row span{display:block;font-size:11.5px;color:var(--tn);line-height:1.35}
-.tt-row em{color:var(--go);font-style:normal;font-size:11px}
-.tt-ench b{color:var(--gr)}
+.tt p{font-size:11.5px;line-height:1.45;color:#c8c2d6}
+.tt-nombre{font-size:13px;font-weight:600;line-height:1.3;margin-bottom:2px}
+.tt-heroico{color:var(--gr)}
+.tt-ilvl{color:var(--go)}
+.tt-ranura{color:var(--tn);margin-bottom:3px}
+.tt-prim{color:#e4dff0}
+.tt-soc{display:flex;align-items:center;gap:6px;color:var(--tn);margin-top:2px}
+.tt-sd{width:8px;height:8px;border-radius:2px;transform:rotate(45deg);flex:0 0 auto}
+.tt-bono{color:var(--tn)}
+.tt-eq{color:var(--gr);margin-top:2px}
 .tt-skip{color:#d99b3c;font-size:11px;margin-left:3px}
+
+/* Diálogo de detalle. */
+.paneles{display:none}
+.modal{position:fixed;inset:0;z-index:400;display:flex;
+  align-items:center;justify-content:center;padding:20px}
+.modal[hidden]{display:none}
+.modal-fondo{position:absolute;inset:0;background:rgba(6,5,10,.78);
+  backdrop-filter:blur(3px)}
+.modal-caja{position:relative;z-index:1;width:100%;max-width:430px;
+  max-height:86vh;overflow-y:auto;
+  background:#14121d;border:1px solid var(--ln2);border-radius:13px;
+  padding:20px 22px 22px;box-shadow:0 24px 70px rgba(0,0,0,.75)}
+.modal-x{position:absolute;top:10px;right:12px;border:0;background:transparent;
+  color:var(--tn);font-size:24px;line-height:1;cursor:pointer;padding:4px 8px;
+  border-radius:6px}
+.modal-x:hover,.modal-x:focus-visible{color:var(--tx);background:var(--p2)}
+
+.det-cab{display:flex;gap:13px;align-items:flex-start;padding-right:26px}
+.det-cab .si{width:46px;height:46px}
+.det-tit h3{font:600 15.5px/1.25 Barlow,sans-serif;text-wrap:balance}
+.det-ranura{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--db);margin-top:3px}
+.det-stats{margin-top:14px;padding-top:12px;border-top:1px solid var(--ln)}
+.det-stats p{font-size:12px;line-height:1.5;color:#c8c2d6}
+.det-sec{margin-top:16px;padding-top:13px;border-top:1px solid var(--ln)}
+.det-sec h4{font:600 10px Barlow,sans-serif;letter-spacing:1.6px;
+  text-transform:uppercase;color:var(--go);margin-bottom:8px}
+.det-lista{list-style:none;display:flex;flex-direction:column;gap:9px}
+.det-fila{display:flex;gap:9px;align-items:flex-start}
+.det-ic{width:26px;height:26px;border-radius:5px;flex:0 0 auto;border:1px solid var(--ln2)}
+.det-fila b{display:block;font-size:12.5px;font-weight:600;color:#d5cee3;line-height:1.3}
+.det-fila span{display:block;font-size:11.5px;color:var(--tn);line-height:1.4}
+.det-fuente{color:var(--db);font-size:10.5px;margin-top:2px}
+.det-origen p{font-size:12.5px;line-height:1.55;color:var(--tx)}
+.det-origen b{color:var(--go);font-weight:600}
 
 @media(max-width:980px){
   /* En vertical el contenido tiene que poder crecer. La cadena de flex:1 con
@@ -319,18 +482,16 @@ body{background:var(--bg);color:var(--tx);
   .slot,.slot.izq{flex-direction:row;text-align:left;max-width:100%}
   .slot.izq .s-dots{justify-content:flex-start}
   .slot.btm{max-width:100%}
-  /* El detalle se despliega al tocar la pieza. Mostrarlo siempre alargaba la
-     ficha muchísimo; las tarjetas ya son enfocables, así que basta el foco. */
-  .slot.has-tt{flex-wrap:wrap;cursor:pointer;padding-right:24px}
+  /* En táctil no hay hover: la pieza se pulsa y se abre el diálogo. */
+  .slot.has-tt{padding-right:24px}
   .slot.has-tt::after{content:"";position:absolute;right:10px;top:50%;
     width:6px;height:6px;margin-top:-4px;
     border-right:1.5px solid var(--db);border-bottom:1.5px solid var(--db);
     transform:rotate(45deg);transition:transform .15s ease,border-color .15s ease}
   .slot.has-tt:focus-within::after{transform:rotate(-135deg);margin-top:-1px;
     border-color:var(--gr)}
-  .tt{position:static;width:auto;margin-top:8px;flex:1 0 100%;
-    box-shadow:none;background:#17141f}
-  .tt-left,.tt-right,.tt-center{transform:none;inset:auto}
+  .tt{display:none!important}
+  .modal-caja{max-width:100%;padding:18px 16px 20px}
 }
 /* En pantallas grandes crece el propio paperdoll: como las tarjetas se pegan
    al centro, ensanchar la página sólo empujaría hueco hacia los lados. */
@@ -377,7 +538,19 @@ body{background:var(--bg);color:var(--tx);
 """
 
 
-def documento(titulo, css, cuerpo, pagina):
+def css_iconos(cuerpo, iconos):
+    """Regla de fondo para cada icono que aparece en esta página."""
+    usados = sorted(set(re.findall(r"ic-([a-z0-9_]+)", cuerpo)))
+    reglas = [".ic{background-size:cover;background-position:center;"
+              "background-repeat:no-repeat;display:inline-block;flex:0 0 auto}"]
+    for n in usados:
+        src = iconos.get(n)
+        if src:
+            reglas.append(f".ic-{n}{{background-image:url({src})}}")
+    return "".join(reglas)
+
+
+def documento(titulo, css, cuerpo, pagina, iconos=None):
     """Envoltorio común a todas las páginas del sitio."""
     return "\n".join([
         '<html lang="es">',
@@ -385,16 +558,18 @@ def documento(titulo, css, cuerpo, pagina):
         '<meta name="viewport" content="width=device-width,initial-scale=1">',
         f"<title>{esc(titulo)}</title>",
         sitio.FUENTES,
-        f"<style>{sitio.TOKENS}{sitio.CABECERA_CSS}{css}{sitio.FONDO_CSS}</style>",
+        f"<style>{sitio.TOKENS}{sitio.CABECERA_CSS}{css}{sitio.FONDO_CSS}"
+        f"{css_iconos(cuerpo, iconos or {})}</style>",
         '<div class="fondo" aria-hidden="true"></div>',
         sitio.cabecera(pagina),
         cuerpo,
         sitio.SCRIPT_I18N,
+        sitio.SCRIPT_DETALLE if 'id="modal"' in cuerpo else "",
     ])
 
 
 # --------------------------------------------------------------- ficha
-def construir_ficha(build_id, iconos, items_stats, vestidor=None):
+def construir_ficha(build_id, iconos, items_stats, vestidor=None, origenes=None):
     with open(os.path.join(DATOS, build_id + ".json"), encoding="utf-8") as f:
         d = json.load(f)
 
@@ -402,9 +577,20 @@ def construir_ficha(build_id, iconos, items_stats, vestidor=None):
     en_der = [s for s in DERECHA if s in d["piezas"]]
     abajo = [s for s in d["orden"] if s not in en_izq and s not in en_der]
 
-    col_l = "".join(ranura(d["piezas"][s], iconos, "izq") for s in en_izq)
-    col_r = "".join(ranura(d["piezas"][s], iconos, "der") for s in en_der)
-    bot = "".join(ranura(d["piezas"][s], iconos, "btm") for s in abajo)
+    origenes = origenes or {}
+    paneles = []
+
+    def col(claves, lado):
+        salida = []
+        for k in claves:
+            ident = "det-" + k
+            salida.append(ranura(d["piezas"][k], iconos, lado, items_stats, origenes, ident))
+            paneles.append(detalle(d["piezas"][k], iconos, items_stats, origenes, ident))
+        return "".join(salida)
+
+    col_l = col(en_izq, "izq")
+    col_r = col(en_der, "der")
+    bot = col(abajo, "btm")
 
     clase, espec = d["clase"], d["especializacion"]
     raza = d.get("raza", "Orco")
@@ -479,10 +665,19 @@ def construir_ficha(build_id, iconos, items_stats, vestidor=None):
   <div class="col col-r">{col_r}</div>
   <div class="bot-row">{bot}</div>
 </div>
-</div>"""
+</div>
+<div class="modal" id="modal" hidden>
+  <div class="modal-fondo" data-cerrar></div>
+  <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-tit">
+    <button type="button" class="modal-x" data-cerrar aria-label="Cerrar"
+      data-i18n-title data-title-es="Cerrar" data-title-en="Close">&times;</button>
+    <div class="modal-cuerpo" id="modal-tit"></div>
+  </div>
+</div>
+<div class="paneles" hidden>{"".join(paneles)}</div>"""
 
     titulo = f"{clase} · {espec} — {sitio.MARCA_ES}"
-    return documento(titulo, CSS_FICHA, cuerpo, "builds")
+    return documento(titulo, CSS_FICHA, cuerpo, "builds", iconos)
 
 
 # --------------------------------------------------------------- índice
@@ -618,7 +813,7 @@ def construir_index(iconos):
 <div class="grid">{"".join(tarjetas)}</div>
 </div>"""
 
-    return documento(sitio.MARCA_ES, CSS_INDEX, cuerpo, "builds")
+    return documento(sitio.MARCA_ES, CSS_INDEX, cuerpo, "builds", iconos)
 
 
 # --------------------------------------------------------------- comentarios
@@ -718,12 +913,19 @@ def main(argv):
             vestidor = json.load(f)
     else:
         print("Aviso: falta datos/vestidor.json; las fichas saldrán sin enlace 3D.")
+    ruta_origenes = os.path.join(DATOS, "origenes.json")
+    origenes = {}
+    if os.path.exists(ruta_origenes):
+        with open(ruta_origenes, encoding="utf-8") as f:
+            origenes = json.load(f)
+    else:
+        print("Aviso: falta datos/origenes.json; no se mostrará la procedencia.")
     if not items_stats:
         print("Aviso: falta datos/stats-items.json; las fichas saldrán sin totales.")
 
     objetivos = argv[1:] or build_ids()
     for bid in objetivos:
-        kb = escribir(bid + ".html", construir_ficha(bid, iconos, items_stats, vestidor))
+        kb = escribir(bid + ".html", construir_ficha(bid, iconos, items_stats, vestidor, origenes))
         print(f"  {bid}.html  {kb} KB")
 
     if not argv[1:]:

@@ -409,6 +409,48 @@ SCRIPT_I18N = """<script>
   });
   var guardado;
   try { guardado = localStorage.getItem(KEY); } catch (e) {}
-  aplicar(guardado === 'en' ? 'en' : 'es');
+  var actual = guardado === 'en' ? 'en' : 'es';
+  aplicar(actual);
+  // El diálogo copia nodos ya traducidos; al cambiar de idioma hay que
+  // volver a pasar por ellos.
+  window.__idioma = function(l){ actual = l || actual; aplicar(actual); return actual; };
+})();
+</script>"""
+
+
+SCRIPT_DETALLE = """<script>
+(function(){
+  var modal = document.getElementById('modal');
+  if (!modal) return;
+  var cuerpo = modal.querySelector('.modal-cuerpo');
+  var ultimo = null;
+
+  function abrir(id){
+    var origen = document.getElementById(id);
+    if (!origen) return;
+    cuerpo.innerHTML = origen.innerHTML;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    if (window.__idioma) window.__idioma();
+    var x = modal.querySelector('.modal-x');
+    if (x) x.focus();
+  }
+
+  function cerrar(){
+    modal.hidden = true;
+    cuerpo.innerHTML = '';
+    document.body.style.overflow = '';
+    if (ultimo) { ultimo.focus(); ultimo = null; }
+  }
+
+  document.querySelectorAll('.slot[data-det]').forEach(function(b){
+    b.addEventListener('click', function(){ ultimo = b; abrir(b.dataset.det); });
+  });
+  modal.querySelectorAll('[data-cerrar]').forEach(function(e){
+    e.addEventListener('click', cerrar);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && !modal.hidden) cerrar();
+  });
 })();
 </script>"""

@@ -1,0 +1,195 @@
+{
+ "42580": {
+  "tipo": "vendedor",
+  "quien": "Nargle Trallacable",
+  "donde": "Dalaran",
+  "rol": "Vendedor de arena experto",
+  "nombre": "Ídolo de tenacidad de Gladiador incansable"
+ },
+ "47059": {
+  "tipo": "botin",
+  "quien": "Lord Jaraxxus",
+  "donde": "Prueba del Cruzado",
+  "prob": "4",
+  "jefe": true,
+  "nombre": "Consuelo de los derrotados"
+ },
+ "47546": {
+  "tipo": "botin",
+  "quien": "[Argent Crusade Tribute Chest]",
+  "donde": "Prueba del Cruzado",
+  "prob": "2",
+  "jefe": false,
+  "nombre": "Astucia de Sylvanas"
+ },
+ "47661": {
+  "tipo": "vendedor",
+  "quien": "Magistrix Iruvia",
+  "donde": "Corona de Hielo",
+  "rol": "Intendente de emblema de triunfo",
+  "nombre": "Tratado sobre valentía"
+ },
+ "47673": {
+  "tipo": "vendedor",
+  "quien": "Magistrix Iruvia",
+  "donde": "Corona de Hielo",
+  "rol": "Intendente de emblema de triunfo",
+  "nombre": "Sigilo de Virulencia"
+ },
+ "49623": {
+  "tipo": "mision",
+  "quien": "Shadowmourne",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "nombre": "Agonía de Sombras"
+ },
+ "50348": {
+  "tipo": "botin",
+  "quien": "Carapútrea",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "6",
+  "jefe": true,
+  "nombre": "Objeto desprendido extraño"
+ },
+ "50363": {
+  "tipo": "botin",
+  "quien": "Alijo del Libramorte",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "40",
+  "jefe": false,
+  "nombre": "Testamento del Libramorte"
+ },
+ "50364": {
+  "tipo": "botin",
+  "quien": "Sindragosa",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "3",
+  "jefe": false,
+  "nombre": "Colmillo impecable de Sindragosa"
+ },
+ "50365": {
+  "tipo": "botin",
+  "quien": "Sindragosa",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "2",
+  "jefe": false,
+  "nombre": "Filacteria del exánime innombrable"
+ },
+ "50366": {
+  "tipo": "botin",
+  "quien": "[Gunship Armory]",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "22",
+  "jefe": false,
+  "nombre": "Ábaco de Althor"
+ },
+ "50398": {
+  "tipo": "mision",
+  "quien": "A Change of Heart",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "nombre": "Sortija Cinérea de destrucción infinita"
+ },
+ "50402": {
+  "tipo": "mision",
+  "quien": "Path of Vengeance",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "nombre": "Sortija Cinérea de venganza infinita"
+ },
+ "50404": {
+  "tipo": "mision",
+  "quien": "A Change of Heart",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "nombre": "Sortija Cinérea de coraje infinito"
+ },
+ "50456": {
+  "tipo": "vendedor",
+  "quien": "Arcanista Uovril",
+  "donde": "Dalaran",
+  "rol": "Intendente de emblema de Escarcha",
+  "nombre": "Ídolo de la luna sollozante"
+ },
+ "50457": {
+  "tipo": "vendedor",
+  "quien": "Arcanista Uovril",
+  "donde": "Dalaran",
+  "rol": "Intendente de emblema de Escarcha",
+  "nombre": "Ídolo del eclipse lunar"
+ },
+ "50458": {
+  "tipo": "vendedor",
+  "quien": "Arcanista Uovril",
+  "donde": "Dalaran",
+  "rol": "Intendente de emblema de Escarcha",
+  "nombre": "Tótem de hielo destrozado de Bizuri"
+ },
+ "50464": {
+  "tipo": "vendedor",
+  "quien": "Arcanista Uovril",
+  "donde": "Dalaran",
+  "rol": "Intendente de emblema de Escarcha",
+  "nombre": "Tótem del mar resurgente"
+ },
+ "50631": {
+  "tipo": "botin",
+  "quien": "Botín del Caminasueños",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "12",
+  "jefe": false,
+  "nombre": "Exterminadora de pesadillas"
+ },
+ "50633": {
+  "tipo": "botin",
+  "quien": "Sindragosa",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "0.6",
+  "jefe": false,
+  "nombre": "Garra cruel de Sindragosa"
+ },
+ "50636": {
+  "tipo": "botin",
+  "quien": "Sindragosa",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "1.1",
+  "jefe": false,
+  "nombre": "Memoria de Malygos"
+ },
+ "50640": {
+  "tipo": "botin",
+  "quien": "Lady Susurramuerte",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "1.2",
+  "jefe": false,
+  "nombre": "Yelmo de calavera de carnero rota"
+ },
+ "50641": {
+  "tipo": "botin",
+  "quien": "Lady Susurramuerte",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "2",
+  "jefe": false,
+  "nombre": "Perforacorazones"
+ },
+ "50644": {
+  "tipo": "botin",
+  "quien": "Lady Susurramuerte",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "1.9",
+  "jefe": false,
+  "nombre": "Anillo de susurros enloquecedores"
+ },
+ "50645": {
+  "tipo": "botin",
+  "quien": "Lady Susurramuerte",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "1.1",
+  "jefe": false,
+  "nombre": "Leotardos de luces del norte"
+ },
+ "50651": {
+  "tipo": "botin",
+  "quien": "Lady Susurramuerte",
+  "donde": "Ciudadela de la Corona de Hielo",
+  "prob": "2",
+  "jefe": false,
+  "nombre": "Brazales frágiles de la Dama"
+ }
+}

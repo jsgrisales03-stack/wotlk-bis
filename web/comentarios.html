@@ -113,7 +113,7 @@ body{background:var(--bg);color:var(--tx);
 
 /* El contenido debe quedar por encima de la capa de fondo. */
 .page{position:relative;z-index:1}
-</style>
+.ic{background-size:cover;background-position:center;background-repeat:no-repeat;display:inline-block;flex:0 0 auto}</style>
 <div class="fondo" aria-hidden="true"></div>
 <header class="site-header">
   <a class="brand" href="index.html">
@@ -167,6 +167,10 @@ body{background:var(--bg);color:var(--tx);
   });
   var guardado;
   try { guardado = localStorage.getItem(KEY); } catch (e) {}
-  aplicar(guardado === 'en' ? 'en' : 'es');
+  var actual = guardado === 'en' ? 'en' : 'es';
+  aplicar(actual);
+  // El diálogo copia nodos ya traducidos; al cambiar de idioma hay que
+  // volver a pasar por ellos.
+  window.__idioma = function(l){ actual = l || actual; aplicar(actual); return actual; };
 })();
 </script>
