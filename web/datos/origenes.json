@@ -1,195 +1,790 @@
 {
  "42580": {
   "tipo": "vendedor",
-  "quien": "Nargle Trallacable",
-  "donde": "Dalaran",
-  "rol": "Vendedor de arena experto",
-  "nombre": "Ídolo de tenacidad de Gladiador incansable"
+  "quien": "Argex Irongut"
  },
  "47059": {
   "tipo": "botin",
   "quien": "Lord Jaraxxus",
-  "donde": "Prueba del Cruzado",
-  "prob": "4",
-  "jefe": true,
-  "nombre": "Consuelo de los derrotados"
+  "prob": "6.7",
+  "jefe": true
  },
  "47546": {
-  "tipo": "botin",
-  "quien": "[Argent Crusade Tribute Chest]",
-  "donde": "Prueba del Cruzado",
-  "prob": "2",
-  "jefe": false,
-  "nombre": "Astucia de Sylvanas"
+  "tipo": "contenedor",
+  "quien": "Argent Crusade Tribute Chest"
  },
  "47661": {
   "tipo": "vendedor",
-  "quien": "Magistrix Iruvia",
-  "donde": "Corona de Hielo",
-  "rol": "Intendente de emblema de triunfo",
-  "nombre": "Tratado sobre valentía"
+  "quien": "Arcanist Miluria"
  },
  "47673": {
   "tipo": "vendedor",
-  "quien": "Magistrix Iruvia",
-  "donde": "Corona de Hielo",
-  "rol": "Intendente de emblema de triunfo",
-  "nombre": "Sigilo de Virulencia"
+  "quien": "Arcanist Miluria"
  },
  "49623": {
   "tipo": "mision",
-  "quien": "Shadowmourne",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "nombre": "Agonía de Sombras"
+  "quien": "Shadowmourne"
  },
  "50348": {
   "tipo": "botin",
-  "quien": "Carapútrea",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "6",
-  "jefe": true,
-  "nombre": "Objeto desprendido extraño"
+  "quien": "Rotface",
+  "prob": "6.7",
+  "jefe": true
  },
  "50363": {
-  "tipo": "botin",
-  "quien": "Alijo del Libramorte",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "40",
-  "jefe": false,
-  "nombre": "Testamento del Libramorte"
+  "tipo": "contenedor",
+  "quien": "Deathbringer's Cache"
  },
  "50364": {
   "tipo": "botin",
   "quien": "Sindragosa",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "3",
-  "jefe": false,
-  "nombre": "Colmillo impecable de Sindragosa"
+  "prob": "20",
+  "jefe": true
  },
  "50365": {
   "tipo": "botin",
   "quien": "Sindragosa",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "2",
-  "jefe": false,
-  "nombre": "Filacteria del exánime innombrable"
+  "prob": "20",
+  "jefe": true
  },
  "50366": {
-  "tipo": "botin",
-  "quien": "[Gunship Armory]",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "22",
-  "jefe": false,
-  "nombre": "Ábaco de Althor"
+  "tipo": "contenedor",
+  "quien": "Gunship Armory"
  },
  "50398": {
   "tipo": "mision",
-  "quien": "A Change of Heart",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "nombre": "Sortija Cinérea de destrucción infinita"
+  "quien": "Path of Destruction"
  },
  "50402": {
   "tipo": "mision",
-  "quien": "Path of Vengeance",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "nombre": "Sortija Cinérea de venganza infinita"
+  "quien": "Path of Vengeance"
  },
  "50404": {
   "tipo": "mision",
-  "quien": "A Change of Heart",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "nombre": "Sortija Cinérea de coraje infinito"
+  "quien": "Path of Courage"
  },
  "50456": {
   "tipo": "vendedor",
-  "quien": "Arcanista Uovril",
-  "donde": "Dalaran",
-  "rol": "Intendente de emblema de Escarcha",
-  "nombre": "Ídolo de la luna sollozante"
+  "quien": "Magister Arlan"
  },
  "50457": {
   "tipo": "vendedor",
-  "quien": "Arcanista Uovril",
-  "donde": "Dalaran",
-  "rol": "Intendente de emblema de Escarcha",
-  "nombre": "Ídolo del eclipse lunar"
+  "quien": "Magister Arlan"
  },
  "50458": {
   "tipo": "vendedor",
-  "quien": "Arcanista Uovril",
-  "donde": "Dalaran",
-  "rol": "Intendente de emblema de Escarcha",
-  "nombre": "Tótem de hielo destrozado de Bizuri"
+  "quien": "Magister Arlan"
  },
  "50464": {
   "tipo": "vendedor",
-  "quien": "Arcanista Uovril",
-  "donde": "Dalaran",
-  "rol": "Intendente de emblema de Escarcha",
-  "nombre": "Tótem del mar resurgente"
+  "quien": "Magister Arlan"
+ },
+ "50603": {
+  "tipo": "botin",
+  "quien": "Prince Valanar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50604": {
+  "tipo": "botin",
+  "quien": "Lord Marrowgar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50607": {
+  "tipo": "botin",
+  "quien": "Lord Marrowgar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50609": {
+  "tipo": "botin",
+  "quien": "Lord Marrowgar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50613": {
+  "tipo": "botin",
+  "quien": "Lord Marrowgar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50616": {
+  "tipo": "botin",
+  "quien": "Lord Marrowgar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50618": {
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
+ },
+ "50619": {
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
+ },
+ "50620": {
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
+ },
+ "50622": {
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
+ },
+ "50624": {
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
+ },
+ "50628": {
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
+ },
+ "50629": {
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
  },
  "50631": {
-  "tipo": "botin",
-  "quien": "Botín del Caminasueños",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "12",
-  "jefe": false,
-  "nombre": "Exterminadora de pesadillas"
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
  },
  "50633": {
   "tipo": "botin",
   "quien": "Sindragosa",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "0.6",
-  "jefe": false,
-  "nombre": "Garra cruel de Sindragosa"
+  "prob": "20",
+  "jefe": true
  },
  "50636": {
   "tipo": "botin",
   "quien": "Sindragosa",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "1.1",
-  "jefe": false,
-  "nombre": "Memoria de Malygos"
+  "prob": "20",
+  "jefe": true
  },
  "50640": {
   "tipo": "botin",
-  "quien": "Lady Susurramuerte",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "1.2",
-  "jefe": false,
-  "nombre": "Yelmo de calavera de carnero rota"
+  "quien": "Lady Deathwhisper",
+  "prob": "6.7",
+  "jefe": true
  },
  "50641": {
   "tipo": "botin",
-  "quien": "Lady Susurramuerte",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "2",
-  "jefe": false,
-  "nombre": "Perforacorazones"
+  "quien": "Lady Deathwhisper",
+  "prob": "6.7",
+  "jefe": true
  },
  "50644": {
   "tipo": "botin",
-  "quien": "Lady Susurramuerte",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "1.9",
-  "jefe": false,
-  "nombre": "Anillo de susurros enloquecedores"
+  "quien": "Lady Deathwhisper",
+  "prob": "6.7",
+  "jefe": true
  },
  "50645": {
   "tipo": "botin",
-  "quien": "Lady Susurramuerte",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "1.1",
-  "jefe": false,
-  "nombre": "Leotardos de luces del norte"
+  "quien": "Lady Deathwhisper",
+  "prob": "6.7",
+  "jefe": true
  },
  "50651": {
   "tipo": "botin",
-  "quien": "Lady Susurramuerte",
-  "donde": "Ciudadela de la Corona de Hielo",
-  "prob": "2",
-  "jefe": false,
-  "nombre": "Brazales frágiles de la Dama"
+  "quien": "Lady Deathwhisper",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50653": {
+  "tipo": "contenedor",
+  "quien": "Gunship Armory"
+ },
+ "50655": {
+  "tipo": "contenedor",
+  "quien": "Gunship Armory"
+ },
+ "50656": {
+  "tipo": "contenedor",
+  "quien": "Gunship Armory"
+ },
+ "50658": {
+  "tipo": "contenedor",
+  "quien": "Gunship Armory"
+ },
+ "50663": {
+  "tipo": "contenedor",
+  "quien": "Gunship Armory"
+ },
+ "50664": {
+  "tipo": "contenedor",
+  "quien": "Gunship Armory"
+ },
+ "50670": {
+  "tipo": "contenedor",
+  "quien": "Deathbringer's Cache"
+ },
+ "50675": {
+  "tipo": "botin",
+  "quien": "Rotface",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50677": {
+  "tipo": "botin",
+  "quien": "Rotface",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50682": {
+  "tipo": "botin",
+  "quien": "Rotface",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50684": {
+  "tipo": "botin",
+  "quien": "Rotface",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50688": {
+  "tipo": "botin",
+  "quien": "Festergut",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "50691": {
+  "tipo": "botin",
+  "quien": "Festergut",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "50693": {
+  "tipo": "botin",
+  "quien": "Festergut",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "50694": {
+  "tipo": "botin",
+  "quien": "Festergut",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "50699": {
+  "tipo": "botin",
+  "quien": "Festergut",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "50702": {
+  "tipo": "botin",
+  "quien": "Festergut",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "50703": {
+  "tipo": "botin",
+  "quien": "Festergut",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "50704": {
+  "tipo": "botin",
+  "quien": "Professor Putricide",
+  "prob": "20",
+  "jefe": true
+ },
+ "50705": {
+  "tipo": "botin",
+  "quien": "Professor Putricide",
+  "prob": "20",
+  "jefe": true
+ },
+ "50707": {
+  "tipo": "botin",
+  "quien": "Professor Putricide",
+  "prob": "20",
+  "jefe": true
+ },
+ "50711": {
+  "tipo": "botin",
+  "quien": "Prince Valanar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50714": {
+  "tipo": "botin",
+  "quien": "Prince Valanar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50715": {
+  "tipo": "botin",
+  "quien": "Prince Valanar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50718": {
+  "tipo": "botin",
+  "quien": "Prince Valanar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50719": {
+  "tipo": "botin",
+  "quien": "Prince Valanar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50722": {
+  "tipo": "botin",
+  "quien": "Prince Valanar",
+  "prob": "6.7",
+  "jefe": true
+ },
+ "50724": {
+  "tipo": "botin",
+  "quien": "Blood-Queen Lana'thel",
+  "prob": "16.7",
+  "jefe": true
+ },
+ "50730": {
+  "tipo": "botin",
+  "quien": "The Lich King",
+  "prob": "11.1",
+  "jefe": true
+ },
+ "50732": {
+  "tipo": "botin",
+  "quien": "The Lich King",
+  "prob": "11.1",
+  "jefe": true
+ },
+ "50733": {
+  "tipo": "botin",
+  "quien": "The Lich King",
+  "prob": "11.1",
+  "jefe": true
+ },
+ "50734": {
+  "tipo": "botin",
+  "quien": "The Lich King",
+  "prob": "11.1",
+  "jefe": true
+ },
+ "50735": {
+  "tipo": "botin",
+  "quien": "The Lich King",
+  "prob": "11.1",
+  "jefe": true
+ },
+ "50737": {
+  "tipo": "botin",
+  "quien": "The Lich King",
+  "prob": "11.1",
+  "jefe": true
+ },
+ "51176": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51178": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51179": {
+  "tipo": "botin",
+  "quien": "Toravon the Ice Watcher",
+  "prob": "0.9",
+  "jefe": true
+ },
+ "51182": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51225": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51227": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51228": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51229": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51230": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51231": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51233": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51234": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51240": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51241": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51242": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51244": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51245": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51246": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51247": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51249": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51250": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51251": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51252": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51253": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51254": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51255": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51256": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51257": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51259": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51265": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51266": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51267": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51268": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51269": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51270": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51271": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51272": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51273": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51274": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51275": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51277": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51278": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51279": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51280": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51281": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51282": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51283": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51284": {
+  "tipo": "vendedor",
+  "quien": "Rueben Lauren"
+ },
+ "51285": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51286": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51288": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51289": {
+  "tipo": "vendedor",
+  "quien": "Matilda Brightlink"
+ },
+ "51290": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51292": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51293": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51294": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51295": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51296": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51297": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51298": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51299": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51301": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51302": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51303": {
+  "tipo": "vendedor",
+  "quien": "Rafael Langrom"
+ },
+ "51305": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51307": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51308": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51309": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51310": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51311": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51312": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51313": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51314": {
+  "tipo": "vendedor",
+  "quien": "Horace Hunderland"
+ },
+ "51823": {
+  "tipo": "contenedor",
+  "quien": "Cache of the Dreamwalker"
+ },
+ "51851": {
+  "tipo": "botin",
+  "quien": "Prince Valanar",
+  "prob": "8.3",
+  "jefe": true
+ },
+ "51901": {
+  "tipo": "contenedor",
+  "quien": "Deathbringer's Cache"
+ },
+ "51944": {
+  "tipo": "botin",
+  "quien": "The Lich King",
+  "prob": "11.1",
+  "jefe": true
+ },
+ "52572": {
+  "tipo": "mision",
+  "quien": "A Change of Heart"
+ },
+ "54576": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54577": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54578": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54579": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54580": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54581": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54582": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54583": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54584": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54585": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54587": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54588": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54589": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54590": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
+ },
+ "54591": {
+  "tipo": "botin",
+  "quien": "Halion",
+  "prob": "6.2",
+  "jefe": true
  }
 }

@@ -8,7 +8,7 @@ en su propio módulo.
 import os
 
 from .. import datos, textos
-from ..componentes import dialogo, enlace3d, personaje, pieza, totales
+from ..componentes import dialogo, personaje, pieza, totales
 from ..html import bi
 from ..plantilla import documento
 
@@ -77,11 +77,11 @@ body{background:var(--bg);color:var(--tx);
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 """
 
-CSS = (CSS_LAYOUT + pieza.CSS + personaje.CSS + enlace3d.CSS
+CSS = (CSS_LAYOUT + pieza.CSS + personaje.CSS
        + totales.CSS + dialogo.CSS)
 
 
-def construir(build_id, iconos, items_stats, vestidor=None, origenes=None):
+def construir(build_id, iconos, items_stats, origenes=None):
     d = datos.build(build_id)
     origenes = origenes or {}
     piezas = d["piezas"]
@@ -133,7 +133,6 @@ def construir(build_id, iconos, items_stats, vestidor=None, origenes=None):
       {bi(raza, textos.en(textos.RAZAS, raza), "span", cls="race")}
       {bi(faccion, textos.en(textos.FACCIONES, faccion), "span", cls="fac")}
     </p>
-    {enlace3d.render((vestidor or {}).get(build_id, ""))}
     {totales.render(d, items_stats)}
   </div>
   <div class="col col-r">{col_r}</div>

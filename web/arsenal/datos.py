@@ -9,7 +9,7 @@ DATOS = os.path.join(AQUI, "datos")
 ASSETS = os.path.join(AQUI, "assets")
 
 # Ficheros de datos y soporte que no describen una build.
-NO_BUILD = ("iconos", "stats-", "displayids", "vestidor", "origenes", "_")
+NO_BUILD = ("iconos", "stats-", "displayids", "origenes", "_")
 
 
 def _leer(nombre, por_defecto):
@@ -24,9 +24,6 @@ def iconos():
     return _leer("iconos.json", {})
 
 
-def vestidor():
-    """Enlaces al Vestidor de Wowhead, por build."""
-    return _leer("vestidor.json", {})
 
 
 def origenes():

@@ -30,30 +30,33 @@ EQUIPAR = {
 
 
 def texto_origen(o):
-    """Frase de procedencia en ambos idiomas. Los nombres propios de jefes y
-    zonas vienen de Wowhead en español; no se traducen."""
+    """Frase de procedencia en los dos idiomas.
+
+    Los nombres de jefes, zonas y misiones vienen de una base de datos en
+    inglés; cuando además se conoce el nombre en español se usa ése para la
+    versión castellana.
+    """
     if not o or o.get("tipo") in (None, "desconocido", "error"):
         return None
-    quien = esc(o.get("quien", "").strip())
-    donde = esc(o.get("donde", "").strip())
-    t = o.get("tipo")
-    if t == "botin":
-        prob = o.get("prob", "")
-        cola = f" · {prob}%" if prob else ""
-        return (f"Botín de <b>{quien}</b>{' · ' + donde if donde else ''}{cola}",
-                f"Dropped by <b>{quien}</b>{' · ' + donde if donde else ''}{cola}")
-    if t == "vendedor":
-        rol = o.get("rol", "")
-        cola = f" · {esc(rol)}" if rol else ""
-        return (f"Lo vende <b>{quien}</b>{' · ' + donde if donde else ''}{cola}",
-                f"Sold by <b>{quien}</b>{' · ' + donde if donde else ''}{cola}")
-    if t == "mision":
-        return (f"Recompensa de la misión <b>{quien}</b>{' · ' + donde if donde else ''}",
-                f"Quest reward: <b>{quien}</b>{' · ' + donde if donde else ''}")
-    if quien:
-        return (f"<b>{quien}</b>{' · ' + donde if donde else ''}",
-                f"<b>{quien}</b>{' · ' + donde if donde else ''}")
-    return None
+    quien_en = esc((o.get("quien") or "").strip())
+    quien_es = esc((o.get("quien_es") or o.get("quien") or "").strip())
+    if not quien_en and not quien_es:
+        return None
+    donde_es = esc((o.get("donde_es") or "").strip())
+    cola_es = f" · {donde_es}" if donde_es else ""
+
+    prob = o.get("prob", "")
+    pct = f" · {esc(prob)}%" if prob else ""
+
+    plantillas = {
+        "botin": ("Botín de <b>{q}</b>{d}{p}", "Dropped by <b>{q}</b>{p}"),
+        "vendedor": ("Lo vende <b>{q}</b>{d}", "Sold by <b>{q}</b>"),
+        "mision": ("Recompensa de la misión <b>{q}</b>{d}", "Quest reward: <b>{q}</b>"),
+        "contenedor": ("Dentro de <b>{q}</b>{d}", "Contained in <b>{q}</b>"),
+    }
+    es_f, en_f = plantillas.get(o["tipo"], ("<b>{q}</b>{d}", "<b>{q}</b>"))
+    return (es_f.format(q=quien_es, d=cola_es, p=pct),
+            en_f.format(q=quien_en or quien_es, p=pct))
 
 
 def bloque_stats(p, items_stats):

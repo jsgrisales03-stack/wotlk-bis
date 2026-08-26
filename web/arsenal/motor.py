@@ -3,7 +3,7 @@
 Motor de estadísticas: suma las estadísticas de un conjunto completo.
 
 El total de una build se compone de cuatro fuentes:
-  1. Estadísticas base de cada objeto      -> datos/stats-items.json (extraído de Wowhead)
+  1. Estadísticas base de cada objeto      -> datos/stats-items.json (extraído de la base de datos de referencia)
   2. Gemas engarzadas                       -> GEMAS
   3. Encantamientos aplicados               -> ENCANTAMIENTOS
   4. Bonificaciones de ranura                -> campo "bono_ranura" de cada pieza,

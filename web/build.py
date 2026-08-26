@@ -26,19 +26,16 @@ def escribir(nombre, contenido):
 def main(argv):
     iconos = datos.iconos()
     items_stats = motor.cargar_items()
-    vestidor = datos.vestidor()
     origenes = datos.origenes()
 
     if not items_stats:
         print("Aviso: falta datos/stats-items.json; las fichas saldrán sin totales.")
-    if not vestidor:
-        print("Aviso: falta datos/vestidor.json; las fichas saldrán sin enlace 3D.")
     if not origenes:
         print("Aviso: falta datos/origenes.json; no se mostrará la procedencia.")
 
     objetivos = argv[1:] or datos.ids()
     for bid in objetivos:
-        pagina = ficha.construir(bid, iconos, items_stats, vestidor, origenes)
+        pagina = ficha.construir(bid, iconos, items_stats, origenes)
         print(f"  {bid}.html  {escribir(bid + '.html', pagina)} KB")
 
     if not argv[1:]:
