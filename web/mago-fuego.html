@@ -63,70 +63,42 @@ body{background:var(--bg);color:var(--tx);
 .col-l{align-items:flex-end}
 .col-r{align-items:flex-start}
 
-.ctr{grid-row:1/2;grid-column:2/3;display:flex;flex-direction:column;
-  align-items:center;justify-content:flex-start;position:relative;
-  padding:10px 6px;gap:8px}
-/* Termina en transparente, no en el color de fondo: si no, recorta la
-   textura del sitio y el panel se lee como una caja vacía. */
-.ctr-bg{position:absolute;inset:0;border-radius:12px;
-  background:radial-gradient(ellipse 78% 52% at 50% 20%,
-    rgba(32,24,52,.85),rgba(20,15,34,.35) 58%,transparent 78%)}
-.ctr-bg::after{content:"";position:absolute;width:104px;height:104px;
-  left:50%;top:52px;transform:translate(-50%,-50%);border-radius:50%;
-  border:1px solid rgba(80,220,140,.1);box-shadow:0 0 46px rgba(80,220,140,.05)}
-/* Personaje renderizado: va detrás, así no le quita alto al panel. */
-.personaje{position:absolute;z-index:0;top:2px;left:50%;transform:translateX(-50%);
-  height:250px;width:auto;pointer-events:none;
-  -webkit-mask-image:linear-gradient(#000 58%,rgba(0,0,0,.25) 82%,transparent);
-  mask-image:linear-gradient(#000 58%,rgba(0,0,0,.25) 82%,transparent)}
-.ctr.con-personaje .ctr-t{margin-top:158px;
-  text-shadow:0 1px 6px #0a090e,0 0 14px #0a090e}
-.ctr.con-personaje .stats{background:rgba(13,11,18,.93);backdrop-filter:blur(2px)}
-
-/* El retrato de raza es de 56 px en origen: se muestra a tamaño nativo. */
-.retrato{position:relative;z-index:1;width:56px;height:56px;flex:0 0 auto}
-.retrato .race-ic{width:56px;height:56px;border-radius:50%;display:block;
-  border:2px solid rgba(80,220,140,.28);box-shadow:0 0 22px rgba(80,220,140,.10)}
-.retrato .cl-badge{position:absolute;right:-4px;bottom:-4px;
-  width:23px;height:23px;border-radius:50%;display:block;
-  border:2px solid var(--bg);background:var(--bg);
-  box-shadow:0 1px 5px rgba(0,0,0,.65)}
-.cl-ic{width:54px;height:54px;border-radius:50%;position:relative;z-index:1;
-  border:2px solid rgba(80,220,140,.22);box-shadow:0 0 22px rgba(80,220,140,.08)}
-/* Enlace al Vestidor de Wowhead con el equipo de la build ya puesto. */
-.ver3d{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;
-  padding:5px 12px;border-radius:999px;text-decoration:none;white-space:nowrap;
-  font:600 10.5px/1 Barlow,"Segoe UI",system-ui,sans-serif;
-  letter-spacing:1.1px;text-transform:uppercase;
-  color:var(--tn);background:rgba(19,17,26,.92);border:1px solid var(--ln2);
-  transition:color .15s ease,border-color .15s ease,background .15s ease}
-.ver3d:hover,.ver3d:focus-visible{color:var(--gr);
-  border-color:rgba(64,217,126,.45);background:rgba(64,217,126,.09)}
-.ver3d svg{width:12px;height:12px;flex:0 0 auto}
-
-.ctr-t{position:relative;z-index:1;text-align:center}
-.ctr-t .race{font-size:12.5px;color:var(--tn);display:block}
-.ctr-t .fac{font-size:9.5px;text-transform:uppercase;letter-spacing:2px;
-  color:var(--dk);margin-top:2px;font-weight:600;display:block}
-
-.stats{position:relative;z-index:1;width:100%;
-  background:rgba(19,17,26,.72);border:1px solid var(--ln);border-radius:9px;
-  padding:11px 13px 9px}
-.stats-h{font:600 10px Barlow,sans-serif;letter-spacing:1.6px;
-  text-transform:uppercase;color:var(--go);text-align:center;
-  padding-bottom:7px;border-bottom:1px solid var(--ln);margin-bottom:5px}
-.stat-list{display:flex;flex-direction:column;gap:1px}
-.stat{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
-  padding:2.5px 0}
-.stat dt{font-size:11.5px;color:var(--tn);min-width:0;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.stat dd{font-size:12.5px;font-weight:600;color:var(--tx);flex:0 0 auto}
-.stat.destacada dd{color:var(--go)}
-.stats-note{font-size:9.5px;line-height:1.4;color:var(--db);
-  margin-top:7px;padding-top:6px;border-top:1px solid var(--ln);text-align:center}
-
 .bot-row{grid-column:1/4;display:flex;justify-content:center;
   gap:6px;flex-wrap:wrap;padding:8px 0 0;flex:0 0 auto}
+
+/* En pantallas grandes crece el propio paperdoll: como las tarjetas se pegan
+   al centro, ensanchar la página sólo empujaría hueco hacia los lados. */
+@media(min-width:1440px){
+  .pd{grid-template-columns:1fr minmax(250px,336px) 1fr}
+}
+@media(min-width:1800px){
+  .pd{grid-template-columns:1fr minmax(280px,382px) 1fr}
+}
+@media(max-width:980px){
+  /* En vertical el contenido tiene que poder crecer. La cadena de flex:1 con
+     min-height:0 dejaba la ficha a la altura de la ventana y las tarjetas se
+     solapaban unas con otras. */
+  .page{display:block;min-height:auto;padding-bottom:14px}
+  .pd{display:flex;flex-direction:column;flex:none;min-height:auto;
+    gap:8px;padding-top:10px}
+  .col{align-items:stretch;justify-content:flex-start;min-height:auto;gap:5px}
+  .col-l{order:2}
+  .col-r{order:3}
+  .bot-row{order:4;padding-top:4px}
+}
+@media(max-width:430px){
+  .ficha-head{padding:10px 0 2px}
+  .spec-lab{letter-spacing:2.5px;font-size:12px}
+  .bot-row{gap:5px}
+}
+/* Portátiles de pantalla baja: se recorta el aire para que la ficha siga
+   entrando de una sola vez, que es el objetivo del diseño. */
+@media(min-width:981px) and (max-height:860px){
+  .ficha-head{padding:10px 0 2px}
+  .pd{padding-top:2px}
+  .bot-row{padding-top:6px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 .slot{display:flex;gap:8px;align-items:center;
   background:var(--p);border:1px solid var(--ln);border-radius:7px;
@@ -183,6 +155,126 @@ body{background:var(--bg);color:var(--tx);
 .tt-org{margin-top:7px;padding-top:6px;border-top:1px solid var(--ln);
   color:var(--tn);font-size:11px;line-height:1.4}
 .tt-org b{color:var(--go);font-weight:600}
+@media(min-width:1440px){
+  .slot{max-width:388px}
+  .slot.btm{max-width:276px}
+  .s-name{font-size:13px}
+}
+@media(min-width:1800px){
+  .slot{max-width:432px}
+  .slot.btm{max-width:308px}
+  .s-name{font-size:13.5px}
+  .s-enc{font-size:11px}
+  .si{width:40px;height:40px}
+}
+@media(max-width:980px){
+  .slot,.slot.izq{flex-direction:row;text-align:left;max-width:100%}
+  .slot.izq .s-dots{justify-content:flex-start}
+  .slot.btm{max-width:100%}
+  /* En táctil no hay hover: la pieza se pulsa y se abre el diálogo. */
+  .slot.has-tt{padding-right:24px}
+  .slot.has-tt::after{content:"";position:absolute;right:10px;top:50%;
+    width:6px;height:6px;margin-top:-4px;
+    border-right:1.5px solid var(--db);border-bottom:1.5px solid var(--db);
+    transform:rotate(45deg);transition:transform .15s ease,border-color .15s ease}
+  .slot.has-tt:focus-within::after{transform:rotate(-135deg);margin-top:-1px;
+    border-color:var(--gr)}
+  .tt{display:none!important}
+}
+@media(max-width:430px){
+  .slot{padding:5px 9px;gap:7px}
+  .si{width:32px;height:32px}
+  .s-name{font-size:12px}
+  .s-enc{font-size:10px}
+}
+
+.ctr{grid-row:1/2;grid-column:2/3;display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-start;position:relative;
+  padding:10px 6px;gap:8px}
+/* Termina en transparente, no en el color de fondo: si no, recorta la
+   textura del sitio y el panel se lee como una caja vacía. */
+.ctr-bg{position:absolute;inset:0;border-radius:12px;
+  background:radial-gradient(ellipse 78% 52% at 50% 20%,
+    rgba(32,24,52,.85),rgba(20,15,34,.35) 58%,transparent 78%)}
+.ctr-bg::after{content:"";position:absolute;width:104px;height:104px;
+  left:50%;top:52px;transform:translate(-50%,-50%);border-radius:50%;
+  border:1px solid rgba(80,220,140,.1);box-shadow:0 0 46px rgba(80,220,140,.05)}
+/* Personaje renderizado: va detrás, así no le quita alto al panel. */
+.personaje{position:absolute;z-index:0;top:2px;left:50%;transform:translateX(-50%);
+  height:250px;width:auto;pointer-events:none;
+  -webkit-mask-image:linear-gradient(#000 58%,rgba(0,0,0,.25) 82%,transparent);
+  mask-image:linear-gradient(#000 58%,rgba(0,0,0,.25) 82%,transparent)}
+.ctr.con-personaje .ctr-t{margin-top:158px;
+  text-shadow:0 1px 6px #0a090e,0 0 14px #0a090e}
+.ctr.con-personaje .stats{background:rgba(13,11,18,.93);backdrop-filter:blur(2px)}
+
+/* El retrato de raza es de 56 px en origen: se muestra a tamaño nativo. */
+.retrato{position:relative;z-index:1;width:56px;height:56px;flex:0 0 auto}
+.retrato .race-ic{width:56px;height:56px;border-radius:50%;display:block;
+  border:2px solid rgba(80,220,140,.28);box-shadow:0 0 22px rgba(80,220,140,.10)}
+.retrato .cl-badge{position:absolute;right:-4px;bottom:-4px;
+  width:23px;height:23px;border-radius:50%;display:block;
+  border:2px solid var(--bg);background:var(--bg);
+  box-shadow:0 1px 5px rgba(0,0,0,.65)}
+.cl-ic{width:54px;height:54px;border-radius:50%;position:relative;z-index:1;
+  border:2px solid rgba(80,220,140,.22);box-shadow:0 0 22px rgba(80,220,140,.08)}
+.ctr-t{position:relative;z-index:1;text-align:center}
+.ctr-t .race{font-size:12.5px;color:var(--tn);display:block}
+.ctr-t .fac{font-size:9.5px;text-transform:uppercase;letter-spacing:2px;
+  color:var(--dk);margin-top:2px;font-weight:600;display:block}
+@media(min-width:1440px){
+  .personaje{height:300px}
+  .ctr.con-personaje .ctr-t{margin-top:206px}
+}
+@media(min-width:1800px){
+  .personaje{height:344px}
+  .ctr.con-personaje .ctr-t{margin-top:238px}
+}
+@media(max-width:980px){
+  .ctr{order:1;padding:4px 0 10px}
+}
+/* Portátiles de pantalla baja: la ficha tiene que seguir entrando de una vez. */
+@media(min-width:981px) and (max-height:860px){
+  .personaje{height:228px}
+  .ctr.con-personaje .ctr-t{margin-top:142px}
+}
+
+/* Enlace al Vestidor de Wowhead con el equipo de la build ya puesto. */
+.ver3d{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;
+  padding:5px 12px;border-radius:999px;text-decoration:none;white-space:nowrap;
+  font:600 10.5px/1 Barlow,"Segoe UI",system-ui,sans-serif;
+  letter-spacing:1.1px;text-transform:uppercase;
+  color:var(--tn);background:rgba(19,17,26,.92);border:1px solid var(--ln2);
+  transition:color .15s ease,border-color .15s ease,background .15s ease}
+.ver3d:hover,.ver3d:focus-visible{color:var(--gr);
+  border-color:rgba(64,217,126,.45);background:rgba(64,217,126,.09)}
+.ver3d svg{width:12px;height:12px;flex:0 0 auto}
+
+.stats{position:relative;z-index:1;width:100%;
+  background:rgba(19,17,26,.72);border:1px solid var(--ln);border-radius:9px;
+  padding:11px 13px 9px}
+.stats-h{font:600 10px Barlow,sans-serif;letter-spacing:1.6px;
+  text-transform:uppercase;color:var(--go);text-align:center;
+  padding-bottom:7px;border-bottom:1px solid var(--ln);margin-bottom:5px}
+.stat-list{display:flex;flex-direction:column;gap:1px}
+.stat{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  padding:2.5px 0}
+.stat dt{font-size:11.5px;color:var(--tn);min-width:0;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stat dd{font-size:12.5px;font-weight:600;color:var(--tx);flex:0 0 auto}
+.stat.destacada dd{color:var(--go)}
+.stats-note{font-size:9.5px;line-height:1.4;color:var(--db);
+  margin-top:7px;padding-top:6px;border-top:1px solid var(--ln);text-align:center}
+@media(min-width:1440px){
+  .stat dt{font-size:12px}
+  .stat dd{font-size:13px}
+}
+@media(max-width:980px){
+  .stats{max-width:340px;margin:0 auto}
+}
+@media(max-width:430px){
+  .stats{padding:10px 11px 8px}
+}
 
 /* Diálogo de detalle. */
 .paneles{display:none}
@@ -218,76 +310,9 @@ body{background:var(--bg);color:var(--tx);
 .det-fuente{color:var(--db);font-size:10.5px;margin-top:2px}
 .det-origen p{font-size:12.5px;line-height:1.55;color:var(--tx)}
 .det-origen b{color:var(--go);font-weight:600}
-
 @media(max-width:980px){
-  /* En vertical el contenido tiene que poder crecer. La cadena de flex:1 con
-     min-height:0 dejaba la ficha a la altura de la ventana y las tarjetas se
-     solapaban unas con otras. */
-  .page{display:block;min-height:auto;padding-bottom:14px}
-  .pd{display:flex;flex-direction:column;flex:none;min-height:auto;
-    gap:8px;padding-top:10px}
-  .col{align-items:stretch;justify-content:flex-start;min-height:auto;gap:5px}
-  .col-l{order:2}
-  .ctr{order:1;padding:4px 0 10px}
-  .col-r{order:3}
-  .bot-row{order:4;padding-top:4px}
-  .stats{max-width:340px;margin:0 auto}
-  .slot,.slot.izq{flex-direction:row;text-align:left;max-width:100%}
-  .slot.izq .s-dots{justify-content:flex-start}
-  .slot.btm{max-width:100%}
-  /* En táctil no hay hover: la pieza se pulsa y se abre el diálogo. */
-  .slot.has-tt{padding-right:24px}
-  .slot.has-tt::after{content:"";position:absolute;right:10px;top:50%;
-    width:6px;height:6px;margin-top:-4px;
-    border-right:1.5px solid var(--db);border-bottom:1.5px solid var(--db);
-    transform:rotate(45deg);transition:transform .15s ease,border-color .15s ease}
-  .slot.has-tt:focus-within::after{transform:rotate(-135deg);margin-top:-1px;
-    border-color:var(--gr)}
-  .tt{display:none!important}
   .modal-caja{max-width:100%;padding:18px 16px 20px}
 }
-/* En pantallas grandes crece el propio paperdoll: como las tarjetas se pegan
-   al centro, ensanchar la página sólo empujaría hueco hacia los lados. */
-@media(min-width:1440px){
-  .pd{grid-template-columns:1fr minmax(250px,336px) 1fr}
-  .slot{max-width:388px}
-  .slot.btm{max-width:276px}
-  .personaje{height:300px}
-  .ctr.con-personaje .ctr-t{margin-top:206px}
-  .s-name{font-size:13px}
-  .stat dt{font-size:12px}
-  .stat dd{font-size:13px}
-}
-@media(min-width:1800px){
-  .pd{grid-template-columns:1fr minmax(280px,382px) 1fr}
-  .slot{max-width:432px}
-  .slot.btm{max-width:308px}
-  .personaje{height:344px}
-  .ctr.con-personaje .ctr-t{margin-top:238px}
-  .s-name{font-size:13.5px}
-  .s-enc{font-size:11px}
-  .si{width:40px;height:40px}
-}
-@media(max-width:430px){
-  .ficha-head{padding:10px 0 2px}
-  .spec-lab{letter-spacing:2.5px;font-size:12px}
-  .slot{padding:5px 9px;gap:7px}
-  .si{width:32px;height:32px}
-  .s-name{font-size:12px}
-  .s-enc{font-size:10px}
-  .stats{padding:10px 11px 8px}
-  .bot-row{gap:5px}
-}
-/* Portátiles de pantalla baja: se recorta el aire para que la ficha siga
-   entrando de una sola vez, que es el objetivo del diseño. */
-@media(min-width:981px) and (max-height:860px){
-  .ficha-head{padding:10px 0 2px}
-  .personaje{height:228px}
-  .ctr.con-personaje .ctr-t{margin-top:142px}
-  .pd{padding-top:2px}
-  .bot-row{padding-top:6px}
-}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 /* Fondo del sitio: capa fija propia para que no se mueva con el scroll ni
    afecte al flujo. Todo son gradientes y un SVG en línea, sin peticiones

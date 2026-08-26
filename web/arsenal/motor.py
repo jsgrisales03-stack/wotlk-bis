@@ -11,7 +11,7 @@ El total de una build se compone de cuatro fuentes:
 """
 import json, os, re
 
-AQUI = os.path.dirname(os.path.abspath(__file__))
+AQUI = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATOS = os.path.join(AQUI, "datos")
 
 # --- Estadísticas reconocidas, en orden de presentación ---------------------
