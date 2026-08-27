@@ -5,7 +5,20 @@
    0,
    16
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Poseer",
+    "Descomposición presurosa",
+    "Transfusión de vida"
+   ],
+   "menores": [
+    "Drenar alma",
+    null,
+    null
+   ]
+  }
  },
  "brujo-demonologia": {
   "reparto": [
@@ -13,7 +26,20 @@
    54,
    17
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Transfusión de vida",
+    "Guardia vil",
+    "Descomposición presurosa"
+   ],
+   "menores": [
+    "Kilrogg",
+    "Drenar alma",
+    null
+   ]
+  }
  },
  "cazador-punteria": {
   "reparto": [
@@ -21,7 +47,20 @@
    57,
    7
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Picadura de serpiente",
+    "Disparo firme",
+    "Disparo mortal"
+   ],
+   "menores": [
+    "Aliviar mascota",
+    "Fingir muerte",
+    "Revivir mascota"
+   ]
+  }
  },
  "chaman-mejora": {
   "reparto": [
@@ -29,7 +68,13 @@
    53,
    0
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": null,
+   "mayores": null,
+   "menores": null,
+   "nota": "la captura sólo muestra iconos"
+  }
  },
  "chaman-restauracion": {
   "reparto": [
@@ -37,7 +82,20 @@
    13,
    58
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Ola de sanación inferior",
+    "Sanación en cadena",
+    "Escudo de tierra"
+   ],
+   "menores": [
+    "Escudo de agua",
+    "Vida renovada",
+    null
+   ]
+  }
  },
  "dk-profano": {
   "reparto": [
@@ -45,7 +103,20 @@
    17,
    54
   ],
-  "fuente": "pie"
+  "fuente": "pie",
+  "glifos": {
+   "idioma": "en",
+   "mayores": [
+    "Icy Touch",
+    "Dark Death",
+    "the Ghoul"
+   ],
+   "menores": [
+    "Horn of Winter",
+    "Raise Dead",
+    "Pestilence"
+   ]
+  }
  },
  "dk-sangre": {
   "reparto": [
@@ -53,7 +124,20 @@
    26,
    2
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Orden oscura",
+    "Sangre vampírica",
+    "Caparazón antimagia"
+   ],
+   "menores": [
+    "Cuerno de invierno",
+    "Transfusión de sangre",
+    "Levantar a muerto"
+   ]
+  }
  },
  "druida-feral-dps": {
   "reparto": [
@@ -61,7 +145,20 @@
    55,
    16
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Triturar",
+    "Destripar",
+    "Rugido salvaje"
+   ],
+   "menores": [
+    "Carrerilla",
+    "Renacer desahogado",
+    "Lo Salvaje"
+   ]
+  }
  },
  "druida-feral-tanque": {
   "reparto": [
@@ -69,7 +166,20 @@
    60,
    11
   ],
-  "fuente": "pie"
+  "fuente": "pie",
+  "glifos": {
+   "idioma": "en",
+   "mayores": [
+    "Survival Instincts",
+    "Frenzied Regeneration",
+    "Growling"
+   ],
+   "menores": [
+    "Unburdened Rebirth",
+    "Dash",
+    "Challenging Roar"
+   ]
+  }
  },
  "druida-restauracion": {
   "reparto": [
@@ -77,7 +187,20 @@
    0,
    60
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Alivio presto",
+    "Crecimiento salvaje",
+    "Nutrir"
+   ],
+   "menores": [
+    "Lo Salvaje",
+    "Renacer desahogado",
+    "Carrerilla"
+   ]
+  }
  },
  "guerrero-furia": {
   "reparto": [
@@ -85,7 +208,20 @@
    53,
    0
   ],
-  "fuente": "pie"
+  "fuente": "pie",
+  "glifos": {
+   "idioma": "en",
+   "mayores": [
+    "Whirlwind",
+    "Heroic Strike",
+    "Cleaving"
+   ],
+   "menores": [
+    "Battle",
+    "Bloodrage",
+    "Command"
+   ]
+  }
  },
  "mago-arcano": {
   "reparto": [
@@ -93,7 +229,20 @@
    3,
    11
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Misiles Arcanos",
+    "Armadura de arrabio",
+    "Explosión Arcana"
+   ],
+   "menores": [
+    "Caída lenta",
+    null,
+    null
+   ]
+  }
  },
  "mago-fuego": {
   "reparto": [
@@ -101,7 +250,20 @@
    53,
    0
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Bomba viva",
+    "Bola de Fuego",
+    "Armadura de arrabio"
+   ],
+   "menores": [
+    "Caída lenta",
+    "Resguardo contra la Escarcha",
+    "Intelecto Arcano"
+   ]
+  }
  },
  "paladin-proteccion": {
   "reparto": [
@@ -109,7 +271,20 @@
    53,
    18
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Defensa recta",
+    "Sello de venganza",
+    "Súplica divina"
+   ],
+   "menores": [
+    "Captar no-muertos",
+    "Imposición de manos",
+    "Bendición de reyes"
+   ]
+  }
  },
  "paladin-reprension": {
   "reparto": [
@@ -117,7 +292,20 @@
    5,
    55
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Sello de venganza",
+    "Sentencia",
+    "Consagración"
+   ],
+   "menores": [
+    "Imposición de manos",
+    "Captar no-muertos",
+    "Bendición de reyes"
+   ]
+  }
  },
  "paladin-sagrado": {
   "reparto": [
@@ -125,7 +313,20 @@
    20,
    0
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Señal de la Luz",
+    "Luz Sagrada",
+    "Sello de sabiduría"
+   ],
+   "menores": [
+    "Imposición de manos",
+    "Del Sabio",
+    null
+   ]
+  }
  },
  "picaro-combate": {
   "reparto": [
@@ -133,7 +334,20 @@
    51,
    0
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Golpe siniestro",
+    "Secretos del oficio",
+    "Asesinato múltiple"
+   ],
+   "menores": [
+    "Caída segura",
+    "Velocidad borrosa",
+    "Esfumarse"
+   ]
+  }
  },
  "sacerdote-disciplina": {
   "reparto": [
@@ -141,7 +355,20 @@
    14,
    0
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Penitencia",
+    "Palabra de poder: escudo",
+    "Rezo de sanación"
+   ],
+   "menores": [
+    "Maligno de las Sombras",
+    "Entereza",
+    null
+   ]
+  }
  },
  "sacerdote-sombras": {
   "reparto": [
@@ -149,10 +376,36 @@
    0,
    58
   ],
-  "fuente": "cabecera"
+  "fuente": "cabecera",
+  "glifos": {
+   "idioma": "es",
+   "mayores": [
+    "Abrasamiento mental",
+    "Tortura mental",
+    "Sombra"
+   ],
+   "menores": [
+    "Levitar",
+    "Protección contra las Sombras",
+    "Maligno de las Sombras"
+   ]
+  }
  },
  "druida-equilibrio": {
   "reparto": null,
-  "fuente": "pendiente"
+  "fuente": "pendiente",
+  "glifos": {
+   "idioma": "en",
+   "mayores": [
+    "Starfall",
+    "Focus",
+    "Insect Swarm"
+   ],
+   "menores": [
+    "Unburdened Rebirth",
+    "the Wild",
+    "Dash"
+   ]
+  }
  }
 }
