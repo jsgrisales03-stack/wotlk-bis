@@ -1,0 +1,158 @@
+{
+ "brujo-afliccion": {
+  "reparto": [
+   55,
+   0,
+   16
+  ],
+  "fuente": "cabecera"
+ },
+ "brujo-demonologia": {
+  "reparto": [
+   0,
+   54,
+   17
+  ],
+  "fuente": "cabecera"
+ },
+ "cazador-punteria": {
+  "reparto": [
+   7,
+   57,
+   7
+  ],
+  "fuente": "cabecera"
+ },
+ "chaman-mejora": {
+  "reparto": [
+   18,
+   53,
+   0
+  ],
+  "fuente": "cabecera"
+ },
+ "chaman-restauracion": {
+  "reparto": [
+   0,
+   13,
+   58
+  ],
+  "fuente": "cabecera"
+ },
+ "dk-profano": {
+  "reparto": [
+   0,
+   17,
+   54
+  ],
+  "fuente": "pie"
+ },
+ "dk-sangre": {
+  "reparto": [
+   43,
+   26,
+   2
+  ],
+  "fuente": "cabecera"
+ },
+ "druida-feral-dps": {
+  "reparto": [
+   0,
+   55,
+   16
+  ],
+  "fuente": "cabecera"
+ },
+ "druida-feral-tanque": {
+  "reparto": [
+   0,
+   60,
+   11
+  ],
+  "fuente": "pie"
+ },
+ "druida-restauracion": {
+  "reparto": [
+   11,
+   0,
+   60
+  ],
+  "fuente": "cabecera"
+ },
+ "guerrero-furia": {
+  "reparto": [
+   18,
+   53,
+   0
+  ],
+  "fuente": "pie"
+ },
+ "mago-arcano": {
+  "reparto": [
+   57,
+   3,
+   11
+  ],
+  "fuente": "cabecera"
+ },
+ "mago-fuego": {
+  "reparto": [
+   18,
+   53,
+   0
+  ],
+  "fuente": "cabecera"
+ },
+ "paladin-proteccion": {
+  "reparto": [
+   0,
+   53,
+   18
+  ],
+  "fuente": "cabecera"
+ },
+ "paladin-reprension": {
+  "reparto": [
+   11,
+   5,
+   55
+  ],
+  "fuente": "cabecera"
+ },
+ "paladin-sagrado": {
+  "reparto": [
+   51,
+   20,
+   0
+  ],
+  "fuente": "cabecera"
+ },
+ "picaro-combate": {
+  "reparto": [
+   20,
+   51,
+   0
+  ],
+  "fuente": "cabecera"
+ },
+ "sacerdote-disciplina": {
+  "reparto": [
+   57,
+   14,
+   0
+  ],
+  "fuente": "cabecera"
+ },
+ "sacerdote-sombras": {
+  "reparto": [
+   13,
+   0,
+   58
+  ],
+  "fuente": "cabecera"
+ },
+ "druida-equilibrio": {
+  "reparto": null,
+  "fuente": "pendiente"
+ }
+}

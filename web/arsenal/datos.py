@@ -8,8 +8,9 @@ AQUI = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATOS = os.path.join(AQUI, "datos")
 ASSETS = os.path.join(AQUI, "assets")
 
-# Ficheros de datos y soporte que no describen una build.
-NO_BUILD = ("iconos", "stats-", "displayids", "origenes", "_")
+# Una build es un JSON con ranuras de equipo. Antes se descartaban por el
+# nombre, y cada fichero de datos nuevo rompía la generación hasta acordarse
+# de añadirlo a la lista: se reconocen por el contenido.
 
 
 def _leer(nombre, por_defecto):
@@ -31,14 +32,21 @@ def origenes():
     return _leer("origenes.json", {})
 
 
+def _es_build(ruta):
+    """Un JSON es una build si trae el diccionario de ranuras de equipo."""
+    try:
+        with open(ruta, encoding="utf-8") as f:
+            d = json.load(f)
+    except (ValueError, OSError):
+        return False
+    return isinstance(d, dict) and isinstance(d.get("piezas"), dict)
+
+
 def ids():
     """Identificadores de todas las builds, en orden."""
-    salida = []
-    for ruta in sorted(glob.glob(os.path.join(DATOS, "*.json"))):
-        nombre = os.path.basename(ruta)
-        if not nombre.startswith(NO_BUILD):
-            salida.append(nombre[:-5])
-    return salida
+    return [os.path.basename(r)[:-5]
+            for r in sorted(glob.glob(os.path.join(DATOS, "*.json")))
+            if _es_build(r)]
 
 
 def build(build_id):
