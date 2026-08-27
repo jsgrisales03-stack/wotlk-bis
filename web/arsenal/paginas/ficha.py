@@ -8,7 +8,7 @@ en su propio módulo.
 import os
 
 from .. import datos, textos
-from ..componentes import dialogo, personaje, pieza, talentos, totales
+from ..componentes import arbol, dialogo, personaje, pieza, talentos, totales
 from ..html import bi
 from ..plantilla import documento
 
@@ -77,14 +77,16 @@ body{background:var(--bg);color:var(--tx);
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 """
 
-CSS = (CSS_LAYOUT + pieza.CSS + personaje.CSS + talentos.CSS
+CSS = (CSS_LAYOUT + pieza.CSS + personaje.CSS + talentos.CSS + arbol.CSS
        + totales.CSS + dialogo.CSS)
 
 
-def construir(build_id, iconos, items_stats, origenes=None, talentos_datos=None):
+def construir(build_id, iconos, items_stats, origenes=None, talentos_datos=None,
+              arboles=None, glifos_iconos=None):
     d = datos.build(build_id)
     origenes = origenes or {}
     tal = (talentos_datos or {}).get(build_id)
+    arboles = arboles or {}
     piezas = d["piezas"]
 
     en_izq = [s for s in IZQUIERDA if s in piezas]
@@ -142,7 +144,7 @@ def construir(build_id, iconos, items_stats, origenes=None, talentos_datos=None)
 </div>
 </div>
 {dialogo.MARCO}
-<div class="paneles" hidden>{"".join(paneles)}{talentos.panel(clase, espec, tal)}</div>"""
+<div class="paneles" hidden>{"".join(paneles)}{talentos.panel(clase, espec, tal, arboles.get(arbol.CLASE_SLUG.get(clase)), iconos, glifos_iconos)}</div>"""
 
     titulo = f"{clase} · {espec} — {textos.MARCA_ES}"
     return documento(titulo, CSS, cuerpo, "builds", iconos)

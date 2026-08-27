@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Envoltorio común a todas las páginas."""
 from . import i18n, tema
-from .componentes import cabecera, dialogo, icono
+from .componentes import arbol, cabecera, dialogo, icono
 from .html import esc
 
 
@@ -16,6 +16,9 @@ def documento(titulo, css, cuerpo, pagina, iconos=None):
     hojas = (tema.TOKENS + cabecera.CABECERA_CSS + css + tema.FONDO_CSS
              + icono.css_usados(cuerpo, iconos))
     guion = dialogo.SCRIPT_DETALLE if 'id="modal"' in cuerpo else ""
+    # El guion del arbol solo hace falta en las fichas que lo dibujan.
+    if 'tal-mapa' in cuerpo:
+        guion += arbol.SCRIPT
     partes = [
         '<html lang="es">',
         '<meta charset="utf-8">',

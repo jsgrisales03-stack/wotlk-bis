@@ -32,6 +32,16 @@ def talentos():
     return _leer("talentos.json", {})
 
 
+def arboles():
+    """Rejilla de talentos de cada clase: nombres, iconos y descripciones."""
+    return _leer("talentos-arboles.json", {})
+
+
+def glifos_iconos():
+    """Nombre inglés de cada glifo -> icono del juego."""
+    return _leer("glifos-iconos.json", {})
+
+
 def origenes():
     """De dónde sale cada objeto, por id."""
     return _leer("origenes.json", {})

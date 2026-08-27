@@ -8,40 +8,22 @@ en un portátil y el conjunto tiene que seguir entrando de una pantalla.
 """
 from .. import textos
 from ..html import bi, esc
+from .icono import ic
+from . import arbol
+from .arbol import ARBOLES
 
 IDENT = "det-talentos"
 
-# Nombre de los tres árboles por clase, en el orden en que los numera el juego.
-ARBOLES = {
-    "Caballero de la Muerte": [("Sangre", "Blood"), ("Escarcha", "Frost"),
-                               ("Profano", "Unholy")],
-    "Guerrero": [("Armas", "Arms"), ("Furia", "Fury"), ("Protección", "Protection")],
-    "Paladín": [("Sagrado", "Holy"), ("Protección", "Protection"),
-                ("Reprensión", "Retribution")],
-    "Cazador": [("Bestias", "Beast Mastery"), ("Puntería", "Marksmanship"),
-                ("Supervivencia", "Survival")],
-    "Pícaro": [("Asesinato", "Assassination"), ("Combate", "Combat"),
-               ("Sutileza", "Subtlety")],
-    "Sacerdote": [("Disciplina", "Discipline"), ("Sagrado", "Holy"),
-                  ("Sombras", "Shadow")],
-    "Chamán": [("Elemental", "Elemental"), ("Mejora", "Enhancement"),
-               ("Restauración", "Restoration")],
-    "Mago": [("Arcano", "Arcane"), ("Fuego", "Fire"), ("Escarcha", "Frost")],
-    "Brujo": [("Aflicción", "Affliction"), ("Demonología", "Demonology"),
-              ("Destrucción", "Destruction")],
-    "Druida": [("Equilibrio", "Balance"), ("Feral", "Feral Combat"),
-               ("Restauración", "Restoration")],
-}
 
 
 def _nombre_glifo(nombre, idioma):
-    """Devuelve (español, inglés) de un glifo a partir del nombre transcrito."""
-    if not nombre:
-        return None
-    otro = textos.GLIFOS_EN.get(nombre) if idioma == "es" else textos.GLIFOS_ES.get(nombre)
-    if idioma == "es":
-        return (nombre, otro or nombre)
-    return (otro or nombre, nombre)
+    """Devuelve (español, inglés) de un glifo a partir del nombre transcrito.
+
+    La búsqueda vive en `textos` porque tolera cómo esté escrito el nombre:
+    por una mayúscula o un artículo de más, un glifo se quedaba sin traducir
+    y, ahora, también sin icono.
+    """
+    return textos.glifo_par(nombre, idioma)
 
 
 def resumen(clase, datos):
@@ -64,56 +46,65 @@ def resumen(clase, datos):
             + '<span class="ir" aria-hidden="true">&rsaquo;</span></button>')
 
 
-def _lista_glifos(titulo_es, titulo_en, nombres, idioma):
+def _mayuscula(n):
+    """Primera letra en mayúscula, sin tocar el resto del nombre.
+
+    La tabla guarda el fragmento tal y como aparece dentro del nombre completo
+    —«Glifo de vida renovada»—, así que en minúscula. Suelto en una lista eso
+    se lee como una errata.
+    """
+    return n[:1].upper() + n[1:] if n else n
+
+
+def _lista_glifos(titulo_es, titulo_en, nombres, idioma, iconos, glifos_iconos):
     filas = []
     for n in nombres or []:
         par = _nombre_glifo(n, idioma)
         if not par:
-            filas.append('<li class="glifo vacio">'
+            filas.append('<li class="glifo vacio"><span class="gi"></span>'
                          + bi("Ranura libre", "Empty slot", "span") + "</li>")
         else:
+            marca = ic(iconos, (glifos_iconos or {}).get(par[1], ""),
+                       "gi", par[0])
             filas.append('<li class="glifo">'
-                         + bi(par[0], par[1], "span") + "</li>")
+                         + (marca or '<span class="gi"></span>')
+                         + bi(_mayuscula(par[0]), _mayuscula(par[1]), "span")
+                         + "</li>")
     if not filas:
         return ""
     return ('<section class="det-sec">' + bi(titulo_es, titulo_en, "h4")
             + f'<ul class="glifos">{"".join(filas)}</ul></section>')
 
 
-def panel(clase, espec, datos):
+def panel(clase, espec, datos, arboles_clase=None, iconos=None,
+          glifos_iconos=None):
     """Panel oculto que el diálogo copia al pulsar el resumen."""
     datos = datos or {}
     reparto = datos.get("reparto")
     if not reparto:
         return ""
-    arboles = ARBOLES.get(clase, [])
-    filas = []
     total = sum(reparto)
-    for i, puntos in enumerate(reparto):
-        es_, en_ = arboles[i] if i < len(arboles) else (str(i + 1), str(i + 1))
-        ancho = round(100 * puntos / total, 1) if total else 0
-        filas.append(
-            '<li class="tal-fila">'
-            + bi(es_, en_, "span", cls="tal-nom")
-            + f'<span class="tal-barra"><i style="width:{ancho}%"></i></span>'
-            + f'<b class="tal-pts">{puntos}</b></li>')
-
     partes = [
         '<div class="det-cab"><div class="det-tit">',
         bi("Talentos", "Talents", "h3"),
         bi(espec, textos.en(textos.ESPECS, espec), "p", cls="det-ranura"),
         '</div></div>',
-        f'<ul class="tal-lista">{"".join(filas)}</ul>',
+        arbol.render(clase, datos, arboles_clase),
         '<p class="tal-total">'
         + bi(f"{total} puntos de talento", f"{total} talent points", "span") + "</p>",
     ]
 
     g = datos.get("glifos") or {}
     idioma = g.get("idioma") or "es"
-    partes.append(_lista_glifos("Glifos sublimes", "Major glyphs",
-                                g.get("mayores"), idioma))
-    partes.append(_lista_glifos("Glifos menores", "Minor glyphs",
-                                g.get("menores"), idioma))
+    # Sublimes y menores son dos categorías hermanas de tres entradas cada
+    # una: apiladas gastaban doscientos treinta píxeles de alto y empujaban el
+    # diálogo a desplazarse. En paralelo caben en la mitad y se comparan mejor.
+    sublimes = _lista_glifos("Glifos sublimes", "Major glyphs",
+                             g.get("mayores"), idioma, iconos, glifos_iconos)
+    menores = _lista_glifos("Glifos menores", "Minor glyphs",
+                            g.get("menores"), idioma, iconos, glifos_iconos)
+    if sublimes or menores:
+        partes.append(f'<div class="glifos-par">{sublimes}{menores}</div>')
     return f'<div class="det-fuente-html" id="{IDENT}" hidden>{"".join(partes)}</div>'
 
 
@@ -151,19 +142,51 @@ CSS = """
 .tal-pts{font-size:12.5px;font-weight:600;color:var(--tx);flex:0 0 auto;
   min-width:20px;text-align:right}
 .tal-total{font-size:10.5px;color:var(--db);margin-top:8px;text-align:right}
-.glifos{list-style:none;display:flex;flex-direction:column;gap:6px}
-.glifo{font-size:12.5px;color:var(--tx);padding-left:13px;position:relative}
-.glifo::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;
-  border-radius:1px;transform:rotate(45deg);background:var(--go)}
+.glifos-par{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+.glifos{list-style:none;display:flex;flex-direction:column;gap:7px}
+.glifo{display:flex;align-items:center;gap:9px;line-height:1.25;
+  font-size:12.5px;color:var(--tx)}
+/* El icono del glifo, del mismo tamaño que el de una gema para que las dos
+   listas del diálogo se lean igual. */
+.gi{width:26px;height:26px;flex:0 0 auto;border-radius:5px;
+  border:1px solid var(--ln2);background:var(--p2)}
 .glifo.vacio{color:var(--db);font-style:italic}
-.glifo.vacio::before{background:var(--ln2)}
+.glifo.vacio .gi{border-style:dashed;background:transparent}
 
 @media(max-width:980px){
   .tal-reparto{justify-content:flex-start}
 }
-/* En pantallas muy estrechas el nombre del árbol empujaba el galón fuera de
-   la ventana. Se queda sólo la cifra: el nombre ya está en el diálogo. */
-@media(max-width:380px){
+/* Portátiles de pantalla baja: se recorta el aire del panel para que el
+   diálogo siga entrando entero antes que encoger los iconos del árbol. */
+@media(max-height:780px){
+  .tal-total{margin-top:4px}
+  .glifos-par .det-sec{margin-top:10px;padding-top:9px}
+  .glifos{gap:5px}
+  .gi{width:20px;height:20px}
+  .glifo{gap:7px;font-size:12px}
+}
+@media(max-height:660px){
+  .tal-total{margin-top:2px;font-size:10px}
+  .glifos-par .det-sec{margin-top:7px;padding-top:6px}
+  .glifos{gap:4px}
+  .gi{width:18px;height:18px}
+  .glifo{gap:6px;font-size:11.5px}
+}
+/* Las dos columnas aguantan hasta muy estrecho: el nombre largo parte de
+   línea, que es justo lo que hace el panel del juego. Apilarlas costaba cien
+   píxeles de alto y devolvía el desplazamiento al diálogo. */
+@media(max-width:430px){
+  .glifos-par{gap:0 12px}
+  .glifo{gap:6px;font-size:11.5px}
+  .gi{width:22px;height:22px}
+}
+@media(max-width:340px){
+  .glifos-par{grid-template-columns:1fr;gap:0}
+}
+/* Sólo en lo más estrecho el nombre del árbol empuja el galón fuera de la
+   ventana; ahí se queda la cifra sola, que el nombre ya está en el diálogo.
+   Por encima de eso caben los tres nombres y ayudan a leer el reparto. */
+@media(max-width:340px){
   .tal-arbol i{display:none}
   .tal-reparto{gap:12px}
 }

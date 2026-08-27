@@ -155,4 +155,19 @@ CSS = """
 @media(max-width:980px){
   .modal-caja{max-width:100%;padding:18px 16px 20px}
 }
+
+/* Con tres árboles al lado los 430px de la tarjeta se quedan cortos. La regla
+   va al final a propósito: el @media de arriba fuerza max-width:100% y con
+   la misma especificidad ganaría la última declarada. */
+.modal-caja:has(.tal-mapa){max-width:min(760px,calc(100vw - 24px))}
+
+/* Cuando el contenido no cabe, la barra del sistema es un tajo gris sobre un
+   panel oscuro. Se adelgaza y se tiñe para que acompañe en vez de estorbar. */
+.modal-caja{scrollbar-width:thin;scrollbar-color:var(--ln2) transparent}
+.modal-caja::-webkit-scrollbar{width:8px}
+.modal-caja::-webkit-scrollbar-track{background:transparent}
+.modal-caja::-webkit-scrollbar-thumb{background:var(--ln2);border-radius:4px;
+  border:2px solid transparent;background-clip:content-box}
+.modal-caja::-webkit-scrollbar-thumb:hover{background:var(--db);
+  border:2px solid transparent;background-clip:content-box}
 """

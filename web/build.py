@@ -28,6 +28,8 @@ def main(argv):
     items_stats = motor.cargar_items()
     origenes = datos.origenes()
     talentos = datos.talentos()
+    arboles = datos.arboles()
+    glifos_iconos = datos.glifos_iconos()
 
     if not items_stats:
         print("Aviso: falta datos/stats-items.json; las fichas saldrán sin totales.")
@@ -35,10 +37,13 @@ def main(argv):
         print("Aviso: falta datos/origenes.json; no se mostrará la procedencia.")
     if not talentos:
         print("Aviso: falta datos/talentos.json; las fichas saldrán sin talentos.")
+    if not arboles:
+        print("Aviso: falta datos/talentos-arboles.json; no se dibujará el árbol.")
 
     objetivos = argv[1:] or datos.ids()
     for bid in objetivos:
-        pagina = ficha.construir(bid, iconos, items_stats, origenes, talentos)
+        pagina = ficha.construir(bid, iconos, items_stats, origenes, talentos,
+                                 arboles, glifos_iconos)
         print(f"  {bid}.html  {escribir(bid + '.html', pagina)} KB")
 
     if not argv[1:]:
