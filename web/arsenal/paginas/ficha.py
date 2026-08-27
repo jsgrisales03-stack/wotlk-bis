@@ -8,7 +8,7 @@ en su propio módulo.
 import os
 
 from .. import datos, textos
-from ..componentes import dialogo, personaje, pieza, totales
+from ..componentes import dialogo, personaje, pieza, talentos, totales
 from ..html import bi
 from ..plantilla import documento
 
@@ -77,13 +77,14 @@ body{background:var(--bg);color:var(--tx);
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 """
 
-CSS = (CSS_LAYOUT + pieza.CSS + personaje.CSS
+CSS = (CSS_LAYOUT + pieza.CSS + personaje.CSS + talentos.CSS
        + totales.CSS + dialogo.CSS)
 
 
-def construir(build_id, iconos, items_stats, origenes=None):
+def construir(build_id, iconos, items_stats, origenes=None, talentos_datos=None):
     d = datos.build(build_id)
     origenes = origenes or {}
+    tal = (talentos_datos or {}).get(build_id)
     piezas = d["piezas"]
 
     en_izq = [s for s in IZQUIERDA if s in piezas]
@@ -134,13 +135,14 @@ def construir(build_id, iconos, items_stats, origenes=None):
       {bi(faccion, textos.en(textos.FACCIONES, faccion), "span", cls="fac")}
     </p>
     {totales.render(d, items_stats)}
+    {talentos.resumen(clase, tal)}
   </div>
   <div class="col col-r">{col_r}</div>
   <div class="bot-row">{bot}</div>
 </div>
 </div>
 {dialogo.MARCO}
-<div class="paneles" hidden>{"".join(paneles)}</div>"""
+<div class="paneles" hidden>{"".join(paneles)}{talentos.panel(clase, espec, tal)}</div>"""
 
     titulo = f"{clase} · {espec} — {textos.MARCA_ES}"
     return documento(titulo, CSS, cuerpo, "builds", iconos)

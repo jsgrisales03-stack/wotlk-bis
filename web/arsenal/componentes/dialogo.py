@@ -102,7 +102,9 @@ SCRIPT_DETALLE = """<script>
     if (ultimo) { ultimo.focus(); ultimo = null; }
   }
 
-  document.querySelectorAll('.slot[data-det]').forEach(function(b){
+  // Cualquier elemento con data-det abre su panel, no sólo las piezas
+  // de equipo: los talentos usan el mismo mecanismo.
+  document.querySelectorAll('[data-det]').forEach(function(b){
     b.addEventListener('click', function(){ ultimo = b; abrir(b.dataset.det); });
   });
   modal.querySelectorAll('[data-cerrar]').forEach(function(e){

@@ -27,6 +27,11 @@ def iconos():
 
 
 
+def talentos():
+    """Reparto por árbol y glifos, por build."""
+    return _leer("talentos.json", {})
+
+
 def origenes():
     """De dónde sale cada objeto, por id."""
     return _leer("origenes.json", {})

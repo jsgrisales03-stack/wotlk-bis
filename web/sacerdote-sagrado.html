@@ -239,6 +239,56 @@ body{background:var(--bg);color:var(--tx);
   .ctr.con-personaje .ctr-t{margin-top:142px}
 }
 
+/* Resumen de talentos: cabe bajo los totales sin robar alto al paperdoll. */
+.talentos{display:flex;align-items:center;gap:9px;width:100%;
+  position:relative;z-index:1;margin-top:7px;
+  background:rgba(19,17,26,.72);border:1px solid var(--ln);border-radius:9px;
+  padding:8px 10px 8px 12px;cursor:pointer;font:inherit;color:inherit;
+  text-align:left;-webkit-appearance:none;appearance:none;
+  transition:border-color .15s ease,background .15s ease}
+.talentos:hover,.talentos:focus-visible{border-color:var(--gr);background:#1c2620}
+.tal-tit{font:600 10px Barlow,sans-serif;letter-spacing:1.6px;
+  text-transform:uppercase;color:var(--go);flex:0 0 auto}
+.tal-reparto{display:flex;gap:8px;flex:1;justify-content:flex-end;
+  min-width:0;flex-wrap:wrap}
+.tal-arbol{display:flex;align-items:baseline;gap:4px;color:var(--db)}
+.tal-arbol b{font-size:13px;font-weight:600;color:var(--tn)}
+.tal-arbol i{font-style:normal;font-size:9.5px;letter-spacing:.4px;
+  text-transform:uppercase}
+.tal-arbol.tal-alto b{color:var(--go)}
+.tal-arbol.tal-alto i{color:var(--tn)}
+.talentos .ir{color:var(--db);font-size:16px;line-height:1;flex:0 0 auto;
+  transition:transform .15s ease,color .15s ease}
+.talentos:hover .ir,.talentos:focus-visible .ir{color:var(--gr);transform:translateX(3px)}
+
+/* Detalle dentro del diálogo. */
+.tal-lista{list-style:none;display:flex;flex-direction:column;gap:9px;
+  margin-top:14px;padding-top:12px;border-top:1px solid var(--ln)}
+.tal-fila{display:flex;align-items:center;gap:10px}
+.tal-nom{font-size:12.5px;color:var(--tx);flex:0 0 92px}
+.tal-barra{flex:1;height:7px;border-radius:4px;background:var(--p2);
+  border:1px solid var(--ln);overflow:hidden}
+.tal-barra i{display:block;height:100%;background:var(--go);opacity:.75}
+.tal-pts{font-size:12.5px;font-weight:600;color:var(--tx);flex:0 0 auto;
+  min-width:20px;text-align:right}
+.tal-total{font-size:10.5px;color:var(--db);margin-top:8px;text-align:right}
+.glifos{list-style:none;display:flex;flex-direction:column;gap:6px}
+.glifo{font-size:12.5px;color:var(--tx);padding-left:13px;position:relative}
+.glifo::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;
+  border-radius:1px;transform:rotate(45deg);background:var(--go)}
+.glifo.vacio{color:var(--db);font-style:italic}
+.glifo.vacio::before{background:var(--ln2)}
+
+@media(max-width:980px){
+  .tal-reparto{justify-content:flex-start}
+}
+/* En pantallas muy estrechas el nombre del árbol empujaba el galón fuera de
+   la ventana. Se queda sólo la cifra: el nombre ya está en el diálogo. */
+@media(max-width:380px){
+  .tal-arbol i{display:none}
+  .tal-reparto{gap:12px}
+}
+
 .stats{position:relative;z-index:1;width:100%;
   background:rgba(19,17,26,.72);border:1px solid var(--ln);border-radius:9px;
   padding:11px 13px 9px}
@@ -424,6 +474,7 @@ body{background:var(--bg);color:var(--tx);
       <span class="i18n fac" data-es="Horda" data-en="Horde">Horda</span>
     </p>
     <div class="stats"><h2 class="i18n stats-h" data-es="Totales del equipo" data-en="Gear totals">Totales del equipo</h2><dl class="stat-list"><div class="stat"><dt class="i18n" data-es="Intelecto" data-en="Intellect">Intelecto</dt><dd>1 351</dd></div><div class="stat destacada"><dt class="i18n" data-es="Poder con hechizos" data-en="Spell power">Poder con hechizos</dt><dd>3 729</dd></div><div class="stat"><dt class="i18n" data-es="Espíritu" data-en="Spirit">Espíritu</dt><dd>572</dd></div><div class="stat"><dt class="i18n" data-es="Maná cada 5 s" data-en="Mana per 5 sec">Maná cada 5 s</dt><dd>78</dd></div><div class="stat"><dt class="i18n" data-es="Crítico" data-en="Crit rating">Crítico</dt><dd>1 011</dd></div><div class="stat"><dt class="i18n" data-es="Celeridad" data-en="Haste rating">Celeridad</dt><dd>573</dd></div><div class="stat"><dt class="i18n" data-es="Aguante" data-en="Stamina">Aguante</dt><dd>1 388</dd></div><div class="stat destacada"><dt class="i18n" data-es="Salud" data-en="Health">Salud</dt><dd>13 880</dd></div></dl><p class="i18n stats-note" data-es="Sólo objetos, gemas y encantamientos. Sin talentos ni beneficios de banda." data-en="Gear, gems and enchants only. No talents or raid buffs.">Sólo objetos, gemas y encantamientos. Sin talentos ni beneficios de banda.</p></div>
+    
   </div>
   <div class="col col-r"><button type="button" class="slot der has-tt" data-det="det-hands"
     aria-haspopup="dialog">
@@ -592,7 +643,9 @@ body{background:var(--bg);color:var(--tx);
     if (ultimo) { ultimo.focus(); ultimo = null; }
   }
 
-  document.querySelectorAll('.slot[data-det]').forEach(function(b){
+  // Cualquier elemento con data-det abre su panel, no sólo las piezas
+  // de equipo: los talentos usan el mismo mecanismo.
+  document.querySelectorAll('[data-det]').forEach(function(b){
     b.addEventListener('click', function(){ ultimo = b; abrir(b.dataset.det); });
   });
   modal.querySelectorAll('[data-cerrar]').forEach(function(e){
