@@ -32,9 +32,10 @@ EQUIPAR = {
 def texto_origen(o):
     """Frase de procedencia en los dos idiomas.
 
-    Los nombres de jefes, zonas y misiones vienen de una base de datos en
-    inglés; cuando además se conoce el nombre en español se usa ése para la
-    versión castellana.
+    Se dice todo lo que se sabe y no sólo de quién viene: si es un jefe, qué
+    oficio tiene el vendedor y cuánto cuesta. Los nombres propios —jefes,
+    vendedores y misiones— siguen en inglés porque la base de datos donde
+    están traducidos no es accesible; el resto de la frase va en castellano.
     """
     if not o or o.get("tipo") in (None, "desconocido", "error"):
         return None
@@ -42,21 +43,39 @@ def texto_origen(o):
     quien_es = esc((o.get("quien_es") or o.get("quien") or "").strip())
     if not quien_en and not quien_es:
         return None
-    donde_es = esc((o.get("donde_es") or "").strip())
-    cola_es = f" · {donde_es}" if donde_es else ""
 
-    prob = o.get("prob", "")
-    pct = f" · {esc(prob)}%" if prob else ""
+    prob = (o.get("prob") or "").strip()
+    # El español separa los decimales con coma.
+    pct_es = f" · {esc(prob.replace('.', ','))}%" if prob else ""
+    pct_en = f" · {esc(prob)}%" if prob else ""
 
-    plantillas = {
-        "botin": ("Botín de <b>{q}</b>{d}{p}", "Dropped by <b>{q}</b>{p}"),
-        "vendedor": ("Lo vende <b>{q}</b>{d}", "Sold by <b>{q}</b>"),
-        "mision": ("Recompensa de la misión <b>{q}</b>{d}", "Quest reward: <b>{q}</b>"),
-        "contenedor": ("Dentro de <b>{q}</b>{d}", "Contained in <b>{q}</b>"),
-    }
-    es_f, en_f = plantillas.get(o["tipo"], ("<b>{q}</b>{d}", "<b>{q}</b>"))
-    return (es_f.format(q=quien_es, d=cola_es, p=pct),
-            en_f.format(q=quien_en or quien_es, p=pct))
+    oficio_es = esc((o.get("oficio_es") or "").strip())
+    oficio_en = esc((o.get("oficio") or "").strip())
+    coma_es = f", {oficio_es}" if oficio_es else ""
+    coma_en = f", {oficio_en.lower()}" if oficio_en else ""
+
+    coste = o.get("coste") or []
+    if len(coste) >= 3 and coste[0]:
+        cuesta_es = f" · cuesta {coste[0]} {esc(coste[1])}"
+        cuesta_en = f" · costs {coste[0]} {esc(coste[2])}"
+    else:
+        cuesta_es = cuesta_en = ""
+
+    if o["tipo"] == "botin":
+        jefe_es = "del jefe " if o.get("jefe") else "de "
+        jefe_en = "boss " if o.get("jefe") else ""
+        return (f"Botín {jefe_es}<b>{quien_es}</b>{pct_es}",
+                f"Dropped by {jefe_en}<b>{quien_en or quien_es}</b>{pct_en}")
+    if o["tipo"] == "vendedor":
+        return (f"Lo vende <b>{quien_es}</b>{coma_es}{cuesta_es}",
+                f"Sold by <b>{quien_en or quien_es}</b>{coma_en}{cuesta_en}")
+    if o["tipo"] == "mision":
+        return (f"Recompensa de la misión <b>{quien_es}</b>",
+                f"Quest reward: <b>{quien_en or quien_es}</b>")
+    if o["tipo"] == "contenedor":
+        return (f"Aparece dentro de <b>{quien_es}</b>",
+                f"Found inside <b>{quien_en or quien_es}</b>")
+    return (f"<b>{quien_es}</b>", f"<b>{quien_en or quien_es}</b>")
 
 
 def bloque_stats(p, items_stats):

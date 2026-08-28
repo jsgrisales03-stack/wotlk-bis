@@ -1,789 +1,1160 @@
 {
  "42580": {
   "tipo": "vendedor",
-  "quien": "Argex Irongut"
+  "quien": "Argex Irongut",
+  "nombre": "Relentless Gladiator's Idol of Tenacity",
+  "oficio": "Veteran Arena Vendor",
+  "oficio_es": "vendedor de arena veterano",
+  "coste": [
+   1150,
+   "puntos de arena",
+   "arena points"
+  ]
  },
  "47059": {
   "tipo": "botin",
   "quien": "Lord Jaraxxus",
+  "nombre": "Solace of the Defeated",
   "prob": "6.7",
   "jefe": true
  },
  "47546": {
   "tipo": "contenedor",
-  "quien": "Argent Crusade Tribute Chest"
+  "quien": "Argent Crusade Tribute Chest",
+  "nombre": "Sylvanas' Cunning"
  },
  "47661": {
   "tipo": "vendedor",
-  "quien": "Arcanist Miluria"
+  "quien": "Arcanist Miluria",
+  "nombre": "Libram of Valiance",
+  "oficio": "Emblem of Triumph Quartermaster",
+  "oficio_es": "intendente de Emblemas de triunfo",
+  "coste": [
+   25,
+   "Emblemas de triunfo",
+   "Emblems of Triumph"
+  ]
  },
  "47673": {
   "tipo": "vendedor",
-  "quien": "Arcanist Miluria"
+  "quien": "Arcanist Miluria",
+  "nombre": "Sigil of Virulence",
+  "oficio": "Emblem of Triumph Quartermaster",
+  "oficio_es": "intendente de Emblemas de triunfo",
+  "coste": [
+   25,
+   "Emblemas de triunfo",
+   "Emblems of Triumph"
+  ]
  },
  "49623": {
   "tipo": "mision",
-  "quien": "Shadowmourne"
+  "quien": "Shadowmourne",
+  "nombre": "Shadowmourne"
  },
  "50348": {
   "tipo": "botin",
   "quien": "Rotface",
+  "nombre": "Dislodged Foreign Object",
   "prob": "6.7",
   "jefe": true
  },
  "50363": {
   "tipo": "contenedor",
-  "quien": "Deathbringer's Cache"
+  "quien": "Deathbringer's Cache",
+  "nombre": "Deathbringer's Will",
+  "quien_es": "Alijo del Libramorte"
  },
  "50364": {
   "tipo": "botin",
   "quien": "Sindragosa",
+  "nombre": "Sindragosa's Flawless Fang",
   "prob": "20",
   "jefe": true
  },
  "50365": {
   "tipo": "botin",
   "quien": "Sindragosa",
+  "nombre": "Phylactery of the Nameless Lich",
   "prob": "20",
   "jefe": true
  },
  "50366": {
   "tipo": "contenedor",
-  "quien": "Gunship Armory"
+  "quien": "Gunship Armory",
+  "nombre": "Althor's Abacus"
  },
  "50398": {
   "tipo": "mision",
-  "quien": "Path of Destruction"
+  "quien": "Path of Destruction",
+  "nombre": "Ashen Band of Endless Destruction"
  },
  "50402": {
   "tipo": "mision",
-  "quien": "Path of Vengeance"
+  "quien": "Path of Vengeance",
+  "nombre": "Ashen Band of Endless Vengeance"
  },
  "50404": {
   "tipo": "mision",
-  "quien": "Path of Courage"
+  "quien": "Path of Courage",
+  "nombre": "Ashen Band of Endless Courage"
  },
  "50456": {
   "tipo": "vendedor",
-  "quien": "Magister Arlan"
+  "quien": "Magister Arlan",
+  "nombre": "Idol of the Crying Moon",
+  "oficio": "Emblem of Frost Quartermaster",
+  "oficio_es": "intendente de Emblemas de escarcha",
+  "coste": [
+   30,
+   "Emblemas de escarcha",
+   "Emblems of Frost"
+  ]
  },
  "50457": {
   "tipo": "vendedor",
-  "quien": "Magister Arlan"
+  "quien": "Magister Arlan",
+  "nombre": "Idol of the Lunar Eclipse",
+  "oficio": "Emblem of Frost Quartermaster",
+  "oficio_es": "intendente de Emblemas de escarcha",
+  "coste": [
+   30,
+   "Emblemas de escarcha",
+   "Emblems of Frost"
+  ]
  },
  "50458": {
   "tipo": "vendedor",
-  "quien": "Magister Arlan"
+  "quien": "Magister Arlan",
+  "nombre": "Bizuri's Totem of Shattered Ice",
+  "oficio": "Emblem of Frost Quartermaster",
+  "oficio_es": "intendente de Emblemas de escarcha",
+  "coste": [
+   30,
+   "Emblemas de escarcha",
+   "Emblems of Frost"
+  ]
  },
  "50464": {
   "tipo": "vendedor",
-  "quien": "Magister Arlan"
+  "quien": "Magister Arlan",
+  "nombre": "Totem of the Surging Sea",
+  "oficio": "Emblem of Frost Quartermaster",
+  "oficio_es": "intendente de Emblemas de escarcha",
+  "coste": [
+   30,
+   "Emblemas de escarcha",
+   "Emblems of Frost"
+  ]
  },
  "50603": {
   "tipo": "botin",
   "quien": "Prince Valanar",
+  "nombre": "Cryptmaker",
   "prob": "6.7",
   "jefe": true
  },
  "50604": {
   "tipo": "botin",
   "quien": "Lord Marrowgar",
+  "nombre": "Band of the Bone Colossus",
   "prob": "6.7",
   "jefe": true
  },
  "50607": {
   "tipo": "botin",
   "quien": "Lord Marrowgar",
+  "nombre": "Frostbitten Fur Boots",
   "prob": "6.7",
   "jefe": true
  },
  "50609": {
   "tipo": "botin",
   "quien": "Lord Marrowgar",
+  "nombre": "Bone Sentinel's Amulet",
   "prob": "6.7",
   "jefe": true
  },
  "50613": {
   "tipo": "botin",
   "quien": "Lord Marrowgar",
+  "nombre": "Crushing Coldwraith Belt",
   "prob": "6.7",
   "jefe": true
  },
  "50616": {
   "tipo": "botin",
   "quien": "Lord Marrowgar",
+  "nombre": "Bulwark of Smouldering Steel",
   "prob": "6.7",
   "jefe": true
  },
  "50618": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Frostbrood Sapphire Ring",
+  "quien_es": "Botín del Caminasueños"
  },
  "50619": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Anub'ar Stalker's Gloves",
+  "quien_es": "Botín del Caminasueños"
  },
  "50620": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Coldwraith Links",
+  "quien_es": "Botín del Caminasueños"
  },
  "50622": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Devium's Eternally Cold Ring",
+  "quien_es": "Botín del Caminasueños"
  },
  "50624": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Scourge Reaver's Legplates",
+  "quien_es": "Botín del Caminasueños"
  },
  "50628": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Frostbinder's Shredded Cape",
+  "quien_es": "Botín del Caminasueños"
  },
  "50629": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Robe of the Waking Nightmare",
+  "quien_es": "Botín del Caminasueños"
  },
  "50631": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Nightmare Ender",
+  "quien_es": "Botín del Caminasueños"
  },
  "50633": {
   "tipo": "botin",
   "quien": "Sindragosa",
+  "nombre": "Sindragosa's Cruel Claw",
   "prob": "20",
   "jefe": true
  },
  "50636": {
   "tipo": "botin",
   "quien": "Sindragosa",
+  "nombre": "Memory of Malygos",
   "prob": "20",
   "jefe": true
  },
  "50640": {
   "tipo": "botin",
   "quien": "Lady Deathwhisper",
+  "nombre": "Broken Ram Skull Helm",
   "prob": "6.7",
   "jefe": true
  },
  "50641": {
   "tipo": "botin",
   "quien": "Lady Deathwhisper",
+  "nombre": "Heartpierce",
   "prob": "6.7",
   "jefe": true
  },
  "50644": {
   "tipo": "botin",
   "quien": "Lady Deathwhisper",
+  "nombre": "Ring of Maddening Whispers",
   "prob": "6.7",
   "jefe": true
  },
  "50645": {
   "tipo": "botin",
   "quien": "Lady Deathwhisper",
+  "nombre": "Leggings of Northern Lights",
   "prob": "6.7",
   "jefe": true
  },
  "50651": {
   "tipo": "botin",
   "quien": "Lady Deathwhisper",
+  "nombre": "The Lady's Brittle Bracers",
   "prob": "6.7",
   "jefe": true
  },
  "50653": {
   "tipo": "contenedor",
-  "quien": "Gunship Armory"
+  "quien": "Gunship Armory",
+  "nombre": "Shadowvault Slayer's Cloak"
  },
  "50655": {
   "tipo": "contenedor",
-  "quien": "Gunship Armory"
+  "quien": "Gunship Armory",
+  "nombre": "Scourge Hunter's Vambraces"
  },
  "50656": {
   "tipo": "contenedor",
-  "quien": "Gunship Armory"
+  "quien": "Gunship Armory",
+  "nombre": "Ikfirus's Sack of Wonder"
  },
  "50658": {
   "tipo": "contenedor",
-  "quien": "Gunship Armory"
+  "quien": "Gunship Armory",
+  "nombre": "Amulet of the Silent Eulogy"
  },
  "50663": {
   "tipo": "contenedor",
-  "quien": "Gunship Armory"
+  "quien": "Gunship Armory",
+  "nombre": "Gunship Captain's Mittens"
  },
  "50664": {
   "tipo": "contenedor",
-  "quien": "Gunship Armory"
+  "quien": "Gunship Armory",
+  "nombre": "Ring of Rapid Ascent"
  },
  "50670": {
   "tipo": "contenedor",
-  "quien": "Deathbringer's Cache"
+  "quien": "Deathbringer's Cache",
+  "nombre": "Toskk's Maximized Wristguards",
+  "quien_es": "Alijo del Libramorte"
  },
  "50675": {
   "tipo": "botin",
   "quien": "Rotface",
+  "nombre": "Aldriana's Gloves of Secrecy",
   "prob": "6.7",
   "jefe": true
  },
  "50677": {
   "tipo": "botin",
   "quien": "Rotface",
+  "nombre": "Winding Sheet",
   "prob": "6.7",
   "jefe": true
  },
  "50682": {
   "tipo": "botin",
   "quien": "Rotface",
+  "nombre": "Bile-Encrusted Medallion",
   "prob": "6.7",
   "jefe": true
  },
  "50684": {
   "tipo": "botin",
   "quien": "Rotface",
+  "nombre": "Corpse-Impaling Spike",
   "prob": "6.7",
   "jefe": true
  },
  "50688": {
   "tipo": "botin",
   "quien": "Festergut",
+  "nombre": "Nerub'ar Stalker's Cord",
   "prob": "6.2",
   "jefe": true
  },
  "50691": {
   "tipo": "botin",
   "quien": "Festergut",
+  "nombre": "Belt of Broken Bones",
   "prob": "6.2",
   "jefe": true
  },
  "50693": {
   "tipo": "botin",
   "quien": "Festergut",
+  "nombre": "Might of Blight",
   "prob": "6.2",
   "jefe": true
  },
  "50694": {
   "tipo": "botin",
   "quien": "Festergut",
+  "nombre": "Plaguebringer's Stained Pants",
   "prob": "6.2",
   "jefe": true
  },
  "50699": {
   "tipo": "botin",
   "quien": "Festergut",
+  "nombre": "Plague Scientist's Boots",
   "prob": "6.2",
   "jefe": true
  },
  "50702": {
   "tipo": "botin",
   "quien": "Festergut",
+  "nombre": "Lingering Illness",
   "prob": "6.2",
   "jefe": true
  },
  "50703": {
   "tipo": "botin",
   "quien": "Festergut",
+  "nombre": "Unclean Surgical Gloves",
   "prob": "6.2",
   "jefe": true
  },
  "50704": {
   "tipo": "botin",
   "quien": "Professor Putricide",
+  "nombre": "Rigormortis",
   "prob": "20",
   "jefe": true
  },
  "50705": {
   "tipo": "botin",
   "quien": "Professor Putricide",
+  "nombre": "Professor's Bloodied Smock",
   "prob": "20",
   "jefe": true
  },
  "50707": {
   "tipo": "botin",
   "quien": "Professor Putricide",
+  "nombre": "Astrylian's Sutured Cinch",
   "prob": "20",
   "jefe": true
  },
  "50711": {
   "tipo": "botin",
   "quien": "Prince Valanar",
+  "nombre": "Treads of the Wasteland",
   "prob": "6.7",
   "jefe": true
  },
  "50714": {
   "tipo": "botin",
   "quien": "Prince Valanar",
+  "nombre": "Valanar's Other Signet Ring",
   "prob": "6.7",
   "jefe": true
  },
  "50715": {
   "tipo": "botin",
   "quien": "Prince Valanar",
+  "nombre": "Shoulders of Frost-Tipped Thorns",
   "prob": "6.7",
   "jefe": true
  },
  "50718": {
   "tipo": "botin",
   "quien": "Prince Valanar",
+  "nombre": "Royal Crimson Cloak",
   "prob": "6.7",
   "jefe": true
  },
  "50719": {
   "tipo": "botin",
   "quien": "Prince Valanar",
+  "nombre": "Shadow Silk Spindle",
   "prob": "6.7",
   "jefe": true
  },
  "50722": {
   "tipo": "botin",
   "quien": "Prince Valanar",
+  "nombre": "San'layn Ritualist Gloves",
   "prob": "6.7",
   "jefe": true
  },
  "50724": {
   "tipo": "botin",
   "quien": "Blood-Queen Lana'thel",
+  "nombre": "Blood Queen's Crimson Choker",
   "prob": "16.7",
   "jefe": true
  },
  "50730": {
   "tipo": "botin",
   "quien": "The Lich King",
+  "nombre": "Glorenzelg, High-Blade of the Silver Hand",
   "prob": "11.1",
   "jefe": true
  },
  "50732": {
   "tipo": "botin",
   "quien": "The Lich King",
+  "nombre": "Bloodsurge, Kel'Thuzad's Blade of Agony",
   "prob": "11.1",
   "jefe": true
  },
  "50733": {
   "tipo": "botin",
   "quien": "The Lich King",
+  "nombre": "Fal'inrush, Defender of Quel'thalas",
   "prob": "11.1",
   "jefe": true
  },
  "50734": {
   "tipo": "botin",
   "quien": "The Lich King",
+  "nombre": "Royal Scepter of Terenas II",
   "prob": "11.1",
   "jefe": true
  },
  "50735": {
   "tipo": "botin",
   "quien": "The Lich King",
+  "nombre": "Oathbinder, Charge of the Ranger-General",
   "prob": "11.1",
   "jefe": true
  },
  "50737": {
   "tipo": "botin",
   "quien": "The Lich King",
+  "nombre": "Havoc's Call, Blade of Lordaeron Kings",
   "prob": "11.1",
   "jefe": true
  },
  "51176": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Crimson Acolyte Robe",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51178": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Crimson Acolyte Hood",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51179": {
   "tipo": "botin",
   "quien": "Toravon the Ice Watcher",
+  "nombre": "Sanctified Crimson Acolyte Gloves",
   "prob": "0.9",
   "jefe": true
  },
  "51182": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Crimson Acolyte Mantle",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51225": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Ymirjar Lord's Battleplate",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51227": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Ymirjar Lord's Helmet",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51228": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Ymirjar Lord's Legplates",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51229": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Ymirjar Lord's Shoulderplates",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51230": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Dark Coven Gloves",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51231": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Dark Coven Hood",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51233": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Dark Coven Robe",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51234": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Dark Coven Shoulderpads",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51240": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Frost Witch's Shoulderguards",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51241": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Frost Witch's War-Kilt",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51242": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Frost Witch's Faceguard",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51244": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Frost Witch's Chestguard",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51245": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Frost Witch's Spaulders",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51246": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Frost Witch's Legguards",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51247": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Frost Witch's Headpiece",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51249": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Frost Witch's Tunic",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51250": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Shadowblade Breastplate",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51251": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Shadowblade Gauntlets",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51252": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Shadowblade Helmet",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51253": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Shadowblade Legplates",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51254": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Shadowblade Pauldrons",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51255": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Crimson Acolyte Cowl",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51256": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Crimson Acolyte Handwraps",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51257": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Crimson Acolyte Mantle",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51259": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Crimson Acolyte Raiments",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51265": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Chestguard",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51266": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Faceguard",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51267": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Handguards",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51268": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Legguards",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51269": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Shoulderguards",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51270": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Gloves",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51271": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Greaves",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51272": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Headpiece",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51273": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Spaulders",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51274": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Tunic",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51275": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Battleplate",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51277": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Helmet",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51278": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Legplates",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51279": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Lightsworn Shoulderplates",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51280": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Bloodmage Gloves",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51281": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Bloodmage Hood",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51282": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Bloodmage Leggings",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51283": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Bloodmage Robe",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51284": {
   "tipo": "vendedor",
-  "quien": "Rueben Lauren"
+  "quien": "Rueben Lauren",
+  "nombre": "Sanctified Bloodmage Shoulderpads",
+  "oficio": "Cloth Armor Merchant",
+  "oficio_es": "comerciante de armadura de tela"
  },
  "51285": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Ahn'Kahar Blood Hunter's Handguards",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51286": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Ahn'Kahar Blood Hunter's Headpiece",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51288": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Ahn'Kahar Blood Hunter's Spaulders",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51289": {
   "tipo": "vendedor",
-  "quien": "Matilda Brightlink"
+  "quien": "Matilda Brightlink",
+  "nombre": "Sanctified Ahn'Kahar Blood Hunter's Tunic",
+  "oficio": "Mail Armor Merchant",
+  "oficio_es": "comerciante de armadura de malla"
  },
  "51290": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Cover",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51292": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Mantle",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51293": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Trousers",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51294": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Vestment",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51295": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Handgrips",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51296": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Headguard",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51297": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Legguards",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51298": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Raiment",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51299": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Shoulderpads",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51301": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Gauntlets",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51302": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Helmet",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51303": {
   "tipo": "vendedor",
-  "quien": "Rafael Langrom"
+  "quien": "Rafael Langrom",
+  "nombre": "Sanctified Lasherweave Legplates",
+  "oficio": "Leather Armor Merchant",
+  "oficio_es": "comerciante de armadura de cuero"
  },
  "51305": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Chestguard",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51307": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Handguards",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51308": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Legguards",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51309": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Pauldrons",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51310": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Battleplate",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51311": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Gauntlets",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51312": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Helmet",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51313": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Legplates",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51314": {
   "tipo": "vendedor",
-  "quien": "Horace Hunderland"
+  "quien": "Horace Hunderland",
+  "nombre": "Sanctified Scourgelord Shoulderplates",
+  "oficio": "Plate Armor Merchant",
+  "oficio_es": "comerciante de armadura de placas"
  },
  "51823": {
   "tipo": "contenedor",
-  "quien": "Cache of the Dreamwalker"
+  "quien": "Cache of the Dreamwalker",
+  "nombre": "Leggings of the Refracted Mind",
+  "quien_es": "Botín del Caminasueños"
  },
  "51851": {
   "tipo": "botin",
   "quien": "Prince Valanar",
+  "nombre": "Bloodsoul Raiment",
   "prob": "8.3",
   "jefe": true
  },
  "51901": {
   "tipo": "contenedor",
-  "quien": "Deathbringer's Cache"
+  "quien": "Deathbringer's Cache",
+  "nombre": "Gargoyle Spit Bracers",
+  "quien_es": "Alijo del Libramorte"
  },
  "51944": {
   "tipo": "botin",
   "quien": "The Lich King",
+  "nombre": "Valius, Gavel of the Lightbringer",
   "prob": "11.1",
   "jefe": true
  },
  "52572": {
   "tipo": "mision",
-  "quien": "A Change of Heart"
+  "quien": "A Change of Heart",
+  "nombre": "Ashen Band of Endless Might"
  },
  "54576": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Signet of Twilight",
   "prob": "6.2",
   "jefe": true
  },
  "54577": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Returning Footfalls",
   "prob": "6.2",
   "jefe": true
  },
  "54578": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Apocalypse's Advance",
   "prob": "6.2",
   "jefe": true
  },
  "54579": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Treads of Impending Resurrection",
   "prob": "6.2",
   "jefe": true
  },
  "54580": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Umbrage Armbands",
   "prob": "6.2",
   "jefe": true
  },
  "54581": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Penumbra Pendant",
   "prob": "6.2",
   "jefe": true
  },
  "54582": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Bracers of Fiery Night",
   "prob": "6.2",
   "jefe": true
  },
  "54583": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Cloak of Burning Dusk",
   "prob": "6.2",
   "jefe": true
  },
  "54584": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Phaseshifter's Bracers",
   "prob": "6.2",
   "jefe": true
  },
  "54585": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Ring of Phased Regeneration",
   "prob": "6.2",
   "jefe": true
  },
  "54587": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Split Shape Belt",
   "prob": "6.2",
   "jefe": true
  },
  "54588": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Charred Twilight Scale",
   "prob": "6.2",
   "jefe": true
  },
  "54589": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Glowing Twilight Scale",
   "prob": "6.2",
   "jefe": true
  },
  "54590": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Sharpened Twilight Scale",
   "prob": "6.2",
   "jefe": true
  },
  "54591": {
   "tipo": "botin",
   "quien": "Halion",
+  "nombre": "Petrified Twilight Scale",
   "prob": "6.2",
   "jefe": true
  }

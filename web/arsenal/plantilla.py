@@ -5,12 +5,13 @@ from .componentes import arbol, cabecera, dialogo, icono
 from .html import esc
 
 
-def documento(titulo, css, cuerpo, pagina, iconos=None):
+def documento(titulo, css, cuerpo, pagina, iconos=None, guion_extra=""):
     """Arma la página: cabeza, fondo, cabecera, cuerpo y scripts.
 
     El CSS de los iconos se calcula sobre el cuerpo ya montado, así cada página
     lleva sólo los que usa. El script del diálogo se añade únicamente donde hay
-    diálogo que manejar.
+    diálogo que manejar, y `guion_extra` deja que una página cuelgue el suyo
+    sin que la plantilla tenga que conocerla.
     """
     iconos = iconos or {}
     hojas = (tema.TOKENS + cabecera.CABECERA_CSS + css + tema.FONDO_CSS
@@ -31,5 +32,6 @@ def documento(titulo, css, cuerpo, pagina, iconos=None):
         cuerpo,
         i18n.SCRIPT_I18N,
         guion,
+        guion_extra,
     ]
     return "\n".join(partes)

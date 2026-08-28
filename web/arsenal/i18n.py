@@ -10,6 +10,10 @@ SCRIPT_I18N = """<script>
       var v = el.getAttribute('data-' + l) || el.getAttribute('data-es') || '';
       if (v.indexOf('<') !== -1) el.innerHTML = v; else el.textContent = v;
     });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
+      var v = el.getAttribute('data-ph-' + l);
+      if (v) el.setAttribute('placeholder', v);
+    });
     document.querySelectorAll('[data-i18n-title]').forEach(function(el){
       var v = el.getAttribute('data-title-' + l);
       if (v) el.setAttribute('title', v);
