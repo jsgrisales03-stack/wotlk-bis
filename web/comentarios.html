@@ -159,7 +159,7 @@ textarea{min-height:118px;resize:vertical;line-height:1.55}
     <p class="lead i18n" data-es="Cuéntanos qué mejorarías. Los desplegables sirven para que el comentario llegue &lt;strong&gt;ya situado&lt;/strong&gt;: qué clase, qué especialización y sobre qué pieza o talento hablas." data-en="Tell us what you would improve. The dropdowns make each comment arrive &lt;strong&gt;already pinned down&lt;/strong&gt;: which class, which specialization, and which item or talent you mean.">Cuéntanos qué mejorarías. Los desplegables sirven para que el comentario llegue <strong>ya situado</strong>: qué clase, qué especialización y sobre qué pieza o talento hablas.</p>
   </div>
 
-  <form class="form" id="coment" name="comentarios" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+  <form class="form" id="coment" name="comentarios" method="POST" data-modo="netlify" data-netlify="true" netlify-honeypot="bot-field"
         data-accion=""
         data-campos="{}"
         data-clave="" novalidate><input type="hidden" name="form-name" value="comentarios"><p hidden><label>No rellenar <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -335,7 +335,7 @@ textarea{min-height:118px;resize:vertical;line-height:1.55}
   f.addEventListener('submit', function(e){
     e.preventDefault();
     var caja = document.getElementById('resultado');
-    var esNetlify = f.hasAttribute('data-netlify');
+    var esNetlify = f.dataset.modo === 'netlify';
     if (!esNetlify && !f.dataset.accion) {
       caja.className = 'resultado mal';
       caja.textContent = idioma()

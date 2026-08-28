@@ -241,7 +241,7 @@ SCRIPT = """<script>
   f.addEventListener('submit', function(e){
     e.preventDefault();
     var caja = document.getElementById('resultado');
-    var esNetlify = f.hasAttribute('data-netlify');
+    var esNetlify = f.dataset.modo === 'netlify';
     if (!esNetlify && !f.dataset.accion) {
       caja.className = 'resultado mal';
       caja.textContent = idioma()
@@ -300,8 +300,11 @@ def construir(talentos_datos=None, arboles=None):
     # descarta los envíos que rellenen el campo señuelo: los robots lo
     # rellenan porque no ven que está oculto, las personas no.
     if NETLIFY:
-        atributos = (f'name="{esc(FORMULARIO)}" method="POST" data-netlify="true"'
-                     ' netlify-honeypot="bot-field"')
+        # `data-modo` es marca nuestra: Netlify borra sus propios atributos al
+        # desplegar —ya han cumplido— y el guion se quedaba sin saber que el
+        # formulario estaba conectado.
+        atributos = (f'name="{esc(FORMULARIO)}" method="POST" data-modo="netlify"'
+                     ' data-netlify="true" netlify-honeypot="bot-field"')
         ocultos = (f'<input type="hidden" name="form-name" value="{esc(FORMULARIO)}">'
                    '<p hidden><label>No rellenar'
                    ' <input name="bot-field" tabindex="-1" autocomplete="off">'
