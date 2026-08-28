@@ -20,18 +20,28 @@ def documento(titulo, css, cuerpo, pagina, iconos=None, guion_extra=""):
     # El guion del arbol solo hace falta en las fichas que lo dibujan.
     if 'tal-mapa' in cuerpo:
         guion += arbol.SCRIPT
+    # El doctype no es adorno: sin él el navegador entra en modo de
+    # compatibilidad antiguo, y quien lea la página con un analizador —el
+    # recogedor de formularios del alojamiento, sin ir más lejos— se encuentra
+    # un documento sin cabeza ni cuerpo declarados.
     partes = [
+        "<!doctype html>",
         '<html lang="es">',
+        "<head>",
         '<meta charset="utf-8">',
         '<meta name="viewport" content="width=device-width,initial-scale=1">',
         f"<title>{esc(titulo)}</title>",
         tema.FUENTES,
         f"<style>{hojas}</style>",
+        "</head>",
+        "<body>",
         '<div class="fondo" aria-hidden="true"></div>',
         cabecera.cabecera(pagina),
         cuerpo,
         i18n.SCRIPT_I18N,
         guion,
         guion_extra,
+        "</body>",
+        "</html>",
     ]
     return "\n".join(partes)
